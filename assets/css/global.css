@@ -1,0 +1,391 @@
+
+/* ============================================
+   DRA. MAURÍCIA MBANI
+   ESTILOS GLOBAIS
+
+   Projeto: Protótipo Demonstrativo
+   ============================================ */
+
+
+/* ============================================
+   1. RESET CSS
+============================================ */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--line-height-normal);
+
+    color: var(--color-text);
+    background-color: var(--color-background);
+
+    -webkit-font-smoothing: antialiased;
+    overflow-wrap: break-word;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+
+/* ============================================
+   2. TIPOGRAFIA
+============================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-heading);
+    color: var(--color-indigo);
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+    letter-spacing: -0.8px;
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+}
+
+h4 {
+    font-size: var(--font-size-xl);
+}
+
+p {
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+}
+
+h1 em,
+h2 em,
+h3 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--color-copper);
+}
+
+
+/* ============================================
+   3. LINKS
+============================================ */
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-copper);
+}
+
+
+/* ============================================
+   4. IMAGENS
+============================================ */
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+picture,
+video,
+iframe {
+    max-width: 100%;
+}
+
+svg {
+    max-width: 100%;
+}
+
+
+/* ============================================
+   5. LISTAS
+============================================ */
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+/* ============================================
+   6. ELEMENTOS DE FORMULÁRIO
+============================================ */
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+input,
+textarea,
+select {
+    max-width: 100%;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ============================================
+   7. ACESSIBILIDADE
+============================================ */
+
+:focus-visible {
+    outline: 3px solid var(--color-copper);
+    outline-offset: 4px;
+}
+
+::selection {
+    background: var(--color-copper-light);
+    color: var(--color-indigo);
+}
+
+
+/* ============================================
+   8. CONTAINER PRINCIPAL
+============================================ */
+
+.container {
+    width: min(
+        calc(100% - 48px),
+        var(--container-width)
+    );
+
+    margin-inline: auto;
+}
+
+
+/* ============================================
+   9. SEÇÕES
+============================================ */
+
+.section {
+    padding-block: var(--section-spacing);
+}
+
+.section-heading {
+    margin-bottom: var(--space-12);
+}
+
+.section-heading h2 {
+    margin-bottom: var(--space-4);
+}
+
+
+/* ============================================
+   10. ELEMENTOS DE TEXTO
+============================================ */
+
+.eyebrow {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: var(--color-copper);
+    margin-bottom: var(--space-5);
+}
+
+.lead {
+    font-size: var(--font-size-md);
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+}
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+
+    color: var(--color-copper);
+    transition: var(--transition-normal);
+}
+
+.text-link:hover {
+    color: var(--color-copper-dark);
+    gap: var(--space-3);
+}
+
+
+/* ============================================
+   11. CLASSES UTILITÁRIAS
+============================================ */
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-white {
+    color: var(--color-white);
+}
+
+.text-indigo {
+    color: var(--color-indigo);
+}
+
+.text-copper {
+    color: var(--color-copper);
+}
+
+.bg-ivory {
+    background-color: var(--color-ivory);
+}
+
+.bg-white {
+    background-color: var(--color-white);
+}
+
+.bg-green {
+    background-color: var(--color-green);
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ============================================
+   12. ANIMAÇÕES
+============================================ */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease both;
+}
+
+.fade-up {
+    animation: fadeUp 0.7s ease both;
+}
+
+
+/* ============================================
+   13. ROLAGEM E ACESSIBILIDADE
+============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* ============================================
+   14. AJUSTES GLOBAIS MOBILE
+============================================ */
+
+@media (max-width: 767px) {
+
+    .container {
+        width: calc(100% - 32px);
+    }
+
+    .section {
+        padding-block: 64px;
+    }
+
+    h1 {
+        font-size: clamp(2.3rem, 9vw, 3.3rem);
+    }
+
+    h2 {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+
+    .eyebrow {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+    }
+}

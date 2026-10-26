@@ -1,0 +1,401 @@
+
+/* ============================================
+   DRA. MAURÍCIA MBANI
+   CABEÇALHO E NAVEGAÇÃO
+   ============================================ */
+
+
+/* ============================================
+   1. FAIXA DE DEMONSTRAÇÃO
+============================================ */
+
+.demo-strip {
+    width: 100%;
+    padding: 8px 16px;
+
+    background: var(--color-green);
+    color: var(--color-white);
+
+    text-align: center;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+}
+
+
+/* ============================================
+   2. CABEÇALHO PRINCIPAL
+============================================ */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-header);
+
+    width: 100%;
+    min-height: var(--header-height);
+
+    background: rgba(250, 247, 242, 0.97);
+
+    border-bottom: 1px solid var(--color-border);
+
+    box-shadow: var(--shadow-sm);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+
+/* ============================================
+   3. ESTRUTURA DO MENU
+============================================ */
+
+.nav-wrap {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: var(--header-height);
+    gap: 24px;
+}
+
+
+/* ============================================
+   4. LOGOTIPO E NOME
+============================================ */
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    min-width: 0;
+    flex-shrink: 0;
+
+    color: var(--color-indigo);
+    text-decoration: none;
+}
+
+.brand:hover {
+    color: var(--color-indigo);
+}
+
+.logo {
+    width: 58px;
+    height: 58px;
+
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.brand-name {
+    display: flex;
+    flex-direction: column;
+
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.2;
+
+    color: var(--color-indigo);
+    white-space: nowrap;
+}
+
+.brand-name small {
+    margin-top: 5px;
+
+    font-family: var(--font-primary);
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+
+    color: var(--color-copper);
+}
+
+
+/* ============================================
+   5. NAVEGAÇÃO DESKTOP
+============================================ */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.nav-links > a:not(.btn) {
+    position: relative;
+
+    padding: 10px 0;
+
+    font-size: 0.86rem;
+    font-weight: 600;
+
+    color: var(--color-indigo);
+
+    white-space: nowrap;
+    transition: color var(--transition-fast);
+}
+
+.nav-links > a:not(.btn):hover {
+    color: var(--color-copper);
+}
+
+
+/* ============================================
+   6. EFEITO DOS LINKS
+============================================ */
+
+.nav-links > a:not(.btn)::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--color-copper);
+
+    transition: width var(--transition-normal);
+}
+
+.nav-links > a:not(.btn):hover::after,
+.nav-links > a.active:not(.btn)::after {
+    width: 100%;
+}
+
+.nav-links > a.active:not(.btn) {
+    color: var(--color-copper);
+}
+
+
+/* ============================================
+   7. LINK ADMINISTRATIVO
+============================================ */
+
+.nav-links .admin-link {
+    color: var(--color-green);
+}
+
+.nav-links .admin-link:hover {
+    color: var(--color-copper);
+}
+
+
+/* ============================================
+   8. BOTÃO DE AGENDAMENTO
+============================================ */
+
+.nav-links > .btn {
+    flex-shrink: 0;
+
+    color: var(--color-white);
+    background: var(--color-copper);
+    border-radius: var(--radius-md);
+}
+
+.nav-links > .btn:hover {
+    color: var(--color-white);
+    background: var(--color-copper-dark);
+}
+
+
+/* ============================================
+   9. BOTÃO MENU MOBILE
+============================================ */
+
+.menu-toggle {
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+
+    background: transparent;
+    color: var(--color-indigo);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    font-size: 1.65rem;
+    line-height: 1;
+
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.menu-toggle:hover {
+    background: var(--color-copper-light);
+    border-color: var(--color-copper);
+}
+
+
+/* ============================================
+   10. TELAS INTERMEDIÁRIAS
+============================================ */
+
+@media (max-width: 1150px) {
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links > a:not(.btn) {
+        font-size: 0.79rem;
+    }
+
+    .brand-name {
+        font-size: 1.1rem;
+    }
+
+    .logo {
+        width: 48px;
+        height: 48px;
+    }
+
+}
+
+
+/* ============================================
+   11. TABLETS E CELULARES
+============================================ */
+
+@media (max-width: 1023px) {
+
+    .site-header {
+        min-height: 72px;
+    }
+
+    .nav-wrap {
+        min-height: 72px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-shrink: 0;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+        padding: 16px;
+
+        background: var(--color-background);
+
+        border: 1px solid var(--color-border);
+        border-top: none;
+
+        border-radius: 0 0 18px 18px;
+
+        box-shadow: var(--shadow-lg);
+
+        max-height: calc(100dvh - 90px);
+        overflow-y: auto;
+    }
+
+    /* Classe ativada pelo JavaScript */
+
+    .nav-links.is-open {
+        display: flex;
+        animation: menuFadeIn 0.25s ease;
+    }
+
+    .nav-links > a:not(.btn) {
+        width: 100%;
+
+        padding: 15px 12px;
+
+        font-size: 0.95rem;
+
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .nav-links > a:not(.btn)::after {
+        display: none;
+    }
+
+    .nav-links > a.active:not(.btn) {
+        color: var(--color-copper);
+        background: var(--color-copper-light);
+
+        border-radius: 8px;
+    }
+
+    .nav-links > .btn {
+        width: 100%;
+        margin-top: 16px;
+    }
+
+}
+
+
+/* ============================================
+   12. CELULARES PEQUENOS
+============================================ */
+
+@media (max-width: 480px) {
+
+    .demo-strip {
+        font-size: 0.64rem;
+        padding: 7px 12px;
+    }
+
+    .brand {
+        gap: 8px;
+    }
+
+    .logo {
+        width: 43px;
+        height: 43px;
+    }
+
+    .brand-name {
+        font-size: 0.98rem;
+    }
+
+    .brand-name small {
+        font-size: 0.56rem;
+        letter-spacing: 3px;
+    }
+
+    .menu-toggle {
+        width: 42px;
+        height: 42px;
+    }
+
+}
+
+
+/* ============================================
+   13. ANIMAÇÃO DO MENU MOBILE
+============================================ */
+
+@keyframes menuFadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}

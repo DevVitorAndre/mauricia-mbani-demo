@@ -1,0 +1,850 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Agendamento demonstrativo de consultas com a Dra. Maurícia Mbani.">
+
+    <title>Agendamento | Dra. Maurícia Mbani</title>
+
+    <!-- FONTES -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- ESTILOS GLOBAIS -->
+    <link rel="stylesheet"
+          href="../assets/css/variables.css">
+
+    <link rel="stylesheet"
+          href="../assets/css/global.css">
+
+    <link rel="stylesheet"
+          href="../assets/css/components.css">
+
+    <link rel="stylesheet"
+          href="../assets/css/header.css">
+
+    <!-- ESTILO DO AGENDAMENTO -->
+    <link rel="stylesheet"
+          href="../assets/css/agendamento.css">
+
+    <link rel="stylesheet"
+          href="../assets/css/responsive.css">
+
+    <!-- JAVASCRIPT -->
+    <script src="../assets/js/navigation.js" defer></script>
+
+    <script src="../assets/js/agendamento.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- AVISO DEMONSTRATIVO -->
+    <div class="demo-strip">
+        Ambiente de demonstração —
+        Nenhuma consulta será agendada de verdade
+    </div>
+
+
+    <!-- =====================================
+         CABEÇALHO
+    ====================================== -->
+
+    <header class="site-header">
+
+        <div class="container nav-wrap">
+
+            <a href="../index.html" class="brand">
+
+                <img
+                    src="../assets/images/logo/logo-principal.png"
+                    alt="Logotipo Dra. Maurícia Mbani"
+                    class="logo">
+
+                <span class="brand-name">
+                    Dra. Maurícia Mbani
+                    <small>MÉDICA</small>
+                </span>
+
+            </a>
+
+            <!-- MENU MOBILE -->
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Abrir menu"
+                aria-controls="nav-links"
+                aria-expanded="false">
+                ☰
+            </button>
+
+            <!-- NAVEGAÇÃO -->
+            <nav class="nav-links" id="nav-links">
+
+                <a href="../index.html">
+                    Início
+                </a>
+
+                <a href="../index.html#sobre">
+                    Sobre
+                </a>
+
+                <a href="../index.html#servicos">
+                    Atendimentos
+                </a>
+
+                <a href="contato.html">
+                    Contato
+                </a>
+
+                <a href="../admin/login.html">
+                    Área de gestão
+                </a>
+
+                <a href="agendamento.html"
+                   class="btn btn-small">
+                    Agendar consulta
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =====================================
+             TÍTULO DA PÁGINA
+        ====================================== -->
+
+        <section class="booking-intro">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    INÍCIO / AGENDAMENTO
+                </p>
+
+                <h1>
+                    Agende sua
+                    <em>consulta.</em>
+                </h1>
+
+                <p class="lead">
+                    Escolha o atendimento, a data e o horário
+                    que melhor se encaixam na sua rotina.
+                </p>
+
+                <p class="booking-disclaimer">
+                    Esta página é uma demonstração.
+                    Utilize somente informações fictícias.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             INDICADOR DE ETAPAS
+        ====================================== -->
+
+        <div class="container">
+
+            <div class="booking-progress"
+                 aria-label="Etapas do agendamento">
+
+                <div class="progress-step active">
+                    <span>01</span>
+                    <p>Serviço</p>
+                </div>
+
+                <div class="progress-step">
+                    <span>02</span>
+                    <p>Modalidade</p>
+                </div>
+
+                <div class="progress-step">
+                    <span>03</span>
+                    <p>Data e horário</p>
+                </div>
+
+                <div class="progress-step">
+                    <span>04</span>
+                    <p>Seus dados</p>
+                </div>
+
+                <div class="progress-step">
+                    <span>05</span>
+                    <p>Confirmação</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             CONTEÚDO DO AGENDAMENTO
+        ====================================== -->
+
+        <section class="booking-section">
+
+            <div class="container booking-layout">
+
+                <!-- COLUNA PRINCIPAL -->
+                <div class="booking-main">
+
+                    <form id="booking-form" novalidate>
+
+                        <!-- =====================
+                             1. SERVIÇO
+                        ====================== -->
+
+                        <section class="booking-card"
+                                 id="etapa-servico">
+
+                            <div class="booking-card-header">
+
+                                <span class="step-number">
+                                    01
+                                </span>
+
+                                <div>
+                                    <h2>
+                                        Escolha o atendimento
+                                    </h2>
+
+                                    <p>
+                                        Selecione o serviço
+                                        desejado.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="service-options">
+
+                                <label class="service-option">
+
+                                    <input
+                                        type="radio"
+                                        name="servico"
+                                        value="Saúde Capilar"
+                                        data-service="capilar"
+                                        checked>
+
+                                    <span class="option-content">
+
+                                        <span class="option-icon">
+                                            ✦
+                                        </span>
+
+                                        <strong>
+                                            Saúde Capilar
+                                        </strong>
+
+                                        <small>
+                                            Avaliação de queda,
+                                            afinamento e saúde
+                                            do couro cabeludo.
+                                        </small>
+
+                                    </span>
+
+                                </label>
+
+
+                                <label class="service-option">
+
+                                    <input
+                                        type="radio"
+                                        name="servico"
+                                        value="Clínica Geral"
+                                        data-service="geral">
+
+                                    <span class="option-content">
+
+                                        <span class="option-icon">
+                                            ♡
+                                        </span>
+
+                                        <strong>
+                                            Clínica Geral
+                                        </strong>
+
+                                        <small>
+                                            Atendimento médico
+                                            individualizado e
+                                            acompanhamento clínico.
+                                        </small>
+
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- =====================
+                             2. MODALIDADE
+                        ====================== -->
+
+                        <section class="booking-card"
+                                 id="etapa-modalidade">
+
+                            <div class="booking-card-header">
+
+                                <span class="step-number">
+                                    02
+                                </span>
+
+                                <div>
+                                    <h2>
+                                        Modalidade da consulta
+                                    </h2>
+
+                                    <p>
+                                        Escolha como deseja
+                                        ser atendido.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="modality-options">
+
+                                <label class="modality-option">
+
+                                    <input
+                                        type="radio"
+                                        name="modalidade"
+                                        value="Online"
+                                        checked>
+
+                                    <span class="modality-content">
+
+                                        <span class="modality-icon">
+                                            ◉
+                                        </span>
+
+                                        <strong>
+                                            Consulta Online
+                                        </strong>
+
+                                        <small>
+                                            Atendimento por
+                                            videochamada.
+                                        </small>
+
+                                    </span>
+
+                                </label>
+
+
+                                <label class="modality-option">
+
+                                    <input
+                                        type="radio"
+                                        name="modalidade"
+                                        value="Presencial">
+
+                                    <span class="modality-content">
+
+                                        <span class="modality-icon">
+                                            ⌖
+                                        </span>
+
+                                        <strong>
+                                            Consulta Presencial
+                                        </strong>
+
+                                        <small>
+                                            Atendimento em
+                                            Porto Alegre - RS.
+                                        </small>
+
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- =====================
+                             3. DATA E HORÁRIO
+                        ====================== -->
+
+                        <section class="booking-card"
+                                 id="etapa-data">
+
+                            <div class="booking-card-header">
+
+                                <span class="step-number">
+                                    03
+                                </span>
+
+                                <div>
+                                    <h2>
+                                        Data e horário
+                                    </h2>
+
+                                    <p>
+                                        Selecione um dia e
+                                        horário de demonstração.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="date-time-grid">
+
+                                <!-- DATA -->
+                                <div class="date-picker-area">
+
+                                    <label for="data-consulta"
+                                           class="form-label">
+                                        Data da consulta
+                                    </label>
+
+                                    <input
+                                        type="date"
+                                        id="data-consulta"
+                                        name="data"
+                                        class="form-control"
+                                        required>
+
+                                    <p class="field-hint">
+                                        As datas são fictícias.
+                                    </p>
+
+                                </div>
+
+
+                                <!-- HORÁRIOS -->
+                                <div class="time-picker-area">
+
+                                    <p class="form-label">
+                                        Horários demonstrativos
+                                    </p>
+
+                                    <div class="time-slots"
+                                         id="time-slots">
+
+                                        <button
+                                            type="button"
+                                            class="time-slot"
+                                            data-time="08:00">
+                                            08:00
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="time-slot"
+                                            data-time="09:00">
+                                            09:00
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="time-slot"
+                                            data-time="10:00">
+                                            10:00
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="time-slot"
+                                            data-time="11:00">
+                                            11:00
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="time-slot"
+                                            data-time="13:00">
+                                            13:00
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="time-slot"
+                                            data-time="14:00">
+                                            14:00
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="time-slot"
+                                            data-time="15:00">
+                                            15:00
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="time-slot"
+                                            data-time="16:00">
+                                            16:00
+                                        </button>
+
+                                    </div>
+
+                                    <input
+                                        type="hidden"
+                                        id="horario-selecionado"
+                                        name="horario">
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- =====================
+                             4. DADOS DO PACIENTE
+                        ====================== -->
+
+                        <section class="booking-card"
+                                 id="etapa-dados">
+
+                            <div class="booking-card-header">
+
+                                <span class="step-number">
+                                    04
+                                </span>
+
+                                <div>
+                                    <h2>
+                                        Seus dados
+                                    </h2>
+
+                                    <p>
+                                        Preencha com dados
+                                        fictícios para testar.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="patient-form-grid">
+
+                                <div class="form-group">
+
+                                    <label
+                                        for="paciente-nome"
+                                        class="form-label">
+                                        Nome completo
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="paciente-nome"
+                                        name="nome"
+                                        class="form-control"
+                                        placeholder="Ex.: Paciente Teste"
+                                        autocomplete="off"
+                                        required>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label
+                                        for="paciente-telefone"
+                                        class="form-label">
+                                        Telefone
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        id="paciente-telefone"
+                                        name="telefone"
+                                        class="form-control"
+                                        placeholder="(51) 99999-9999"
+                                        autocomplete="off"
+                                        required>
+
+                                </div>
+
+
+                                <div class="form-group form-full">
+
+                                    <label
+                                        for="paciente-email"
+                                        class="form-label">
+                                        E-mail
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="paciente-email"
+                                        name="email"
+                                        class="form-control"
+                                        placeholder="teste@exemplo.com"
+                                        autocomplete="off"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- =====================
+                             FINALIZAR ETAPA
+                        ====================== -->
+
+                        <div class="booking-actions">
+
+                            <a
+                                href="../index.html"
+                                class="btn btn-outline">
+                                ← Voltar ao início
+                            </a>
+
+                            <button
+                                type="submit"
+                                id="btn-continuar"
+                                class="btn">
+                                Continuar para pagamento →
+                            </button>
+
+                        </div>
+
+                        <p
+                            id="booking-message"
+                            class="booking-message"
+                            role="status"
+                            aria-live="polite">
+                        </p>
+
+                    </form>
+
+                </div>
+
+
+                <!-- =====================================
+                     RESUMO DA CONSULTA
+                ====================================== -->
+
+                <aside class="booking-summary">
+
+                    <div class="summary-card">
+
+                        <h2>
+                            Resumo da consulta
+                        </h2>
+
+                        <!-- MÉDICA -->
+                        <div class="summary-doctor">
+
+                            <img
+                                src="../assets/images/doutora/mauricia-principal.png"
+                                alt="Dra. Maurícia Mbani">
+
+                            <div>
+
+                                <strong>
+                                    Dra. Maurícia Mbani
+                                </strong>
+
+                                <small>
+                                    Médica
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="summary-divider"></div>
+
+
+                        <!-- SERVIÇO -->
+                        <div class="summary-row">
+
+                            <span>Atendimento</span>
+
+                            <strong id="resumo-servico">
+                                Saúde Capilar
+                            </strong>
+
+                        </div>
+
+
+                        <!-- MODALIDADE -->
+                        <div class="summary-row">
+
+                            <span>Modalidade</span>
+
+                            <strong id="resumo-modalidade">
+                                Online
+                            </strong>
+
+                        </div>
+
+
+                        <!-- DATA -->
+                        <div class="summary-row">
+
+                            <span>Data</span>
+
+                            <strong id="resumo-data">
+                                Não selecionada
+                            </strong>
+
+                        </div>
+
+
+                        <!-- HORÁRIO -->
+                        <div class="summary-row">
+
+                            <span>Horário</span>
+
+                            <strong id="resumo-horario">
+                                Não selecionado
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-divider"></div>
+
+
+                        <!-- AVISO -->
+                        <div class="summary-notice">
+
+                            <strong>
+                                Ambiente demonstrativo
+                            </strong>
+
+                            <p>
+                                Os horários apresentados
+                                não correspondem à agenda real.
+                                Nenhuma reserva será realizada.
+                            </p>
+
+                        </div>
+
+
+                        <a href="#etapa-servico"
+                           class="summary-edit-link">
+
+                            Alterar atendimento ↑
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- AJUDA -->
+                    <div class="booking-help">
+
+                        <h3>
+                            Precisa de ajuda?
+                        </h3>
+
+                        <p>
+                            Conheça os serviços oferecidos
+                            ou entre em contato.
+                        </p>
+
+                        <a href="contato.html">
+                            Entrar em contato →
+                        </a>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================
+         RODAPÉ
+    ====================================== -->
+
+    <footer class="booking-footer">
+
+        <div class="container footer-inner">
+
+            <div>
+
+                <strong>
+                    Dra. Maurícia Mbani
+                </strong>
+
+                <p>
+                    Medicina com cuidado,
+                    ciência e acolhimento.
+                </p>
+
+            </div>
+
+            <div>
+
+                <p>
+                    Porto Alegre - RS
+                </p>
+
+                <p>
+                    Consultas online e presenciais
+                </p>
+
+            </div>
+
+            <div>
+
+                <a href="../index.html">
+                    Voltar ao início
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Dra. Maurícia Mbani —
+                Protótipo demonstrativo
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

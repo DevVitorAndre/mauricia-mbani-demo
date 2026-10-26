@@ -1,0 +1,1180 @@
+
+/* ============================================
+   DRA. MAURÍCIA MBANI
+   SISTEMA DE AGENDAMENTO
+   PROTÓTIPO DEMONSTRATIVO
+============================================ */
+
+
+/* ============================================
+   1. APRESENTAÇÃO DO AGENDAMENTO
+============================================ */
+
+.booking-intro {
+    padding: 65px 0 45px;
+
+    background: var(--color-background);
+}
+
+.booking-intro h1 {
+    font-size: clamp(2.6rem, 4.5vw, 4.2rem);
+    font-weight: 500;
+
+    margin-bottom: 20px;
+}
+
+.booking-intro h1 em {
+    color: var(--color-copper);
+}
+
+.booking-intro .lead {
+    max-width: 650px;
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.booking-disclaimer {
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 10px 16px;
+
+    background: var(--color-copper-light);
+    color: var(--color-copper-dark);
+
+    border-radius: var(--radius-md);
+
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+
+/* ============================================
+   2. INDICADOR DE ETAPAS
+============================================ */
+
+.booking-progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 28px 24px;
+    margin-bottom: 30px;
+
+    background: var(--color-white);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.progress-step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    min-width: 0;
+}
+
+.progress-step span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+
+    color: var(--color-text-muted);
+    background: var(--color-background);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.progress-step p {
+    font-size: 0.82rem;
+    font-weight: 600;
+
+    color: var(--color-text-muted);
+    white-space: nowrap;
+}
+
+.progress-step.active span {
+    color: var(--color-white);
+    background: var(--color-copper);
+    border-color: var(--color-copper);
+}
+
+.progress-step.active p {
+    color: var(--color-copper-dark);
+}
+
+.progress-step.completed span {
+    color: var(--color-white);
+    background: var(--color-green);
+    border-color: var(--color-green);
+}
+
+
+/* ============================================
+   3. ESTRUTURA PRINCIPAL
+============================================ */
+
+.booking-section {
+    padding: 10px 0 100px;
+}
+
+.booking-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.8fr)
+        minmax(285px, 0.9fr);
+
+    align-items: start;
+    gap: 30px;
+}
+
+.booking-main,
+.booking-summary {
+    min-width: 0;
+}
+
+
+/* ============================================
+   4. CARTÕES DO FORMULÁRIO
+============================================ */
+
+.booking-card {
+    padding: 34px;
+    margin-bottom: 25px;
+
+    background: var(--color-white);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+
+    box-shadow: var(--shadow-card);
+}
+
+.booking-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+
+    margin-bottom: 30px;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    color: var(--color-white);
+    background: var(--color-copper);
+
+    border-radius: 50%;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.booking-card-header h2 {
+    margin-bottom: 8px;
+
+    font-size: 1.65rem;
+    line-height: 1.25;
+}
+
+.booking-card-header p {
+    font-size: 0.9rem;
+}
+
+
+/* ============================================
+   5. OPÇÕES DE SERVIÇOS
+============================================ */
+
+.service-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+.service-option {
+    position: relative;
+    display: block;
+
+    min-width: 0;
+    cursor: pointer;
+}
+
+/* Radio invisível, mas acessível */
+
+.service-option input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+}
+
+.option-content {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    height: 100%;
+    min-height: 185px;
+
+    padding: 24px;
+
+    background: var(--color-background);
+
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+
+    transition: var(--transition-normal);
+}
+
+.service-option:hover .option-content {
+    border-color: var(--color-copper);
+    background: var(--color-surface-soft);
+}
+
+.service-option input:checked + .option-content {
+    background: #FFF8F3;
+    border-color: var(--color-copper);
+
+    box-shadow: 0 0 0 2px
+        rgba(183, 110, 79, 0.09);
+}
+
+.service-option input:focus-visible + .option-content {
+    outline: 3px solid var(--color-copper);
+    outline-offset: 3px;
+}
+
+.option-content::after {
+    content: "";
+
+    position: absolute;
+    top: 18px;
+    right: 18px;
+
+    width: 18px;
+    height: 18px;
+
+    border: 2px solid var(--color-border);
+    border-radius: 50%;
+
+    background: var(--color-white);
+}
+
+.service-option input:checked + .option-content::after {
+    border: 5px solid var(--color-copper);
+}
+
+.option-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    background: var(--color-copper-light);
+    color: var(--color-copper-dark);
+
+    border-radius: var(--radius-md);
+
+    font-size: 1.5rem;
+}
+
+.option-content strong {
+    padding-right: 18px;
+
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+
+    color: var(--color-indigo);
+}
+
+.option-content small {
+    font-size: 0.83rem;
+    line-height: 1.7;
+
+    color: var(--color-text-secondary);
+}
+
+
+/* ============================================
+   6. MODALIDADE DA CONSULTA
+============================================ */
+
+.modality-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+.modality-option {
+    position: relative;
+    display: block;
+
+    min-width: 0;
+    cursor: pointer;
+}
+
+.modality-option input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+}
+
+.modality-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    height: 100%;
+    min-height: 145px;
+
+    padding: 24px;
+
+    background: var(--color-background);
+
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+
+    transition: var(--transition-normal);
+}
+
+.modality-option:hover .modality-content {
+    border-color: var(--color-copper);
+}
+
+.modality-option input:checked + .modality-content {
+    background: #FFF8F3;
+    border-color: var(--color-copper);
+}
+
+.modality-option input:focus-visible + .modality-content {
+    outline: 3px solid var(--color-copper);
+    outline-offset: 3px;
+}
+
+.modality-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    color: var(--color-copper);
+    background: var(--color-copper-light);
+
+    border-radius: var(--radius-md);
+
+    font-size: 1.4rem;
+}
+
+.modality-content strong {
+    font-size: 0.95rem;
+    color: var(--color-indigo);
+}
+
+.modality-content small {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+}
+
+
+/* ============================================
+   7. DATA E HORÁRIO
+============================================ */
+
+.date-time-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+
+    align-items: start;
+    gap: 30px;
+}
+
+.date-picker-area,
+.time-picker-area {
+    min-width: 0;
+}
+
+.date-picker-area .form-label,
+.time-picker-area .form-label {
+    display: block;
+    margin-bottom: 12px;
+
+    color: var(--color-indigo);
+    font-weight: 700;
+}
+
+#data-consulta {
+    min-height: 54px;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    background: var(--color-background);
+
+    color: var(--color-indigo);
+
+    cursor: pointer;
+}
+
+#data-consulta:focus {
+    border-color: var(--color-copper);
+    outline: 2px solid var(--color-copper-light);
+}
+
+.field-hint {
+    margin-top: 10px;
+
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+
+/* ============================================
+   8. HORÁRIOS DISPONÍVEIS
+============================================ */
+
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+.time-slot {
+    min-width: 0;
+    min-height: 46px;
+
+    padding: 10px 6px;
+
+    background: var(--color-background);
+    color: var(--color-indigo);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    transition: var(--transition-fast);
+}
+
+.time-slot:hover {
+    background: var(--color-copper-light);
+    border-color: var(--color-copper);
+
+    color: var(--color-copper-dark);
+}
+
+/* Classe que o JavaScript adicionará */
+
+.time-slot.selected,
+.time-slot.is-selected,
+.time-slot[aria-pressed="true"] {
+    background: var(--color-copper);
+    border-color: var(--color-copper);
+
+    color: var(--color-white);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.time-slot:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+
+/* ============================================
+   9. FORMULÁRIO DO PACIENTE
+============================================ */
+
+.patient-form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 0 20px;
+}
+
+.patient-form-grid .form-group {
+    min-width: 0;
+}
+
+.patient-form-grid .form-full {
+    grid-column: 1 / -1;
+}
+
+.patient-form-grid .form-control {
+    min-height: 52px;
+
+    background: var(--color-background);
+}
+
+.patient-form-grid .form-control:focus {
+    background: var(--color-white);
+}
+
+.form-control.is-invalid,
+.form-control[aria-invalid="true"] {
+    border-color: var(--color-danger);
+}
+
+
+/* ============================================
+   10. BOTÕES DO AGENDAMENTO
+============================================ */
+
+.booking-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.booking-actions .btn {
+    min-height: 52px;
+}
+
+.booking-message {
+    margin-top: 18px;
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    color: var(--color-text-secondary);
+}
+
+.booking-message.error,
+.booking-message.is-error {
+    color: var(--color-danger);
+}
+
+.booking-message.success,
+.booking-message.is-success {
+    color: var(--color-success);
+}
+
+
+/* ============================================
+   11. RESUMO LATERAL
+============================================ */
+
+.booking-summary {
+    position: sticky;
+    top: 110px;
+}
+
+.summary-card {
+    padding: 30px;
+
+    background: var(--color-white);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+
+    box-shadow: var(--shadow-card);
+}
+
+.summary-card h2 {
+    font-size: 1.55rem;
+    margin-bottom: 25px;
+}
+
+
+/* ============================================
+   12. INFORMAÇÕES DA DOUTORA
+============================================ */
+
+.summary-doctor {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.summary-doctor img {
+    width: 75px;
+    height: 85px;
+
+    flex-shrink: 0;
+
+    object-fit: cover;
+    object-position: center 20%;
+
+    border-radius: var(--radius-md);
+}
+
+.summary-doctor > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    min-width: 0;
+}
+
+.summary-doctor strong {
+    font-family: var(--font-heading);
+
+    font-size: 1.05rem;
+    font-weight: 600;
+
+    color: var(--color-indigo);
+}
+
+.summary-doctor small {
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+}
+
+
+/* ============================================
+   13. LINHAS DO RESUMO
+============================================ */
+
+.summary-divider {
+    height: 1px;
+
+    margin: 25px 0;
+
+    background: var(--color-border);
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 14px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+.summary-row:last-of-type {
+    border-bottom: none;
+}
+
+.summary-row span {
+    font-size: 0.85rem;
+
+    color: var(--color-text-secondary);
+}
+
+.summary-row strong {
+    max-width: 60%;
+
+    text-align: right;
+    overflow-wrap: anywhere;
+
+    font-size: 0.87rem;
+    font-weight: 700;
+
+    color: var(--color-indigo);
+}
+
+
+/* ============================================
+   14. AVISO DO RESUMO
+============================================ */
+
+.summary-notice {
+    padding: 18px;
+
+    background: var(--color-green-light);
+
+    border: 1px solid rgba(69, 89, 76, 0.15);
+    border-radius: var(--radius-md);
+}
+
+.summary-notice strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 0.85rem;
+    color: var(--color-green-dark);
+}
+
+.summary-notice p {
+    font-size: 0.78rem;
+    line-height: 1.7;
+
+    color: var(--color-green-dark);
+}
+
+.summary-edit-link {
+    display: inline-block;
+
+    margin-top: 24px;
+
+    color: var(--color-copper);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.summary-edit-link:hover {
+    color: var(--color-copper-dark);
+}
+
+
+/* ============================================
+   15. CARTÃO DE AJUDA
+============================================ */
+
+.booking-help {
+    padding: 25px;
+    margin-top: 20px;
+
+    background: var(--color-ivory);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+}
+
+.booking-help h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.booking-help p {
+    font-size: 0.85rem;
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+.booking-help a {
+    color: var(--color-copper);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+
+/* ============================================
+   16. RODAPÉ DO AGENDAMENTO
+============================================ */
+
+.booking-footer {
+    background: var(--color-indigo);
+    color: var(--color-white);
+}
+
+.booking-footer .footer-inner {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 0.8fr;
+
+    gap: 40px;
+
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.booking-footer .footer-inner strong {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.booking-footer .footer-inner p {
+    font-size: 0.88rem;
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.booking-footer .footer-inner a {
+    color: var(--color-white);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.booking-footer .footer-inner a:hover {
+    color: var(--color-gold);
+}
+
+.booking-footer .footer-bottom {
+    padding: 20px 16px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.booking-footer .footer-bottom p {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.78rem;
+}
+
+
+/* ============================================
+   17. NOTEBOOKS E TABLETS
+============================================ */
+
+@media (max-width: 1100px) {
+
+    .booking-layout {
+        grid-template-columns:
+            minmax(0, 1.5fr)
+            minmax(255px, 0.9fr);
+
+        gap: 20px;
+    }
+
+    .booking-card {
+        padding: 26px;
+    }
+
+    .summary-card {
+        padding: 22px;
+    }
+
+    .booking-progress {
+        gap: 8px;
+        padding: 22px 16px;
+    }
+
+    .progress-step {
+        gap: 7px;
+    }
+
+    .progress-step span {
+        width: 33px;
+        height: 33px;
+    }
+
+    .progress-step p {
+        font-size: 0.72rem;
+    }
+
+}
+
+
+/* ============================================
+   18. TABLETS
+============================================ */
+
+@media (max-width: 900px) {
+
+    .booking-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-summary {
+        position: static;
+    }
+
+    .booking-progress {
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .progress-step {
+        flex-shrink: 0;
+    }
+
+    .progress-step:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    .summary-card {
+        padding: 30px;
+    }
+
+    .date-time-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* ============================================
+   19. CELULARES
+============================================ */
+
+@media (max-width: 767px) {
+
+    /* APRESENTAÇÃO */
+
+    .booking-intro {
+        padding: 45px 0 35px;
+    }
+
+    .booking-intro h1 {
+        font-size: clamp(2.2rem, 9vw, 3.2rem);
+    }
+
+    .booking-intro .lead {
+        font-size: 0.95rem;
+    }
+
+    .booking-disclaimer {
+        font-size: 0.75rem;
+        line-height: 1.6;
+    }
+
+
+    /* PROGRESSO */
+
+    .booking-progress {
+        gap: 22px;
+
+        padding: 20px 18px;
+        margin-bottom: 20px;
+
+        border-radius: var(--radius-lg);
+
+        scrollbar-width: thin;
+    }
+
+    .progress-step {
+        flex-direction: column;
+        align-items: center;
+
+        gap: 6px;
+
+        min-width: 65px;
+    }
+
+    .progress-step p {
+        font-size: 0.68rem;
+        text-align: center;
+    }
+
+
+    /* ESTRUTURA */
+
+    .booking-section {
+        padding-bottom: 65px;
+    }
+
+    .booking-layout {
+        display: flex;
+        flex-direction: column;
+
+        gap: 22px;
+    }
+
+    .booking-main,
+    .booking-summary {
+        width: 100%;
+    }
+
+
+    /* CARTÕES */
+
+    .booking-card {
+        padding: 22px 18px;
+        margin-bottom: 18px;
+
+        border-radius: 18px;
+    }
+
+    .booking-card-header {
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .step-number {
+        width: 38px;
+        height: 38px;
+
+        font-size: 0.75rem;
+    }
+
+    .booking-card-header h2 {
+        font-size: 1.35rem;
+    }
+
+    .booking-card-header p {
+        font-size: 0.82rem;
+    }
+
+
+    /* SERVIÇOS */
+
+    .service-options,
+    .modality-options {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .option-content {
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .modality-content {
+        min-height: auto;
+        padding: 20px;
+    }
+
+
+    /* DATA E HORÁRIO */
+
+    .date-time-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .time-slots {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+
+    /* DADOS */
+
+    .patient-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .patient-form-grid .form-full {
+        grid-column: auto;
+    }
+
+    .patient-form-grid .form-control {
+        font-size: 16px;
+    }
+
+
+    /* BOTÕES */
+
+    .booking-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+
+        margin-top: 25px;
+    }
+
+    .booking-actions .btn {
+        width: 100%;
+    }
+
+
+    /* RESUMO */
+
+    .booking-summary {
+        position: static;
+    }
+
+    .summary-card {
+        padding: 24px 20px;
+    }
+
+    .summary-card h2 {
+        font-size: 1.4rem;
+    }
+
+    .summary-doctor img {
+        width: 68px;
+        height: 78px;
+    }
+
+    .summary-row {
+        gap: 8px;
+    }
+
+    .summary-row strong {
+        font-size: 0.8rem;
+    }
+
+
+    /* RODAPÉ */
+
+    .booking-footer .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 25px;
+
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+}
+
+
+/* ============================================
+   20. CELULARES MENORES
+============================================ */
+
+@media (max-width: 380px) {
+
+    .time-slots {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .booking-card {
+        padding: 20px 15px;
+    }
+
+    .option-content,
+    .modality-content {
+        padding: 17px;
+    }
+
+    .booking-intro h1 {
+        font-size: 2.1rem;
+    }
+
+}
+
+
+/* ============================================
+   21. ACESSIBILIDADE
+============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .service-option *,
+    .modality-option *,
+    .time-slot {
+        transition: none;
+    }
+
+}

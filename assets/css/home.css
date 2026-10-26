@@ -1,0 +1,807 @@
+
+/* ============================================
+   DRA. MAURÍCIA MBANI
+   PÁGINA INICIAL - HOME.CSS
+
+   Projeto: Protótipo Demonstrativo
+   HTML + CSS + JavaScript
+============================================ */
+
+
+/* ============================================
+   1. HERO - APRESENTAÇÃO PRINCIPAL
+============================================ */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 65px;
+
+    padding-top: 85px;
+    padding-bottom: 100px;
+
+    min-height: 650px;
+}
+
+
+/* ============================================
+   2. TEXTOS DO HERO
+============================================ */
+
+.hero-copy {
+    max-width: 650px;
+    animation: fadeUp 0.7s ease both;
+}
+
+.hero-copy .eyebrow {
+    margin-bottom: 25px;
+}
+
+.hero-copy h1 {
+    font-family: var(--font-heading);
+
+    font-size: clamp(2.8rem, 4.2vw, 4.2rem);
+    font-weight: 500;
+
+    line-height: 1.18;
+    letter-spacing: -1.8px;
+
+    color: var(--color-indigo);
+
+    margin-bottom: 30px;
+}
+
+.hero-copy h1 em {
+    color: var(--color-copper);
+    font-weight: 400;
+    font-style: italic;
+}
+
+.hero-copy .lead {
+    max-width: 570px;
+
+    font-size: 1.05rem;
+    line-height: 1.9;
+
+    color: var(--color-text-secondary);
+
+    margin-bottom: 35px;
+}
+
+
+/* ============================================
+   3. BOTÕES DO HERO
+============================================ */
+
+.hero .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    margin-bottom: 35px;
+}
+
+.hero .actions .btn {
+    min-height: 54px;
+    border-radius: 10px;
+}
+
+
+/* ============================================
+   4. DIFERENCIAIS
+============================================ */
+
+.hero-features {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 12px 20px;
+}
+
+.hero-features span {
+    display: inline-flex;
+    align-items: center;
+
+    color: var(--color-green);
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+
+/* ============================================
+   5. IMAGEM PRINCIPAL DA DOUTORA
+============================================ */
+
+.hero-visual {
+    position: relative;
+
+    width: 100%;
+    min-width: 0;
+
+    aspect-ratio: 4 / 5;
+
+    border-radius: 28px;
+    overflow: hidden;
+
+    background: var(--color-ivory);
+
+    box-shadow: var(--shadow-lg);
+
+    animation: fadeIn 0.8s ease both;
+}
+
+.hero-visual::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 15px;
+    z-index: 1;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+
+    pointer-events: none;
+}
+
+.hero-visual img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center 25%;
+
+    transition: transform 0.6s ease;
+}
+
+.hero-visual:hover img {
+    transform: scale(1.035);
+}
+
+
+/* ============================================
+   6. IDENTIFICAÇÃO SOBRE A FOTO
+============================================ */
+
+.visual-label {
+    position: absolute;
+
+    bottom: 25px;
+    left: 25px;
+    right: 25px;
+
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    padding: 18px 22px;
+
+    background: rgba(35, 38, 58, 0.85);
+    color: var(--color-white);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+}
+
+.visual-label small {
+    font-family: var(--font-primary);
+
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+
+    color: #E6D0B7;
+}
+
+
+/* ============================================
+   7. SEÇÃO SOBRE MIM
+============================================ */
+
+.about {
+    background: var(--color-ivory);
+
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+    gap: 90px;
+}
+
+.about h2 {
+    max-width: 550px;
+
+    font-size: clamp(2.2rem, 3.5vw, 3.3rem);
+    line-height: 1.25;
+}
+
+.about h2 em {
+    color: var(--color-copper);
+}
+
+.about-grid > div:last-child {
+    max-width: 540px;
+}
+
+.about-grid p:not(.eyebrow) {
+    font-size: 1rem;
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+}
+
+.about .text-link {
+    margin-top: 15px;
+}
+
+
+/* ============================================
+   8. CABEÇALHO DOS SERVIÇOS
+============================================ */
+
+.section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    margin-bottom: 0;
+}
+
+.section-heading > p {
+    max-width: 380px;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+
+/* ============================================
+   9. AJUSTES DOS CARDS DE SERVIÇOS
+============================================ */
+
+.service-grid {
+    align-items: stretch;
+}
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: var(--color-copper);
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card:nth-child(2) .service-icon {
+    background: var(--color-green-light);
+    color: var(--color-green);
+}
+
+.service-card:nth-child(3) .service-icon {
+    background: var(--color-ivory);
+    color: var(--color-indigo);
+}
+
+
+/* ============================================
+   10. COMO FUNCIONA
+============================================ */
+
+.steps {
+    background: var(--color-surface-soft);
+
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.steps .container > h2 {
+    margin-bottom: 55px;
+}
+
+.step-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 35px;
+
+    margin-bottom: 45px;
+}
+
+.step-grid > div {
+    min-width: 0;
+
+    padding: 32px;
+
+    background: var(--color-white);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.step-grid > div:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.step-grid strong {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 54px;
+    height: 54px;
+
+    margin-bottom: 26px;
+
+    background: var(--color-copper-light);
+    color: var(--color-copper-dark);
+
+    border-radius: 50%;
+
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.step-grid h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.step-grid p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+
+/* ============================================
+   11. CHAMADA FINAL PARA AGENDAMENTO
+============================================ */
+
+.final-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 35px;
+
+    margin-top: 95px;
+    margin-bottom: 95px;
+
+    padding: 65px;
+
+    background: var(--color-green);
+    color: var(--color-white);
+
+    border-radius: var(--radius-2xl);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.final-cta::after {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    right: -100px;
+    top: -100px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.final-cta .eyebrow {
+    color: var(--color-gold);
+}
+
+.final-cta h2 {
+    color: var(--color-white);
+    margin-bottom: 18px;
+}
+
+.final-cta p:not(.eyebrow) {
+    max-width: 550px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.final-cta .btn {
+    position: relative;
+    z-index: 1;
+
+    flex-shrink: 0;
+}
+
+
+/* ============================================
+   12. RODAPÉ PRINCIPAL
+============================================ */
+
+footer {
+    background: var(--color-indigo);
+    color: var(--color-white);
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 0.8fr;
+
+    align-items: start;
+    gap: 45px;
+
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.footer-inner strong {
+    display: block;
+
+    margin-bottom: 14px;
+
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.footer-inner p {
+    margin-bottom: 8px;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.footer-inner a {
+    color: var(--color-white);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.footer-inner a:hover {
+    color: var(--color-gold);
+}
+
+
+/* ============================================
+   13. RODAPÉ INFERIOR
+============================================ */
+
+.footer-bottom {
+    padding: 22px 16px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.78rem;
+}
+
+
+/* ============================================
+   14. TABLET E NOTEBOOKS MENORES
+============================================ */
+
+@media (max-width: 1023px) {
+
+    .hero {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+
+        padding-top: 65px;
+        padding-bottom: 75px;
+
+        min-height: auto;
+    }
+
+    .hero-copy h1 {
+        font-size: clamp(2.3rem, 4.5vw, 3.2rem);
+    }
+
+    .hero-copy .lead {
+        font-size: 0.95rem;
+    }
+
+    .about-grid {
+        gap: 45px;
+    }
+
+    .step-grid {
+        gap: 18px;
+    }
+
+    .step-grid > div {
+        padding: 24px;
+    }
+
+    .final-cta {
+        padding: 45px;
+    }
+
+    .footer-inner {
+        gap: 25px;
+    }
+
+}
+
+
+/* ============================================
+   15. CELULARES
+============================================ */
+
+@media (max-width: 767px) {
+
+    /* HERO */
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+
+        gap: 38px;
+
+        padding-top: 48px;
+        padding-bottom: 65px;
+    }
+
+    .hero-copy {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-copy h1 {
+        font-size: clamp(2.4rem, 9vw, 3.4rem);
+        line-height: 1.2;
+        letter-spacing: -1px;
+
+        margin-bottom: 22px;
+    }
+
+    .hero-copy .lead {
+        font-size: 0.98rem;
+        line-height: 1.8;
+
+        margin-bottom: 28px;
+    }
+
+    .hero .actions {
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 12px;
+    }
+
+    .hero .actions .btn {
+        width: 100%;
+    }
+
+    .hero-features {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+    .hero-features span {
+        font-size: 0.8rem;
+    }
+
+
+    /* FOTO */
+
+    .hero-visual {
+        width: 100%;
+        max-width: 480px;
+
+        aspect-ratio: 4 / 4.5;
+
+        margin-inline: auto;
+
+        border-radius: 22px;
+    }
+
+    .visual-label {
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+
+        padding: 14px 16px;
+
+        font-size: 1rem;
+    }
+
+    .visual-label small {
+        font-size: 0.57rem;
+        letter-spacing: 1.5px;
+    }
+
+
+    /* SOBRE */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .about h2 {
+        font-size: clamp(2rem, 8vw, 2.7rem);
+    }
+
+
+    /* SERVIÇOS */
+
+    .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .section-heading > p {
+        max-width: 100%;
+    }
+
+
+    /* COMO FUNCIONA */
+
+    .steps .container > h2 {
+        margin-bottom: 32px;
+    }
+
+    .step-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+
+        margin-bottom: 32px;
+    }
+
+    .step-grid > div {
+        padding: 26px;
+    }
+
+    .steps .container > .btn {
+        width: 100%;
+    }
+
+
+    /* CHAMADA FINAL */
+
+    .final-cta {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 30px;
+
+        margin-top: 65px;
+        margin-bottom: 65px;
+
+        padding: 35px 26px;
+
+        border-radius: 22px;
+    }
+
+    .final-cta h2 {
+        font-size: 2rem;
+    }
+
+    .final-cta .btn {
+        width: 100%;
+    }
+
+
+    /* RODAPÉ */
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .footer-inner strong {
+        font-size: 1.35rem;
+    }
+
+}
+
+
+/* ============================================
+   16. CELULARES MUITO PEQUENOS
+============================================ */
+
+@media (max-width: 380px) {
+
+    .hero-copy h1 {
+        font-size: 2.15rem;
+    }
+
+    .hero-visual {
+        aspect-ratio: 3 / 4;
+    }
+
+    .visual-label {
+        padding: 12px;
+    }
+
+    .final-cta {
+        padding: 28px 20px;
+    }
+
+}
+
+
+/* ============================================
+   17. ACESSIBILIDADE DE MOVIMENTO
+============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-copy,
+    .hero-visual {
+        animation: none;
+    }
+
+    .hero-visual img,
+    .step-grid > div {
+        transition: none;
+    }
+
+}
