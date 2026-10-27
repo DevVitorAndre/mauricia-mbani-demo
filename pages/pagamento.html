@@ -1,0 +1,771 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Demonstração de pagamento de consultas da Dra. Maurícia Mbani.">
+
+    <title>Pagamento | Dra. Maurícia Mbani</title>
+
+    <!-- FONTES -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="../assets/css/variables.css">
+
+    <link rel="stylesheet"
+          href="../assets/css/global.css">
+
+    <link rel="stylesheet"
+          href="../assets/css/components.css">
+
+    <link rel="stylesheet"
+          href="../assets/css/header.css">
+
+    <link rel="stylesheet"
+          href="../assets/css/home.css">
+
+    <link rel="stylesheet"
+          href="../assets/css/paginas.css">
+
+    <link rel="stylesheet"
+          href="../assets/css/responsive.css">
+
+    <!-- JAVASCRIPT -->
+    <script
+        src="../assets/js/navigation.js"
+        defer>
+    </script>
+
+    <script
+        src="../assets/js/pagamento-demo.js"
+        defer>
+    </script>
+
+</head>
+
+<body>
+
+    <!-- AVISO DEMONSTRATIVO -->
+    <div class="demo-strip">
+        Protótipo demonstrativo —
+        Nenhum pagamento será realizado
+    </div>
+
+
+    <!-- =====================================
+         CABEÇALHO
+    ====================================== -->
+
+    <header class="site-header">
+
+        <div class="container nav-wrap">
+
+            <a href="../index.html" class="brand">
+
+                <img
+                    src="../assets/images/logo/logo-principal.png"
+                    alt="Logotipo Dra. Maurícia Mbani"
+                    class="logo">
+
+                <span class="brand-name">
+                    Dra. Maurícia Mbani
+                    <small>MÉDICA</small>
+                </span>
+
+            </a>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Abrir menu"
+                aria-controls="nav-links"
+                aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="nav-links" id="nav-links">
+
+                <a href="../index.html">
+                    Início
+                </a>
+
+                <a href="../index.html#sobre">
+                    Sobre
+                </a>
+
+                <a href="../index.html#servicos">
+                    Atendimentos
+                </a>
+
+                <a href="agendamento.html">
+                    Agendamento
+                </a>
+
+                <a href="contato.html">
+                    Contato
+                </a>
+
+                <a
+                    href="../admin/login.html"
+                    class="admin-link">
+                    Área de gestão
+                </a>
+
+                <a
+                    href="agendamento.html"
+                    class="btn btn-small">
+                    Agendar consulta
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =====================================
+             APRESENTAÇÃO
+        ====================================== -->
+
+        <section class="payment-intro">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    AGENDAMENTO / PAGAMENTO
+                </p>
+
+                <h1>
+                    Pagamento da
+                    <em>consulta.</em>
+                </h1>
+
+                <p class="lead">
+                    Confira os detalhes da consulta
+                    e conheça as opções de pagamento
+                    disponíveis nesta demonstração.
+                </p>
+
+                <div class="payment-demo-notice">
+
+                    <strong>
+                        Ambiente de demonstração
+                    </strong>
+
+                    <p>
+                        Esta página não processa
+                        pagamentos. Utilize apenas
+                        os botões de simulação.
+                        Não informe dados bancários reais.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CONTEÚDO DO PAGAMENTO
+        ====================================== -->
+
+        <section class="payment-section">
+
+            <div class="container payment-layout">
+
+                <!-- COLUNA PRINCIPAL -->
+                <div class="payment-main">
+
+                    <!-- =====================
+                         RESUMO DA CONSULTA
+                    ====================== -->
+
+                    <section class="payment-card">
+
+                        <div class="payment-card-header">
+
+                            <span class="payment-step-number">
+                                01
+                            </span>
+
+                            <div>
+
+                                <h2>
+                                    Confira seu atendimento
+                                </h2>
+
+                                <p>
+                                    Revise as informações
+                                    selecionadas no agendamento.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="payment-doctor">
+
+                            <img
+                                src="../assets/images/doutora/mauricia-principal.png"
+                                alt="Dra. Maurícia Mbani">
+
+                            <div>
+
+                                <p class="eyebrow">
+                                    ATENDIMENTO MÉDICO
+                                </p>
+
+                                <h3>
+                                    Dra. Maurícia Mbani
+                                </h3>
+
+                                <p>
+                                    Saúde Capilar e Clínica Geral
+                                </p>
+
+                                <span class="payment-doctor-location">
+                                    Porto Alegre - RS
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="payment-details">
+
+                            <div class="payment-detail">
+
+                                <span>
+                                    Atendimento
+                                </span>
+
+                                <strong id="pagamento-servico">
+                                    Saúde Capilar
+                                </strong>
+
+                            </div>
+
+
+                            <div class="payment-detail">
+
+                                <span>
+                                    Modalidade
+                                </span>
+
+                                <strong id="pagamento-modalidade">
+                                    Online
+                                </strong>
+
+                            </div>
+
+
+                            <div class="payment-detail">
+
+                                <span>
+                                    Data da consulta
+                                </span>
+
+                                <strong id="pagamento-data">
+                                    Não selecionada
+                                </strong>
+
+                            </div>
+
+
+                            <div class="payment-detail">
+
+                                <span>
+                                    Horário
+                                </span>
+
+                                <strong id="pagamento-horario">
+                                    Não selecionado
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- =====================
+                         MÉTODO DE PAGAMENTO
+                    ====================== -->
+
+                    <section class="payment-card">
+
+                        <div class="payment-card-header">
+
+                            <span class="payment-step-number">
+                                02
+                            </span>
+
+                            <div>
+
+                                <h2>
+                                    Forma de pagamento
+                                </h2>
+
+                                <p>
+                                    Selecione como deseja
+                                    simular o pagamento.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="payment-methods">
+
+                            <!-- PIX -->
+
+                            <label class="payment-method">
+
+                                <input
+                                    type="radio"
+                                    name="metodo-pagamento"
+                                    value="Pix"
+                                    checked>
+
+                                <span class="payment-method-content">
+
+                                    <span class="method-icon">
+                                        ◈
+                                    </span>
+
+                                    <strong>
+                                        Pix
+                                    </strong>
+
+                                    <small>
+                                        Simulação de pagamento
+                                        instantâneo
+                                    </small>
+
+                                </span>
+
+                            </label>
+
+
+                            <!-- CRÉDITO -->
+
+                            <label class="payment-method">
+
+                                <input
+                                    type="radio"
+                                    name="metodo-pagamento"
+                                    value="Cartão de crédito">
+
+                                <span class="payment-method-content">
+
+                                    <span class="method-icon">
+                                        ▣
+                                    </span>
+
+                                    <strong>
+                                        Cartão de crédito
+                                    </strong>
+
+                                    <small>
+                                        Demonstração visual
+                                        sem dados bancários
+                                    </small>
+
+                                </span>
+
+                            </label>
+
+
+                            <!-- DÉBITO -->
+
+                            <label class="payment-method">
+
+                                <input
+                                    type="radio"
+                                    name="metodo-pagamento"
+                                    value="Cartão de débito">
+
+                                <span class="payment-method-content">
+
+                                    <span class="method-icon">
+                                        ▤
+                                    </span>
+
+                                    <strong>
+                                        Cartão de débito
+                                    </strong>
+
+                                    <small>
+                                        Demonstração visual
+                                        sem cobrança
+                                    </small>
+
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- ÁREA DINÂMICA -->
+
+                        <div
+                            class="payment-method-info"
+                            id="payment-method-info"
+                            aria-live="polite">
+
+                            <div class="method-info-icon">
+                                ◈
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Pagamento via Pix
+                                </h3>
+
+                                <p>
+                                    Na versão definitiva,
+                                    o sistema poderá gerar
+                                    uma cobrança Pix integrada
+                                    a um provedor de pagamentos.
+                                </p>
+
+                                <p>
+                                    Nesta demonstração,
+                                    nenhuma cobrança será criada.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- =====================
+                         CONFIRMAÇÃO
+                    ====================== -->
+
+                    <section class="payment-card">
+
+                        <div class="payment-card-header">
+
+                            <span class="payment-step-number">
+                                03
+                            </span>
+
+                            <div>
+
+                                <h2>
+                                    Confirmação demonstrativa
+                                </h2>
+
+                                <p>
+                                    Revise as informações antes
+                                    de concluir a simulação.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="payment-security">
+
+                            <span class="security-icon">
+                                ✓
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Seus dados estão protegidos
+                                </strong>
+
+                                <p>
+                                    Este protótipo não realiza
+                                    transações nem solicita
+                                    informações de cartão.
+                                    O ambiente é utilizado
+                                    apenas para apresentação.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="payment-actions">
+
+                            <a
+                                href="agendamento.html"
+                                class="btn btn-outline">
+                                ← Voltar ao agendamento
+                            </a>
+
+                            <button
+                                type="button"
+                                class="btn"
+                                id="btn-simular-pagamento">
+
+                                Simular pagamento →
+
+                            </button>
+
+                        </div>
+
+
+                        <p
+                            id="payment-message"
+                            class="payment-message"
+                            role="status"
+                            aria-live="polite">
+                        </p>
+
+                    </section>
+
+                </div>
+
+
+                <!-- =====================================
+                     RESUMO LATERAL
+                ====================================== -->
+
+                <aside class="payment-sidebar">
+
+                    <div class="payment-summary-card">
+
+                        <p class="eyebrow">
+                            SUA CONSULTA
+                        </p>
+
+                        <h2>
+                            Resumo do pagamento
+                        </h2>
+
+
+                        <div class="payment-summary-doctor">
+
+                            <img
+                                src="../assets/images/doutora/mauricia-principal.png"
+                                alt="Dra. Maurícia Mbani">
+
+                            <div>
+
+                                <strong>
+                                    Dra. Maurícia Mbani
+                                </strong>
+
+                                <small>
+                                    Atendimento médico
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="payment-summary-divider"></div>
+
+
+                        <div class="payment-summary-row">
+
+                            <span>Serviço</span>
+
+                            <strong id="resumo-pagamento-servico">
+                                Saúde Capilar
+                            </strong>
+
+                        </div>
+
+
+                        <div class="payment-summary-row">
+
+                            <span>Modalidade</span>
+
+                            <strong id="resumo-pagamento-modalidade">
+                                Online
+                            </strong>
+
+                        </div>
+
+
+                        <div class="payment-summary-row">
+
+                            <span>Data</span>
+
+                            <strong id="resumo-pagamento-data">
+                                Não selecionada
+                            </strong>
+
+                        </div>
+
+
+                        <div class="payment-summary-row">
+
+                            <span>Horário</span>
+
+                            <strong id="resumo-pagamento-horario">
+                                Não selecionado
+                            </strong>
+
+                        </div>
+
+
+                        <div class="payment-summary-divider"></div>
+
+
+                        <div class="payment-total">
+
+                            <span>
+                                Valor ilustrativo
+                            </span>
+
+                            <strong id="payment-total">
+                                R$ 250,00
+                            </strong>
+
+                        </div>
+
+                        <p class="payment-total-note">
+                            Valor totalmente fictício,
+                            utilizado apenas para demonstrar
+                            a interface. Não representa
+                            o preço real da consulta.
+                        </p>
+
+
+                        <div class="payment-summary-notice">
+
+                            <strong>
+                                Demonstração sem cobrança
+                            </strong>
+
+                            <p>
+                                Nenhum valor será debitado,
+                                transferido ou recebido.
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            href="agendamento.html"
+                            class="payment-edit-link">
+
+                            Editar agendamento →
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="payment-help-card">
+
+                        <h3>
+                            Ficou com alguma dúvida?
+                        </h3>
+
+                        <p>
+                            Conheça os serviços da
+                            Dra. Maurícia ou acesse
+                            a página de contato.
+                        </p>
+
+                        <a href="contato.html">
+                            Entrar em contato →
+                        </a>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================
+         RODAPÉ
+    ====================================== -->
+
+    <footer>
+
+        <div class="container footer-inner">
+
+            <div>
+
+                <strong>
+                    Dra. Maurícia Mbani
+                </strong>
+
+                <p>
+                    Medicina com ciência,
+                    atenção e acolhimento.
+                </p>
+
+            </div>
+
+            <div>
+
+                <p>
+                    Porto Alegre - RS
+                </p>
+
+                <p>
+                    Atendimento online e presencial
+                </p>
+
+            </div>
+
+            <div>
+
+                <a href="../index.html">
+                    Voltar ao início
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Dra. Maurícia Mbani —
+                Protótipo demonstrativo
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
