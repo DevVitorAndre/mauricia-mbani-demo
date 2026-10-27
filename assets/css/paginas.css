@@ -1949,3 +1949,2940 @@
     }
 
 }
+
+/* =====================================================
+   DRA. MAURÍCIA MBANI
+   SAÚDE CAPILAR
+
+   ARQUIVO: assets/css/paginas.css
+   ADICIONAR AO FINAL DO ARQUIVO
+
+   Identidade visual:
+   Azul-marinho: #23263A
+   Marfim:       #F5EFE6
+   Cobre:        #B76E4F
+   Verde:        #45594C
+   Dourado:      #C8A66A
+===================================================== */
+
+
+/* =====================================================
+   1. CONFIGURAÇÕES GERAIS DA PÁGINA
+===================================================== */
+
+.capilar-page {
+    overflow: clip;
+    background: #FFFFFF;
+}
+
+.capilar-page h1,
+.capilar-page h2,
+.capilar-page h3 {
+    color: #23263A;
+}
+
+.capilar-page h1,
+.capilar-page h2 {
+    font-family: "Playfair Display", serif;
+}
+
+.capilar-page p {
+    line-height: 1.8;
+}
+
+.capilar-page em {
+    color: #B76E4F;
+    font-weight: 400;
+}
+
+.capilar-page .eyebrow {
+    color: #B76E4F;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+}
+
+
+/* =====================================================
+   2. HERO - APRESENTAÇÃO PRINCIPAL
+===================================================== */
+
+.capilar-hero {
+    position: relative;
+    padding: 85px 0 95px;
+    background: #F5EFE6;
+}
+
+.capilar-hero::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 42%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(200, 166, 106, 0.10),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+.capilar-hero-grid {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.1fr)
+        minmax(0, 0.9fr);
+
+    align-items: center;
+    gap: clamp(35px, 5vw, 85px);
+}
+
+.capilar-hero-content {
+    min-width: 0;
+}
+
+.capilar-hero-content .eyebrow {
+    margin-bottom: 22px;
+}
+
+.capilar-hero h1 {
+    max-width: 680px;
+
+    margin-bottom: 28px;
+
+    font-size: clamp(2.75rem, 5vw, 4.7rem);
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: -0.035em;
+}
+
+.capilar-hero-description {
+    max-width: 590px;
+
+    margin-bottom: 16px;
+
+    font-size: 1rem;
+    color: #64646B;
+}
+
+.capilar-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.capilar-hero-actions .btn {
+    min-height: 52px;
+}
+
+
+/* =====================================================
+   3. DESTAQUES DO HERO
+===================================================== */
+
+.capilar-hero-highlights {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px 20px;
+    margin-top: 36px;
+}
+
+.capilar-highlight {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+.capilar-highlight span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 25px;
+    height: 25px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    background: #E8DED0;
+    color: #B76E4F;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.capilar-highlight p {
+    font-size: 0.76rem;
+    font-weight: 600;
+    line-height: 1.5;
+
+    color: #45594C;
+}
+
+
+/* =====================================================
+   4. FOTO DA MÉDICA
+===================================================== */
+
+.capilar-hero-visual {
+    position: relative;
+    min-width: 0;
+
+    padding: 10px 15px 15px 0;
+}
+
+.capilar-photo-frame {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    min-height: 535px;
+
+    border-radius: 200px 200px 24px 24px;
+
+    background: #DED5CC;
+
+    box-shadow:
+        0 25px 60px rgba(35, 38, 58, 0.12);
+}
+
+.capilar-doctor-photo {
+    display: block;
+
+    width: 100%;
+    height: 535px;
+
+    object-fit: cover;
+    object-position: center 20%;
+}
+
+.capilar-photo-frame::after {
+    content: "";
+
+    position: absolute;
+    inset: 40% 0 0;
+
+    background: linear-gradient(
+        to bottom,
+        transparent 10%,
+        rgba(25, 30, 43, 0.75) 100%
+    );
+
+    pointer-events: none;
+}
+
+.capilar-photo-caption {
+    position: absolute;
+    z-index: 2;
+
+    left: 32px;
+    right: 32px;
+    bottom: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    color: #FFFFFF;
+}
+
+.capilar-photo-caption span {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+
+    color: #EBD1AD;
+}
+
+.capilar-photo-caption strong {
+    max-width: 300px;
+
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.4rem, 2vw, 1.9rem);
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.capilar-decorative-mark {
+    position: absolute;
+    z-index: 3;
+
+    top: 8%;
+    right: -5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+    border: 5px solid #F5EFE6;
+
+    background: #C8A66A;
+    color: #FFFFFF;
+
+    font-size: 2rem;
+
+    box-shadow:
+        0 8px 25px rgba(35, 38, 58, 0.10);
+}
+
+
+/* =====================================================
+   5. INTRODUÇÃO À SAÚDE CAPILAR
+===================================================== */
+
+.capilar-introduction {
+    padding: 100px 0;
+    background: #FFFFFF;
+}
+
+.capilar-intro-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1.1fr);
+
+    align-items: start;
+    gap: clamp(40px, 7vw, 110px);
+}
+
+.capilar-intro-heading .eyebrow {
+    margin-bottom: 18px;
+}
+
+.capilar-intro-heading h2 {
+    max-width: 490px;
+
+    font-size: clamp(2.1rem, 4vw, 3.5rem);
+    font-weight: 500;
+    line-height: 1.22;
+}
+
+.capilar-intro-text {
+    padding-top: 10px;
+}
+
+.capilar-intro-text p {
+    margin-bottom: 20px;
+
+    font-size: 1rem;
+    color: #65656C;
+}
+
+.capilar-intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   6. TÍTULOS DAS SEÇÕES
+===================================================== */
+
+.capilar-section-heading {
+    max-width: 730px;
+
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.capilar-section-heading .eyebrow {
+    margin-bottom: 15px;
+}
+
+.capilar-section-heading h2 {
+    margin-bottom: 20px;
+
+    font-size: clamp(2rem, 4vw, 3.3rem);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.capilar-section-heading > p:last-child {
+    max-width: 660px;
+
+    margin: 0 auto;
+
+    color: #66666B;
+    font-size: 0.96rem;
+}
+
+
+/* =====================================================
+   7. PRINCIPAIS QUEIXAS CAPILARES
+===================================================== */
+
+.capilar-concerns {
+    padding: 105px 0;
+    background: #F9F6F1;
+}
+
+.capilar-concerns-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.capilar-concern-card {
+    position: relative;
+
+    min-width: 0;
+    min-height: 290px;
+
+    padding: 32px 25px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E9E2DA;
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 30px rgba(35, 38, 58, 0.035);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.capilar-concern-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #D9B9A8;
+
+    box-shadow:
+        0 16px 36px rgba(35, 38, 58, 0.08);
+}
+
+.capilar-concern-number {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+
+    color: #D8C6B5;
+
+    font-family: "Playfair Display", serif;
+    font-size: 1.25rem;
+}
+
+.capilar-concern-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 62px;
+    height: 62px;
+
+    margin-bottom: 28px;
+
+    border-radius: 17px;
+
+    background: #F5E8DF;
+    color: #B76E4F;
+
+    font-size: 1.8rem;
+}
+
+.capilar-concern-card h3 {
+    margin-bottom: 14px;
+
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.capilar-concern-card p {
+    color: #696970;
+
+    font-size: 0.87rem;
+    line-height: 1.8;
+}
+
+.capilar-concerns-note {
+    max-width: 700px;
+
+    margin: 32px auto 0;
+
+    color: #77777C;
+
+    text-align: center;
+    font-size: 0.82rem;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   8. ETAPAS DO ATENDIMENTO
+===================================================== */
+
+.capilar-process {
+    padding: 110px 0;
+    background: #FFFFFF;
+}
+
+.capilar-process-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+.capilar-process-step {
+    position: relative;
+
+    min-width: 0;
+
+    padding: 34px 30px 32px;
+
+    border: 1px solid #E9E2DA;
+    border-radius: 20px;
+
+    background: #FAF8F5;
+}
+
+.capilar-process-step::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 30px;
+    right: 30px;
+
+    height: 3px;
+
+    background: #C8A66A;
+
+    border-radius: 0 0 3px 3px;
+}
+
+.capilar-process-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 55px;
+    height: 55px;
+
+    margin-bottom: 26px;
+
+    background: #23263A;
+    color: #FFFFFF;
+
+    border-radius: 50%;
+
+    font-family: "Playfair Display", serif;
+    font-size: 1.2rem;
+}
+
+.capilar-process-step h3 {
+    margin-bottom: 14px;
+
+    font-family: "Playfair Display", serif;
+    font-size: 1.45rem;
+    font-weight: 600;
+}
+
+.capilar-process-step p {
+    color: #68686F;
+
+    font-size: 0.9rem;
+    line-height: 1.85;
+}
+
+
+/* =====================================================
+   9. MODALIDADES DE CONSULTA
+===================================================== */
+
+.capilar-modalities {
+    padding: 105px 0;
+
+    background: #F5EFE6;
+}
+
+.capilar-modalities-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 0.95fr)
+        minmax(0, 1.05fr);
+
+    align-items: center;
+
+    gap: clamp(40px, 6vw, 90px);
+}
+
+.capilar-modalities-content .eyebrow {
+    margin-bottom: 18px;
+}
+
+.capilar-modalities-content h2 {
+    max-width: 530px;
+
+    margin-bottom: 23px;
+
+    font-size: clamp(2.1rem, 4vw, 3.4rem);
+    font-weight: 500;
+    line-height: 1.23;
+}
+
+.capilar-modalities-content > p:not(.eyebrow) {
+    max-width: 530px;
+
+    margin-bottom: 28px;
+
+    color: #66666B;
+    font-size: 0.97rem;
+}
+
+.capilar-modality-cards {
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.capilar-modality-card {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 20px;
+    padding: 27px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E7DDD2;
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(35, 38, 58, 0.045);
+}
+
+.capilar-modality-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    background: #F4E6DB;
+    color: #B76E4F;
+
+    border-radius: 15px;
+
+    font-size: 1.7rem;
+}
+
+.capilar-modality-card > div {
+    min-width: 0;
+}
+
+.capilar-modality-card h3 {
+    margin-bottom: 10px;
+
+    font-family: "Playfair Display", serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+.capilar-modality-card p {
+    color: #68686F;
+
+    font-size: 0.87rem;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   10. PERGUNTAS FREQUENTES
+===================================================== */
+
+.capilar-faq {
+    padding: 110px 0;
+
+    background: #FFFFFF;
+}
+
+.capilar-faq-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 0.75fr)
+        minmax(0, 1.25fr);
+
+    align-items: start;
+
+    gap: clamp(35px, 6vw, 90px);
+}
+
+.capilar-faq-heading {
+    position: sticky;
+    top: 120px;
+}
+
+.capilar-faq-heading .eyebrow {
+    margin-bottom: 18px;
+}
+
+.capilar-faq-heading h2 {
+    margin-bottom: 22px;
+
+    font-size: clamp(2.1rem, 3.8vw, 3.3rem);
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.capilar-faq-heading > p:not(.eyebrow) {
+    color: #68686F;
+
+    font-size: 0.94rem;
+}
+
+
+/* =====================================================
+   11. ACORDEÃO DAS PERGUNTAS
+===================================================== */
+
+.capilar-faq-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.capilar-faq-item {
+    overflow: hidden;
+
+    background: #FAF8F5;
+
+    border: 1px solid #E8E1D9;
+    border-radius: 16px;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.capilar-faq-item:hover {
+    border-color: #D7B5A5;
+}
+
+.capilar-faq-item[open] {
+    background: #FFFFFF;
+    border-color: #B76E4F;
+}
+
+.capilar-faq-item summary {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 23px 25px;
+
+    color: #23263A;
+
+    font-size: 0.94rem;
+    font-weight: 700;
+    line-height: 1.6;
+
+    cursor: pointer;
+    list-style: none;
+}
+
+.capilar-faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.capilar-faq-item summary::after {
+    content: "+";
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    background: #F1E2D7;
+    color: #B76E4F;
+
+    border-radius: 50%;
+
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.capilar-faq-item[open] summary::after {
+    content: "−";
+
+    background: #B76E4F;
+    color: #FFFFFF;
+}
+
+.capilar-faq-item summary:focus-visible {
+    outline: 3px solid #B76E4F;
+    outline-offset: -4px;
+}
+
+.capilar-faq-answer {
+    padding: 0 25px 25px;
+}
+
+.capilar-faq-answer p {
+    padding-top: 18px;
+
+    border-top: 1px solid #EAE3DB;
+
+    color: #68686F;
+    font-size: 0.9rem;
+    line-height: 1.85;
+}
+
+
+/* =====================================================
+   12. CHAMADA FINAL
+===================================================== */
+
+.capilar-final-cta {
+    position: relative;
+    overflow: hidden;
+
+    padding: 95px 0;
+
+    background: #45594C;
+    color: #FFFFFF;
+}
+
+.capilar-final-cta::before {
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    right: -120px;
+    top: -140px;
+
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 0 0 55px rgba(255, 255, 255, 0.025),
+        0 0 0 110px rgba(255, 255, 255, 0.025);
+
+    pointer-events: none;
+}
+
+.capilar-cta-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 780px;
+
+    margin: 0 auto;
+    text-align: center;
+}
+
+.capilar-final-cta .eyebrow {
+    margin-bottom: 18px;
+
+    color: #E8D4AF;
+}
+
+.capilar-final-cta h2 {
+    margin-bottom: 25px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.capilar-final-cta h2 em {
+    color: #E6C69A;
+}
+
+.capilar-final-cta .capilar-cta-content > p:not(.eyebrow) {
+    max-width: 630px;
+
+    margin: 0 auto;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 0.98rem;
+    line-height: 1.9;
+}
+
+.capilar-cta-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 25px;
+
+    margin-top: 33px;
+}
+
+.capilar-cta-actions .btn {
+    min-height: 52px;
+}
+
+.capilar-cta-link {
+    color: #FFFFFF;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.capilar-cta-link:hover {
+    color: #E6C69A;
+}
+
+
+/* =====================================================
+   13. AVISO MÉDICO FINAL
+===================================================== */
+
+.capilar-medical-note {
+    padding: 28px 0;
+
+    background: #F9F6F1;
+
+    border-bottom: 1px solid #E8E1D9;
+}
+
+.capilar-medical-note p {
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    color: #74747A;
+
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 1.85;
+}
+
+.capilar-medical-note strong {
+    color: #45594C;
+}
+
+
+/* =====================================================
+   14. TELAS INTERMEDIÁRIAS
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .capilar-hero {
+        padding: 70px 0;
+    }
+
+    .capilar-hero-grid {
+        gap: 35px;
+    }
+
+    .capilar-hero h1 {
+        font-size: clamp(2.5rem, 4.6vw, 4rem);
+    }
+
+    .capilar-photo-frame {
+        min-height: 460px;
+    }
+
+    .capilar-doctor-photo {
+        height: 460px;
+    }
+
+    .capilar-concerns-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .capilar-concern-card {
+        min-height: 250px;
+    }
+
+}
+
+
+/* =====================================================
+   15. TABLETS
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .capilar-hero-grid,
+    .capilar-intro-grid,
+    .capilar-modalities-grid,
+    .capilar-faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .capilar-hero-grid {
+        gap: 48px;
+    }
+
+    .capilar-hero-content {
+        max-width: 700px;
+    }
+
+    .capilar-hero-visual {
+        max-width: 570px;
+        width: 100%;
+
+        margin: 0 auto;
+    }
+
+    .capilar-photo-frame {
+        min-height: 500px;
+    }
+
+    .capilar-doctor-photo {
+        height: 500px;
+    }
+
+    .capilar-intro-grid,
+    .capilar-modalities-grid,
+    .capilar-faq-grid {
+        gap: 28px;
+    }
+
+    .capilar-process-grid {
+        gap: 15px;
+    }
+
+    .capilar-process-step {
+        padding: 27px 22px;
+    }
+
+    .capilar-faq-heading {
+        position: static;
+        max-width: 650px;
+    }
+
+    .capilar-faq-list {
+        width: 100%;
+    }
+
+}
+
+
+/* =====================================================
+   16. CELULARES
+===================================================== */
+
+@media (max-width: 767px) {
+
+    /* HERO */
+
+    .capilar-hero {
+        padding: 50px 0 60px;
+    }
+
+    .capilar-hero-grid {
+        gap: 38px;
+    }
+
+    .capilar-hero h1 {
+        font-size: clamp(2.35rem, 9vw, 3.4rem);
+        line-height: 1.16;
+    }
+
+    .capilar-hero-description {
+        font-size: 0.93rem;
+    }
+
+    .capilar-hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .capilar-hero-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .capilar-hero-highlights {
+        gap: 14px;
+        margin-top: 28px;
+    }
+
+    .capilar-highlight {
+        width: 100%;
+    }
+
+
+    /* FOTO */
+
+    .capilar-hero-visual {
+        max-width: 450px;
+        padding: 0 8px 8px 0;
+    }
+
+    .capilar-photo-frame {
+        min-height: 400px;
+        border-radius: 150px 150px 20px 20px;
+    }
+
+    .capilar-doctor-photo {
+        height: 400px;
+    }
+
+    .capilar-photo-caption {
+        left: 23px;
+        right: 23px;
+        bottom: 24px;
+    }
+
+    .capilar-photo-caption strong {
+        font-size: 1.45rem;
+    }
+
+    .capilar-decorative-mark {
+        width: 50px;
+        height: 50px;
+
+        right: -4px;
+
+        font-size: 1.5rem;
+        border-width: 4px;
+    }
+
+
+    /* INTRODUÇÃO */
+
+    .capilar-introduction {
+        padding: 70px 0;
+    }
+
+    .capilar-intro-heading h2 {
+        font-size: 2.25rem;
+    }
+
+    .capilar-intro-text {
+        padding-top: 0;
+    }
+
+    .capilar-intro-text p {
+        font-size: 0.92rem;
+    }
+
+
+    /* TÍTULOS */
+
+    .capilar-section-heading {
+        margin-bottom: 35px;
+    }
+
+    .capilar-section-heading h2 {
+        font-size: 2.2rem;
+    }
+
+    .capilar-section-heading > p:last-child {
+        font-size: 0.9rem;
+    }
+
+
+    /* QUEIXAS */
+
+    .capilar-concerns {
+        padding: 75px 0;
+    }
+
+    .capilar-concerns-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .capilar-concern-card {
+        min-height: auto;
+        padding: 27px 23px;
+    }
+
+    .capilar-concern-icon {
+        width: 55px;
+        height: 55px;
+
+        margin-bottom: 20px;
+    }
+
+    .capilar-concern-card h3 {
+        font-size: 1.3rem;
+    }
+
+
+    /* PROCESSO */
+
+    .capilar-process {
+        padding: 75px 0;
+    }
+
+    .capilar-process-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .capilar-process-step {
+        padding: 28px 24px;
+    }
+
+
+    /* MODALIDADES */
+
+    .capilar-modalities {
+        padding: 75px 0;
+    }
+
+    .capilar-modalities-content h2 {
+        font-size: 2.3rem;
+    }
+
+    .capilar-modalities-content .btn {
+        width: 100%;
+    }
+
+    .capilar-modality-card {
+        padding: 22px 18px;
+        gap: 15px;
+    }
+
+    .capilar-modality-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.35rem;
+    }
+
+    .capilar-modality-card h3 {
+        font-size: 1.2rem;
+    }
+
+
+    /* FAQ */
+
+    .capilar-faq {
+        padding: 75px 0;
+    }
+
+    .capilar-faq-heading h2 {
+        font-size: 2.2rem;
+    }
+
+    .capilar-faq-item summary {
+        padding: 20px 18px;
+        font-size: 0.87rem;
+    }
+
+    .capilar-faq-answer {
+        padding: 0 18px 20px;
+    }
+
+    .capilar-faq-answer p {
+        font-size: 0.85rem;
+    }
+
+
+    /* CHAMADA FINAL */
+
+    .capilar-final-cta {
+        padding: 75px 0;
+    }
+
+    .capilar-final-cta h2 {
+        font-size: 2.35rem;
+    }
+
+    .capilar-cta-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 22px;
+    }
+
+    .capilar-cta-actions .btn {
+        width: 100%;
+    }
+
+    .capilar-cta-link {
+        text-align: center;
+    }
+
+
+    /* AVISO FINAL */
+
+    .capilar-medical-note {
+        padding: 25px 0;
+    }
+
+    .capilar-medical-note p {
+        font-size: 0.75rem;
+    }
+
+}
+
+
+/* =====================================================
+   17. CELULARES PEQUENOS
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .capilar-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .capilar-photo-frame {
+        min-height: 355px;
+    }
+
+    .capilar-doctor-photo {
+        height: 355px;
+    }
+
+    .capilar-photo-caption strong {
+        font-size: 1.25rem;
+    }
+
+    .capilar-photo-caption span {
+        font-size: 0.6rem;
+    }
+
+    .capilar-intro-heading h2,
+    .capilar-section-heading h2,
+    .capilar-modalities-content h2,
+    .capilar-faq-heading h2 {
+        font-size: 2rem;
+    }
+
+    .capilar-modality-card {
+        flex-direction: column;
+    }
+
+    .capilar-final-cta h2 {
+        font-size: 2.1rem;
+    }
+
+}
+
+
+/* =====================================================
+   18. ACESSIBILIDADE
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .capilar-concern-card,
+    .capilar-faq-item {
+        transition: none;
+    }
+
+    .capilar-concern-card:hover {
+        transform: none;
+    }
+
+}
+
+/* =====================================================
+   DRA. MAURÍCIA MBANI
+   PÁGINA DE CLÍNICA GERAL
+
+   ARQUIVO: assets/css/paginas.css
+   ADICIONAR AO FINAL DO ARQUIVO
+
+   IDENTIDADE VISUAL:
+   Azul-marinho: #23263A
+   Marfim:       #F5EFE6
+   Cobre:        #B76E4F
+   Verde:        #45594C
+   Dourado:      #C8A66A
+===================================================== */
+
+
+/* =====================================================
+   1. CONFIGURAÇÕES GERAIS
+===================================================== */
+
+.geral-page {
+    overflow: clip;
+    background: #FFFFFF;
+}
+
+.geral-page h1,
+.geral-page h2,
+.geral-page h3 {
+    color: #23263A;
+}
+
+.geral-page h1,
+.geral-page h2 {
+    font-family: "Playfair Display", serif;
+}
+
+.geral-page p {
+    line-height: 1.8;
+}
+
+.geral-page em {
+    color: #B76E4F;
+    font-weight: 400;
+}
+
+.geral-page .eyebrow {
+    color: #B76E4F;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+}
+
+
+/* =====================================================
+   2. HERO - APRESENTAÇÃO
+===================================================== */
+
+.geral-hero {
+    position: relative;
+
+    padding: 85px 0 95px;
+
+    background: #F5EFE6;
+}
+
+.geral-hero::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 43%;
+    height: 100%;
+
+    background: linear-gradient(
+        145deg,
+        rgba(69, 89, 76, 0.08),
+        transparent 75%
+    );
+
+    pointer-events: none;
+}
+
+.geral-hero-grid {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.1fr)
+        minmax(0, 0.9fr);
+
+    align-items: center;
+
+    gap: clamp(35px, 5vw, 85px);
+}
+
+.geral-hero-content {
+    min-width: 0;
+}
+
+.geral-hero-content .eyebrow {
+    margin-bottom: 23px;
+}
+
+.geral-hero h1 {
+    max-width: 690px;
+
+    margin-bottom: 28px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(2.75rem, 5vw, 4.7rem);
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: -0.035em;
+
+    color: #23263A;
+}
+
+.geral-hero-description {
+    max-width: 585px;
+
+    margin-bottom: 16px;
+
+    color: #64646B;
+
+    font-size: 1rem;
+    line-height: 1.85;
+}
+
+
+/* =====================================================
+   3. BOTÕES DO HERO
+===================================================== */
+
+.geral-hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 30px;
+}
+
+.geral-hero-actions .btn {
+    min-height: 52px;
+}
+
+
+/* =====================================================
+   4. DESTAQUES DO HERO
+===================================================== */
+
+.geral-hero-highlights {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px 20px;
+
+    margin-top: 38px;
+}
+
+.geral-highlight {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+.geral-highlight span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 26px;
+    height: 26px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #E3E8DF;
+    color: #45594C;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.geral-highlight p {
+    color: #45594C;
+
+    font-size: 0.76rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   5. FOTO DA DRA. MAURÍCIA
+===================================================== */
+
+.geral-hero-visual {
+    position: relative;
+
+    min-width: 0;
+
+    padding: 10px 15px 15px 0;
+}
+
+.geral-photo-frame {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    min-height: 535px;
+
+    background: #DBD5CD;
+
+    border-radius:
+        200px 200px 24px 24px;
+
+    box-shadow:
+        0 25px 60px
+        rgba(35, 38, 58, 0.12);
+}
+
+.geral-doctor-photo {
+    display: block;
+
+    width: 100%;
+    height: 535px;
+
+    object-fit: cover;
+    object-position: center 20%;
+}
+
+.geral-photo-frame::after {
+    content: "";
+
+    position: absolute;
+    inset: 40% 0 0;
+
+    background: linear-gradient(
+        to bottom,
+        transparent 10%,
+        rgba(25, 30, 43, 0.76) 100%
+    );
+
+    pointer-events: none;
+}
+
+.geral-photo-caption {
+    position: absolute;
+    z-index: 2;
+
+    left: 32px;
+    right: 32px;
+    bottom: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    color: #FFFFFF;
+}
+
+.geral-photo-caption span {
+    color: #E8D4AF;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+.geral-photo-caption strong {
+    max-width: 320px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(1.4rem, 2vw, 1.9rem);
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.geral-decorative-mark {
+    position: absolute;
+    z-index: 3;
+
+    top: 8%;
+    right: -5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 65px;
+    height: 65px;
+
+    border: 5px solid #F5EFE6;
+    border-radius: 50%;
+
+    background: #45594C;
+    color: #FFFFFF;
+
+    font-size: 2rem;
+
+    box-shadow:
+        0 8px 25px rgba(35, 38, 58, 0.10);
+}
+
+
+/* =====================================================
+   6. INTRODUÇÃO À CLÍNICA GERAL
+===================================================== */
+
+.geral-introduction {
+    padding: 100px 0;
+
+    background: #FFFFFF;
+}
+
+.geral-intro-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1.1fr);
+
+    align-items: start;
+
+    gap: clamp(40px, 7vw, 110px);
+}
+
+.geral-intro-heading .eyebrow {
+    margin-bottom: 18px;
+}
+
+.geral-intro-heading h2 {
+    max-width: 500px;
+
+    font-size: clamp(2.1rem, 4vw, 3.5rem);
+    font-weight: 500;
+    line-height: 1.22;
+}
+
+.geral-intro-text {
+    padding-top: 10px;
+}
+
+.geral-intro-text p {
+    margin-bottom: 20px;
+
+    color: #65656C;
+
+    font-size: 1rem;
+    line-height: 1.85;
+}
+
+.geral-intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   7. TÍTULOS DAS SEÇÕES
+===================================================== */
+
+.geral-section-heading {
+    max-width: 760px;
+
+    margin: 0 auto 48px;
+
+    text-align: center;
+}
+
+.geral-section-heading .eyebrow {
+    margin-bottom: 15px;
+}
+
+.geral-section-heading h2 {
+    margin-bottom: 20px;
+
+    font-size: clamp(2rem, 4vw, 3.3rem);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.geral-section-heading > p:last-child {
+    max-width: 660px;
+
+    margin: 0 auto;
+
+    color: #66666B;
+    font-size: 0.96rem;
+}
+
+
+/* =====================================================
+   8. CARTÕES DE ATENDIMENTO
+===================================================== */
+
+.geral-care {
+    padding: 105px 0;
+
+    background: #F9F6F1;
+}
+
+.geral-care-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.geral-care-card {
+    position: relative;
+
+    min-width: 0;
+    min-height: 290px;
+
+    padding: 32px 25px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E9E2DA;
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 30px rgba(35, 38, 58, 0.035);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.geral-care-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #B8C9BB;
+
+    box-shadow:
+        0 16px 36px
+        rgba(35, 38, 58, 0.08);
+}
+
+.geral-care-number {
+    position: absolute;
+
+    top: 24px;
+    right: 24px;
+
+    color: #CCD5CB;
+
+    font-family: "Playfair Display", serif;
+    font-size: 1.25rem;
+}
+
+.geral-care-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 62px;
+    height: 62px;
+
+    margin-bottom: 28px;
+
+    border-radius: 17px;
+
+    background: #E7EFE5;
+    color: #45594C;
+
+    font-size: 1.8rem;
+}
+
+.geral-care-card h3 {
+    margin-bottom: 14px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.geral-care-card p {
+    color: #696970;
+
+    font-size: 0.87rem;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   9. PROPOSTA DE CUIDADO
+===================================================== */
+
+.geral-care-values {
+    padding: 110px 0;
+
+    background: #FFFFFF;
+}
+
+.geral-values-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.95fr)
+        minmax(0, 1.05fr);
+
+    align-items: center;
+
+    gap: clamp(40px, 6vw, 95px);
+}
+
+.geral-values-intro .eyebrow {
+    margin-bottom: 18px;
+}
+
+.geral-values-intro h2 {
+    max-width: 560px;
+
+    margin-bottom: 24px;
+
+    font-size: clamp(2.15rem, 4vw, 3.5rem);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.geral-values-intro > p:not(.eyebrow) {
+    max-width: 540px;
+
+    margin-bottom: 30px;
+
+    color: #66666B;
+
+    font-size: 0.98rem;
+}
+
+.geral-values-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+/* =====================================================
+   10. ITENS DA PROPOSTA DE CUIDADO
+===================================================== */
+
+.geral-value-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 22px;
+
+    padding: 25px 27px;
+
+    background: #FAF8F5;
+
+    border: 1px solid #E9E2DA;
+    border-radius: 18px;
+}
+
+.geral-value-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 49px;
+    height: 49px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #45594C;
+    color: #FFFFFF;
+
+    font-family: "Playfair Display", serif;
+    font-size: 1.05rem;
+}
+
+.geral-value-item > div {
+    min-width: 0;
+}
+
+.geral-value-item h3 {
+    margin-bottom: 10px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.geral-value-item p {
+    color: #68686F;
+
+    font-size: 0.89rem;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   11. COMO FUNCIONA A CONSULTA
+===================================================== */
+
+.geral-process {
+    padding: 110px 0;
+
+    background: #F5EFE6;
+}
+
+.geral-process-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+.geral-process-step {
+    position: relative;
+
+    min-width: 0;
+
+    padding: 35px 30px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E9E2DA;
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(35, 38, 58, 0.035);
+}
+
+.geral-process-step::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 30px;
+    right: 30px;
+
+    height: 3px;
+
+    background: #C8A66A;
+
+    border-radius: 0 0 3px 3px;
+}
+
+.geral-process-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 26px;
+
+    background: #23263A;
+    color: #FFFFFF;
+
+    border-radius: 50%;
+
+    font-family: "Playfair Display", serif;
+    font-size: 1.2rem;
+}
+
+.geral-process-step h3 {
+    margin-bottom: 14px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.45rem;
+    font-weight: 600;
+}
+
+.geral-process-step p {
+    color: #68686F;
+
+    font-size: 0.9rem;
+    line-height: 1.85;
+}
+
+
+/* =====================================================
+   12. MODALIDADES DE CONSULTA
+===================================================== */
+
+.geral-modalities {
+    padding: 105px 0;
+
+    background: #FFFFFF;
+}
+
+.geral-modalities-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.95fr)
+        minmax(0, 1.05fr);
+
+    align-items: center;
+
+    gap: clamp(40px, 6vw, 90px);
+}
+
+.geral-modalities-content .eyebrow {
+    margin-bottom: 18px;
+}
+
+.geral-modalities-content h2 {
+    max-width: 540px;
+
+    margin-bottom: 23px;
+
+    font-size: clamp(2.1rem, 4vw, 3.4rem);
+    font-weight: 500;
+    line-height: 1.23;
+}
+
+.geral-modalities-content > p:not(.eyebrow) {
+    max-width: 530px;
+
+    margin-bottom: 28px;
+
+    color: #66666B;
+
+    font-size: 0.97rem;
+}
+
+.geral-modality-cards {
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.geral-modality-card {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 20px;
+    padding: 27px;
+
+    background: #FAF8F5;
+
+    border: 1px solid #E7DDD2;
+    border-radius: 20px;
+}
+
+.geral-modality-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    border-radius: 15px;
+
+    background: #E7EFE5;
+    color: #45594C;
+
+    font-size: 1.7rem;
+}
+
+.geral-modality-card > div {
+    min-width: 0;
+}
+
+.geral-modality-card h3 {
+    margin-bottom: 10px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+.geral-modality-card p {
+    margin-bottom: 12px;
+
+    color: #68686F;
+
+    font-size: 0.87rem;
+    line-height: 1.8;
+}
+
+.geral-modality-card a {
+    display: inline-block;
+
+    color: #B76E4F;
+
+    font-size: 0.86rem;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.geral-modality-card a:hover {
+    color: #95563D;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+
+/* =====================================================
+   13. PERGUNTAS FREQUENTES
+===================================================== */
+
+.geral-faq {
+    padding: 110px 0;
+
+    background: #F9F6F1;
+}
+
+.geral-faq-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.75fr)
+        minmax(0, 1.25fr);
+
+    align-items: start;
+
+    gap: clamp(35px, 6vw, 90px);
+}
+
+.geral-faq-heading {
+    position: sticky;
+    top: 120px;
+}
+
+.geral-faq-heading .eyebrow {
+    margin-bottom: 18px;
+}
+
+.geral-faq-heading h2 {
+    margin-bottom: 22px;
+
+    font-size: clamp(2.1rem, 3.8vw, 3.3rem);
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.geral-faq-heading > p:not(.eyebrow) {
+    color: #68686F;
+
+    font-size: 0.94rem;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   14. ACORDEÃO DO FAQ
+===================================================== */
+
+.geral-faq-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.geral-faq-item {
+    overflow: hidden;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E8E1D9;
+    border-radius: 16px;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.geral-faq-item:hover {
+    border-color: #B8C9BB;
+}
+
+.geral-faq-item[open] {
+    border-color: #45594C;
+
+    background: #FFFFFF;
+}
+
+.geral-faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 23px 25px;
+
+    color: #23263A;
+
+    font-size: 0.94rem;
+    font-weight: 700;
+    line-height: 1.6;
+
+    cursor: pointer;
+    list-style: none;
+}
+
+.geral-faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.geral-faq-item summary::after {
+    content: "+";
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #E7EFE5;
+    color: #45594C;
+
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.geral-faq-item[open] summary::after {
+    content: "−";
+
+    background: #45594C;
+    color: #FFFFFF;
+}
+
+.geral-faq-item summary:focus-visible {
+    outline: 3px solid #45594C;
+    outline-offset: -4px;
+}
+
+.geral-faq-answer {
+    padding: 0 25px 25px;
+}
+
+.geral-faq-answer p {
+    padding-top: 18px;
+
+    border-top: 1px solid #EAE3DB;
+
+    color: #68686F;
+
+    font-size: 0.9rem;
+    line-height: 1.85;
+}
+
+
+/* =====================================================
+   15. CHAMADA FINAL
+===================================================== */
+
+.geral-final-cta {
+    position: relative;
+    overflow: hidden;
+
+    padding: 95px 0;
+
+    background: #23263A;
+    color: #FFFFFF;
+}
+
+.geral-final-cta::before {
+    content: "";
+
+    position: absolute;
+
+    right: -130px;
+    top: -140px;
+
+    width: 390px;
+    height: 390px;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.12);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 55px
+            rgba(255, 255, 255, 0.025),
+        0 0 0 110px
+            rgba(255, 255, 255, 0.025);
+
+    pointer-events: none;
+}
+
+.geral-cta-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 780px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.geral-final-cta .eyebrow {
+    margin-bottom: 18px;
+
+    color: #E8D4AF;
+}
+
+.geral-final-cta h2 {
+    margin-bottom: 25px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.geral-final-cta h2 em {
+    color: #E6C69A;
+}
+
+.geral-final-cta
+.geral-cta-content > p:not(.eyebrow) {
+    max-width: 630px;
+
+    margin: 0 auto;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 0.98rem;
+    line-height: 1.9;
+}
+
+.geral-cta-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin-top: 33px;
+}
+
+.geral-cta-actions .btn {
+    min-height: 52px;
+}
+
+.geral-cta-link {
+    color: #FFFFFF;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.geral-cta-link:hover {
+    color: #E6C69A;
+}
+
+
+/* =====================================================
+   16. AVISO MÉDICO
+===================================================== */
+
+.geral-medical-note {
+    padding: 28px 0;
+
+    background: #F9F6F1;
+
+    border-bottom: 1px solid #E8E1D9;
+}
+
+.geral-medical-note p {
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    color: #74747A;
+
+    text-align: center;
+
+    font-size: 0.8rem;
+    line-height: 1.85;
+}
+
+.geral-medical-note strong {
+    color: #45594C;
+}
+
+
+/* =====================================================
+   17. NOTEBOOKS E TELAS INTERMEDIÁRIAS
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .geral-hero {
+        padding: 70px 0;
+    }
+
+    .geral-hero-grid {
+        gap: 35px;
+    }
+
+    .geral-hero h1 {
+        font-size: clamp(2.5rem, 4.6vw, 4rem);
+    }
+
+    .geral-photo-frame {
+        min-height: 460px;
+    }
+
+    .geral-doctor-photo {
+        height: 460px;
+    }
+
+    .geral-care-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .geral-care-card {
+        min-height: 250px;
+    }
+
+}
+
+
+/* =====================================================
+   18. TABLETS
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .geral-hero-grid,
+    .geral-intro-grid,
+    .geral-values-grid,
+    .geral-modalities-grid,
+    .geral-faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .geral-hero-grid {
+        gap: 48px;
+    }
+
+    .geral-hero-content {
+        max-width: 700px;
+    }
+
+    .geral-hero-visual {
+        width: 100%;
+        max-width: 570px;
+
+        margin: 0 auto;
+    }
+
+    .geral-photo-frame {
+        min-height: 500px;
+    }
+
+    .geral-doctor-photo {
+        height: 500px;
+    }
+
+    .geral-intro-grid,
+    .geral-values-grid,
+    .geral-modalities-grid,
+    .geral-faq-grid {
+        gap: 30px;
+    }
+
+    .geral-process-grid {
+        gap: 15px;
+    }
+
+    .geral-process-step {
+        padding: 27px 22px;
+    }
+
+    .geral-faq-heading {
+        position: static;
+
+        max-width: 650px;
+    }
+
+    .geral-faq-list {
+        width: 100%;
+    }
+
+}
+
+
+/* =====================================================
+   19. CELULARES
+===================================================== */
+
+@media (max-width: 767px) {
+
+    /* HERO */
+
+    .geral-hero {
+        padding: 50px 0 60px;
+    }
+
+    .geral-hero-grid {
+        gap: 38px;
+    }
+
+    .geral-hero h1 {
+        font-size: clamp(2.35rem, 9vw, 3.4rem);
+        line-height: 1.16;
+    }
+
+    .geral-hero-description {
+        font-size: 0.93rem;
+    }
+
+    .geral-hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .geral-hero-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .geral-hero-highlights {
+        gap: 14px;
+        margin-top: 28px;
+    }
+
+    .geral-highlight {
+        width: 100%;
+    }
+
+
+    /* FOTO */
+
+    .geral-hero-visual {
+        max-width: 450px;
+
+        padding: 0 8px 8px 0;
+    }
+
+    .geral-photo-frame {
+        min-height: 400px;
+
+        border-radius:
+            150px 150px 20px 20px;
+    }
+
+    .geral-doctor-photo {
+        height: 400px;
+    }
+
+    .geral-photo-caption {
+        left: 23px;
+        right: 23px;
+        bottom: 24px;
+    }
+
+    .geral-photo-caption strong {
+        font-size: 1.45rem;
+    }
+
+    .geral-decorative-mark {
+        width: 50px;
+        height: 50px;
+
+        right: -4px;
+
+        border-width: 4px;
+
+        font-size: 1.5rem;
+    }
+
+
+    /* INTRODUÇÃO */
+
+    .geral-introduction {
+        padding: 70px 0;
+    }
+
+    .geral-intro-heading h2 {
+        font-size: 2.25rem;
+    }
+
+    .geral-intro-text {
+        padding-top: 0;
+    }
+
+    .geral-intro-text p {
+        font-size: 0.92rem;
+    }
+
+
+    /* TÍTULOS */
+
+    .geral-section-heading {
+        margin-bottom: 35px;
+    }
+
+    .geral-section-heading h2 {
+        font-size: 2.2rem;
+    }
+
+    .geral-section-heading > p:last-child {
+        font-size: 0.9rem;
+    }
+
+
+    /* CARTÕES DE CUIDADO */
+
+    .geral-care {
+        padding: 75px 0;
+    }
+
+    .geral-care-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .geral-care-card {
+        min-height: auto;
+
+        padding: 27px 23px;
+    }
+
+    .geral-care-icon {
+        width: 55px;
+        height: 55px;
+
+        margin-bottom: 20px;
+    }
+
+    .geral-care-card h3 {
+        font-size: 1.3rem;
+    }
+
+
+    /* PROPOSTA DE CUIDADO */
+
+    .geral-care-values {
+        padding: 75px 0;
+    }
+
+    .geral-values-intro h2 {
+        font-size: 2.3rem;
+    }
+
+    .geral-values-intro .btn {
+        width: 100%;
+    }
+
+    .geral-value-item {
+        padding: 23px 18px;
+        gap: 14px;
+    }
+
+    .geral-value-icon {
+        width: 43px;
+        height: 43px;
+    }
+
+    .geral-value-item h3 {
+        font-size: 1.2rem;
+    }
+
+
+    /* ETAPAS DA CONSULTA */
+
+    .geral-process {
+        padding: 75px 0;
+    }
+
+    .geral-process-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .geral-process-step {
+        padding: 28px 24px;
+    }
+
+
+    /* MODALIDADES */
+
+    .geral-modalities {
+        padding: 75px 0;
+    }
+
+    .geral-modalities-content h2 {
+        font-size: 2.3rem;
+    }
+
+    .geral-modalities-content .btn {
+        width: 100%;
+    }
+
+    .geral-modality-card {
+        padding: 22px 18px;
+        gap: 15px;
+    }
+
+    .geral-modality-icon {
+        width: 45px;
+        height: 45px;
+
+        font-size: 1.35rem;
+    }
+
+    .geral-modality-card h3 {
+        font-size: 1.2rem;
+    }
+
+
+    /* PERGUNTAS FREQUENTES */
+
+    .geral-faq {
+        padding: 75px 0;
+    }
+
+    .geral-faq-heading h2 {
+        font-size: 2.2rem;
+    }
+
+    .geral-faq-item summary {
+        padding: 20px 18px;
+        font-size: 0.87rem;
+    }
+
+    .geral-faq-answer {
+        padding: 0 18px 20px;
+    }
+
+    .geral-faq-answer p {
+        font-size: 0.85rem;
+    }
+
+
+    /* CHAMADA FINAL */
+
+    .geral-final-cta {
+        padding: 75px 0;
+    }
+
+    .geral-final-cta h2 {
+        font-size: 2.35rem;
+    }
+
+    .geral-cta-actions {
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 22px;
+    }
+
+    .geral-cta-actions .btn {
+        width: 100%;
+    }
+
+    .geral-cta-link {
+        text-align: center;
+    }
+
+
+    /* AVISO MÉDICO */
+
+    .geral-medical-note {
+        padding: 25px 0;
+    }
+
+    .geral-medical-note p {
+        font-size: 0.75rem;
+    }
+
+}
+
+
+/* =====================================================
+   20. CELULARES MENORES
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .geral-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .geral-photo-frame {
+        min-height: 355px;
+    }
+
+    .geral-doctor-photo {
+        height: 355px;
+    }
+
+    .geral-photo-caption strong {
+        font-size: 1.25rem;
+    }
+
+    .geral-photo-caption span {
+        font-size: 0.6rem;
+    }
+
+    .geral-intro-heading h2,
+    .geral-section-heading h2,
+    .geral-values-intro h2,
+    .geral-modalities-content h2,
+    .geral-faq-heading h2 {
+        font-size: 2rem;
+    }
+
+    .geral-modality-card {
+        flex-direction: column;
+    }
+
+    .geral-final-cta h2 {
+        font-size: 2.1rem;
+    }
+
+}
+
+
+/* =====================================================
+   21. ACESSIBILIDADE
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .geral-care-card,
+    .geral-faq-item {
+        transition: none;
+    }
+
+    .geral-care-card:hover {
+        transform: none;
+    }
+
+}
+
