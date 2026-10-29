@@ -1,0 +1,1831 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Financeiro administrativo demonstrativo da Dra. Maurícia Mbani.">
+
+    <meta
+        name="robots"
+        content="noindex, nofollow">
+
+    <title>
+        Financeiro | Dra. Maurícia Mbani
+    </title>
+
+    <!-- FONTES -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS DO PROJETO -->
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/variables.css">
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/global.css">
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/components.css">
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/admin.css">
+
+    <!-- JAVASCRIPT -->
+
+    <script
+        src="../assets/js/dashboard.js"
+        defer>
+    </script>
+
+    <script
+        src="../assets/js/financeiro.js"
+        defer>
+    </script>
+
+</head>
+
+
+<body class="admin-dashboard-body admin-finance-page">
+
+    <!-- ======================================
+         AVISO DE DEMONSTRAÇÃO
+    ======================================= -->
+
+    <div class="admin-demo-strip">
+        ✦ PAINEL DEMONSTRATIVO — VALORES FICTÍCIOS ✦
+    </div>
+
+
+    <div class="admin-app">
+
+        <!-- ======================================
+             1. MENU ADMINISTRATIVO
+        ======================================= -->
+
+        <aside
+            class="admin-sidebar"
+            id="admin-sidebar"
+            aria-label="Menu administrativo">
+
+            <!-- MARCA -->
+
+            <div class="admin-sidebar-brand">
+
+                <a href="dashboard.html">
+
+                    <img
+                        src="../assets/images/logo/logo-principal.png"
+                        alt="Logotipo da Dra. Maurícia Mbani">
+
+                    <span>
+
+                        <strong>
+                            Dra. Maurícia Mbani
+                        </strong>
+
+                        <small>
+                            PAINEL ADMINISTRATIVO
+                        </small>
+
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <!-- PERFIL FICTÍCIO -->
+
+            <div class="admin-sidebar-profile">
+
+                <div
+                    class="admin-profile-avatar"
+                    aria-hidden="true">
+                    DM
+                </div>
+
+                <div class="admin-profile-info">
+
+                    <strong>
+                        Usuário Demo
+                    </strong>
+
+                    <small>
+                        Administrador demonstrativo
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- NAVEGAÇÃO -->
+
+            <nav
+                class="admin-sidebar-nav"
+                aria-label="Seções do painel">
+
+                <p class="admin-nav-label">
+                    GERENCIAMENTO
+                </p>
+
+
+                <a
+                    href="dashboard.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ◫
+                    </span>
+
+                    Dashboard
+
+                </a>
+
+
+                <a
+                    href="agenda.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ◷
+                    </span>
+
+                    Agenda
+
+                </a>
+
+
+                <a
+                    href="pacientes.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ♙
+                    </span>
+
+                    Pacientes
+
+                </a>
+
+
+                <a
+                    href="financeiro.html"
+                    class="admin-nav-link is-active"
+                    aria-current="page">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ◈
+                    </span>
+
+                    Financeiro
+
+                </a>
+
+
+                <p class="admin-nav-label">
+                    ADMINISTRAÇÃO
+                </p>
+
+
+                <a
+                    href="servicos.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ♡
+                    </span>
+
+                    Serviços
+
+                </a>
+
+
+                <a
+                    href="relatorios.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ▤
+                    </span>
+
+                    Relatórios
+
+                </a>
+
+
+                <a
+                    href="configuracoes.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ⚙
+                    </span>
+
+                    Configurações
+
+                </a>
+
+            </nav>
+
+
+            <!-- RODAPÉ DO MENU -->
+
+            <div class="admin-sidebar-bottom">
+
+                <div class="admin-sidebar-demo-note">
+
+                    <strong>
+                        Ambiente de demonstração
+                    </strong>
+
+                    <p>
+                        Nenhuma cobrança ou transação
+                        financeira real é processada.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="login.html"
+                    class="admin-logout-link">
+
+                    <span aria-hidden="true">
+                        ↩
+                    </span>
+
+                    Voltar ao login
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ======================================
+             2. ÁREA PRINCIPAL
+        ======================================= -->
+
+        <div class="admin-main-area">
+
+
+            <!-- CABEÇALHO -->
+
+            <header class="admin-topbar">
+
+                <div class="admin-topbar-left">
+
+                    <button
+                        type="button"
+                        id="admin-menu-toggle"
+                        class="admin-menu-toggle"
+                        aria-label="Abrir menu administrativo"
+                        aria-controls="admin-sidebar"
+                        aria-expanded="false">
+                        ☰
+                    </button>
+
+                    <div>
+
+                        <span class="admin-topbar-subtitle">
+                            GERENCIAMENTO
+                        </span>
+
+                        <strong>
+                            Controle Financeiro
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-topbar-right">
+
+                    <span class="admin-topbar-demo">
+                        ● Modo demonstração
+                    </span>
+
+                    <div class="admin-topbar-avatar">
+                        DM
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- FUNDO DO MENU MOBILE -->
+
+            <button
+                type="button"
+                id="admin-sidebar-overlay"
+                class="admin-sidebar-overlay"
+                aria-label="Fechar menu administrativo"
+                hidden>
+            </button>
+
+
+            <!-- ======================================
+                 3. CONTEÚDO FINANCEIRO
+            ======================================= -->
+
+            <main class="admin-content">
+
+
+                <!-- APRESENTAÇÃO -->
+
+                <section class="admin-page-heading">
+
+                    <div>
+
+                        <p class="admin-eyebrow">
+                            CONTROLE DE PAGAMENTOS
+                        </p>
+
+                        <h1>
+                            Visão
+                            <em>financeira.</em>
+                        </h1>
+
+                        <p>
+                            Acompanhe indicadores,
+                            consulte movimentações e
+                            explore o controle financeiro
+                            demonstrativo da plataforma.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="finance-new-button"
+                        class="admin-primary-action">
+
+                        <span aria-hidden="true">
+                            +
+                        </span>
+
+                        Nova transação
+
+                    </button>
+
+                </section>
+
+
+                <!-- ======================================
+                     4. AVISO IMPORTANTE
+                ======================================= -->
+
+                <div class="admin-dashboard-notice">
+
+                    <span
+                        class="admin-notice-icon"
+                        aria-hidden="true">
+                        i
+                    </span>
+
+                    <p>
+
+                        <strong>
+                            Financeiro demonstrativo:
+                        </strong>
+
+                        os valores e pagamentos
+                        apresentados são fictícios.
+                        Não existe integração bancária,
+                        cobrança real, emissão fiscal
+                        ou processamento de pagamentos.
+
+                    </p>
+
+                </div>
+
+
+                <!-- ======================================
+                     5. INDICADORES
+                ======================================= -->
+
+                <section
+                    class="finance-summary"
+                    aria-label="Indicadores financeiros ilustrativos">
+
+
+                    <!-- RECEITA -->
+
+                    <article class="finance-summary-card">
+
+                        <div class="finance-summary-top">
+
+                            <span
+                                class="finance-summary-icon green"
+                                aria-hidden="true">
+                                $
+                            </span>
+
+                            <span class="finance-summary-tag">
+                                Fictício
+                            </span>
+
+                        </div>
+
+                        <p
+                            class="finance-summary-value"
+                            id="finance-total-revenue">
+                            R$ 6.000,00
+                        </p>
+
+                        <h2>
+                            Receita ilustrativa
+                        </h2>
+
+                        <small>
+                            Total demonstrativo
+                        </small>
+
+                    </article>
+
+
+                    <!-- RECEBIDOS -->
+
+                    <article class="finance-summary-card">
+
+                        <div class="finance-summary-top">
+
+                            <span
+                                class="finance-summary-icon copper"
+                                aria-hidden="true">
+                                ✓
+                            </span>
+
+                            <span class="finance-summary-tag">
+                                Fictício
+                            </span>
+
+                        </div>
+
+                        <p
+                            class="finance-summary-value"
+                            id="finance-paid-total">
+                            R$ 4.500,00
+                        </p>
+
+                        <h2>
+                            Pagamentos simulados
+                        </h2>
+
+                        <small>
+                            Situação: pago
+                        </small>
+
+                    </article>
+
+
+                    <!-- PENDENTES -->
+
+                    <article class="finance-summary-card">
+
+                        <div class="finance-summary-top">
+
+                            <span
+                                class="finance-summary-icon gold"
+                                aria-hidden="true">
+                                ◷
+                            </span>
+
+                            <span class="finance-summary-tag">
+                                Fictício
+                            </span>
+
+                        </div>
+
+                        <p
+                            class="finance-summary-value"
+                            id="finance-pending-total">
+                            R$ 1.500,00
+                        </p>
+
+                        <h2>
+                            Valores pendentes
+                        </h2>
+
+                        <small>
+                            Pagamentos não confirmados
+                        </small>
+
+                    </article>
+
+
+                    <!-- MOVIMENTAÇÕES -->
+
+                    <article class="finance-summary-card">
+
+                        <div class="finance-summary-top">
+
+                            <span
+                                class="finance-summary-icon navy"
+                                aria-hidden="true">
+                                ◈
+                            </span>
+
+                            <span class="finance-summary-tag">
+                                Fictício
+                            </span>
+
+                        </div>
+
+                        <p
+                            class="finance-summary-value"
+                            id="finance-transactions-count">
+                            12
+                        </p>
+
+                        <h2>
+                            Transações de exemplo
+                        </h2>
+
+                        <small>
+                            Registros demonstrativos
+                        </small>
+
+                    </article>
+
+                </section>
+
+
+                <!-- ======================================
+                     6. GRÁFICO E FORMAS DE PAGAMENTO
+                ======================================= -->
+
+                <div class="finance-overview-grid">
+
+
+                    <!-- GRÁFICO -->
+
+                    <section
+                        class="admin-panel finance-chart-panel"
+                        aria-labelledby="finance-chart-title">
+
+                        <div class="admin-panel-header">
+
+                            <div>
+
+                                <p class="admin-panel-eyebrow">
+                                    DESEMPENHO
+                                </p>
+
+                                <h2 id="finance-chart-title">
+                                    Movimentação ilustrativa
+                                </h2>
+
+                            </div>
+
+                            <span class="finance-chart-period">
+                                Últimos 6 meses
+                            </span>
+
+                        </div>
+
+
+                        <p class="finance-chart-description">
+                            Comparativo fictício entre
+                            valores pagos e pendentes.
+                        </p>
+
+
+                        <div
+                            class="finance-chart"
+                            id="finance-chart"
+                            role="img"
+                            aria-label="Gráfico com barras ilustrativas de receitas simuladas por mês.">
+
+                            <!-- OUTUBRO - EXEMPLO -->
+
+                            <div class="finance-chart-month">
+
+                                <div class="finance-chart-bars">
+
+                                    <span
+                                        class="finance-chart-bar paid"
+                                        style="--bar-height: 45%;">
+                                    </span>
+
+                                    <span
+                                        class="finance-chart-bar pending"
+                                        style="--bar-height: 20%;">
+                                    </span>
+
+                                </div>
+
+                                <small>Mai</small>
+
+                            </div>
+
+
+                            <div class="finance-chart-month">
+
+                                <div class="finance-chart-bars">
+
+                                    <span
+                                        class="finance-chart-bar paid"
+                                        style="--bar-height: 63%;">
+                                    </span>
+
+                                    <span
+                                        class="finance-chart-bar pending"
+                                        style="--bar-height: 30%;">
+                                    </span>
+
+                                </div>
+
+                                <small>Jun</small>
+
+                            </div>
+
+
+                            <div class="finance-chart-month">
+
+                                <div class="finance-chart-bars">
+
+                                    <span
+                                        class="finance-chart-bar paid"
+                                        style="--bar-height: 54%;">
+                                    </span>
+
+                                    <span
+                                        class="finance-chart-bar pending"
+                                        style="--bar-height: 18%;">
+                                    </span>
+
+                                </div>
+
+                                <small>Jul</small>
+
+                            </div>
+
+
+                            <div class="finance-chart-month">
+
+                                <div class="finance-chart-bars">
+
+                                    <span
+                                        class="finance-chart-bar paid"
+                                        style="--bar-height: 76%;">
+                                    </span>
+
+                                    <span
+                                        class="finance-chart-bar pending"
+                                        style="--bar-height: 24%;">
+                                    </span>
+
+                                </div>
+
+                                <small>Ago</small>
+
+                            </div>
+
+
+                            <div class="finance-chart-month">
+
+                                <div class="finance-chart-bars">
+
+                                    <span
+                                        class="finance-chart-bar paid"
+                                        style="--bar-height: 67%;">
+                                    </span>
+
+                                    <span
+                                        class="finance-chart-bar pending"
+                                        style="--bar-height: 33%;">
+                                    </span>
+
+                                </div>
+
+                                <small>Set</small>
+
+                            </div>
+
+
+                            <div class="finance-chart-month">
+
+                                <div class="finance-chart-bars">
+
+                                    <span
+                                        class="finance-chart-bar paid"
+                                        style="--bar-height: 90%;">
+                                    </span>
+
+                                    <span
+                                        class="finance-chart-bar pending"
+                                        style="--bar-height: 35%;">
+                                    </span>
+
+                                </div>
+
+                                <small>Out</small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="finance-chart-legend">
+
+                            <span>
+                                <i class="finance-legend-dot paid"></i>
+                                Pagos
+                            </span>
+
+                            <span>
+                                <i class="finance-legend-dot pending"></i>
+                                Pendentes
+                            </span>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- FORMAS DE PAGAMENTO -->
+
+                    <section
+                        class="admin-panel finance-methods-panel"
+                        aria-labelledby="finance-methods-title">
+
+                        <div class="admin-panel-header">
+
+                            <div>
+
+                                <p class="admin-panel-eyebrow">
+                                    PAGAMENTOS
+                                </p>
+
+                                <h2 id="finance-methods-title">
+                                    Formas de pagamento
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+                        <p class="finance-methods-description">
+                            Distribuição fictícia
+                            dos meios utilizados.
+                        </p>
+
+
+                        <div class="finance-methods-list">
+
+                            <div class="finance-method-item">
+
+                                <div class="finance-method-heading">
+
+                                    <span>PIX demonstrativo</span>
+
+                                    <strong>50%</strong>
+
+                                </div>
+
+                                <div class="finance-method-track">
+
+                                    <span
+                                        class="finance-method-fill pix"
+                                        style="width: 50%;">
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="finance-method-item">
+
+                                <div class="finance-method-heading">
+
+                                    <span>Cartão de crédito</span>
+
+                                    <strong>30%</strong>
+
+                                </div>
+
+                                <div class="finance-method-track">
+
+                                    <span
+                                        class="finance-method-fill credit"
+                                        style="width: 30%;">
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="finance-method-item">
+
+                                <div class="finance-method-heading">
+
+                                    <span>Cartão de débito</span>
+
+                                    <strong>15%</strong>
+
+                                </div>
+
+                                <div class="finance-method-track">
+
+                                    <span
+                                        class="finance-method-fill debit"
+                                        style="width: 15%;">
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="finance-method-item">
+
+                                <div class="finance-method-heading">
+
+                                    <span>Dinheiro</span>
+
+                                    <strong>5%</strong>
+
+                                </div>
+
+                                <div class="finance-method-track">
+
+                                    <span
+                                        class="finance-method-fill cash"
+                                        style="width: 5%;">
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <p class="admin-panel-footnote">
+                            Percentuais apenas ilustrativos.
+                        </p>
+
+                    </section>
+
+                </div>
+
+
+                <!-- ======================================
+                     7. MOVIMENTAÇÕES FINANCEIRAS
+                ======================================= -->
+
+                <section
+                    class="admin-panel finance-transactions-panel"
+                    aria-labelledby="finance-transactions-title">
+
+
+                    <div class="admin-panel-header">
+
+                        <div>
+
+                            <p class="admin-panel-eyebrow">
+                                MOVIMENTAÇÕES
+                            </p>
+
+                            <h2 id="finance-transactions-title">
+                                Histórico de transações
+                            </h2>
+
+                        </div>
+
+                        <span
+                            id="finance-results-count"
+                            class="finance-results-count">
+
+                            12 registros fictícios
+
+                        </span>
+
+                    </div>
+
+
+                    <!-- ======================================
+                         8. FILTROS
+                    ======================================= -->
+
+                    <div class="finance-filters">
+
+                        <!-- PESQUISA -->
+
+                        <div class="finance-filter-field">
+
+                            <label for="finance-search">
+                                Pesquisar transação
+                            </label>
+
+                            <input
+                                type="search"
+                                id="finance-search"
+                                placeholder="Ex.: DEMO-001"
+                                autocomplete="off">
+
+                        </div>
+
+
+                        <!-- SITUAÇÃO -->
+
+                        <div class="finance-filter-field">
+
+                            <label for="finance-status-filter">
+                                Situação
+                            </label>
+
+                            <select id="finance-status-filter">
+
+                                <option value="todos">
+                                    Todas
+                                </option>
+
+                                <option value="Pago">
+                                    Pago
+                                </option>
+
+                                <option value="Pendente">
+                                    Pendente
+                                </option>
+
+                                <option value="Cancelado">
+                                    Cancelado
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- MÉTODO -->
+
+                        <div class="finance-filter-field">
+
+                            <label for="finance-method-filter">
+                                Forma de pagamento
+                            </label>
+
+                            <select id="finance-method-filter">
+
+                                <option value="todos">
+                                    Todas
+                                </option>
+
+                                <option value="PIX">
+                                    PIX
+                                </option>
+
+                                <option value="Crédito">
+                                    Crédito
+                                </option>
+
+                                <option value="Débito">
+                                    Débito
+                                </option>
+
+                                <option value="Dinheiro">
+                                    Dinheiro
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- PERÍODO -->
+
+                        <div class="finance-filter-field">
+
+                            <label for="finance-period-filter">
+                                Período
+                            </label>
+
+                            <select id="finance-period-filter">
+
+                                <option value="todos">
+                                    Todos
+                                </option>
+
+                                <option value="mes">
+                                    Mês atual
+                                </option>
+
+                                <option value="anterior">
+                                    Mês anterior
+                                </option>
+
+                                <option value="90dias">
+                                    Últimos 90 dias
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            id="finance-clear-filters"
+                            class="finance-clear-filters">
+                            Limpar filtros
+                        </button>
+
+                    </div>
+
+
+                    <!-- ======================================
+                         9. TABELA
+                    ======================================= -->
+
+                    <div class="admin-table-scroll">
+
+                        <table class="admin-data-table finance-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th scope="col">
+                                        Transação
+                                    </th>
+
+                                    <th scope="col">
+                                        Data
+                                    </th>
+
+                                    <th scope="col">
+                                        Referência
+                                    </th>
+
+                                    <th scope="col">
+                                        Serviço
+                                    </th>
+
+                                    <th scope="col">
+                                        Pagamento
+                                    </th>
+
+                                    <th scope="col">
+                                        Valor
+                                    </th>
+
+                                    <th scope="col">
+                                        Situação
+                                    </th>
+
+                                    <th scope="col">
+                                        Ação
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="finance-table-body">
+
+                                <!-- REGISTRO ILUSTRATIVO 01 -->
+
+                                <tr>
+
+                                    <td>
+                                        <strong>DEMO-001</strong>
+                                    </td>
+
+                                    <td>
+                                        28/10/2026
+                                    </td>
+
+                                    <td>
+                                        Paciente Exemplo 01
+                                    </td>
+
+                                    <td>
+                                        Saúde Capilar
+                                    </td>
+
+                                    <td>
+                                        PIX
+                                    </td>
+
+                                    <td>
+                                        R$ 350,00
+                                    </td>
+
+                                    <td>
+                                        <span class="finance-status paid">
+                                            Pago
+                                        </span>
+                                    </td>
+
+                                    <td>
+
+                                        <button
+                                            type="button"
+                                            class="finance-detail-button"
+                                            data-finance-id="1">
+                                            Detalhes
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- REGISTRO ILUSTRATIVO 02 -->
+
+                                <tr>
+
+                                    <td>
+                                        <strong>DEMO-002</strong>
+                                    </td>
+
+                                    <td>
+                                        27/10/2026
+                                    </td>
+
+                                    <td>
+                                        Paciente Exemplo 02
+                                    </td>
+
+                                    <td>
+                                        Clínica Geral
+                                    </td>
+
+                                    <td>
+                                        Crédito
+                                    </td>
+
+                                    <td>
+                                        R$ 450,00
+                                    </td>
+
+                                    <td>
+                                        <span class="finance-status pending">
+                                            Pendente
+                                        </span>
+                                    </td>
+
+                                    <td>
+
+                                        <button
+                                            type="button"
+                                            class="finance-detail-button"
+                                            data-finance-id="2">
+                                            Detalhes
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- REGISTRO ILUSTRATIVO 03 -->
+
+                                <tr>
+
+                                    <td>
+                                        <strong>DEMO-003</strong>
+                                    </td>
+
+                                    <td>
+                                        26/10/2026
+                                    </td>
+
+                                    <td>
+                                        Paciente Exemplo 03
+                                    </td>
+
+                                    <td>
+                                        Consulta Online
+                                    </td>
+
+                                    <td>
+                                        PIX
+                                    </td>
+
+                                    <td>
+                                        R$ 300,00
+                                    </td>
+
+                                    <td>
+                                        <span class="finance-status paid">
+                                            Pago
+                                        </span>
+                                    </td>
+
+                                    <td>
+
+                                        <button
+                                            type="button"
+                                            class="finance-detail-button"
+                                            data-finance-id="3">
+                                            Detalhes
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <!-- SEM RESULTADOS -->
+
+                    <div
+                        id="finance-empty-state"
+                        class="finance-empty-state"
+                        hidden>
+
+                        <span aria-hidden="true">
+                            ◈
+                        </span>
+
+                        <strong>
+                            Nenhuma transação encontrada
+                        </strong>
+
+                        <p>
+                            Experimente modificar os
+                            filtros ou limpar a pesquisa.
+                        </p>
+
+                    </div>
+
+
+                    <!-- RODAPÉ DA LISTAGEM -->
+
+                    <div class="finance-table-footer">
+
+                        <p>
+                            Esta listagem utiliza
+                            exclusivamente dados
+                            financeiros fictícios.
+                        </p>
+
+                        <span>
+                            Ambiente de demonstração
+                        </span>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ======================================
+                     10. ACESSOS RÁPIDOS
+                ======================================= -->
+
+                <section class="finance-shortcuts">
+
+                    <div class="finance-shortcuts-heading">
+
+                        <p class="admin-eyebrow">
+                            ORGANIZAÇÃO
+                        </p>
+
+                        <h2>
+                            Mais controle para
+                            a gestão da clínica.
+                        </h2>
+
+                    </div>
+
+
+                    <div class="finance-shortcuts-grid">
+
+                        <!-- AGENDA -->
+
+                        <a
+                            href="agenda.html"
+                            class="finance-shortcut-card">
+
+                            <span
+                                class="finance-shortcut-icon"
+                                aria-hidden="true">
+                                ◷
+                            </span>
+
+                            <h3>
+                                Agenda
+                            </h3>
+
+                            <p>
+                                Consulte os atendimentos
+                                demonstrativos.
+                            </p>
+
+                            <span class="finance-shortcut-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <!-- PACIENTES -->
+
+                        <a
+                            href="pacientes.html"
+                            class="finance-shortcut-card">
+
+                            <span
+                                class="finance-shortcut-icon"
+                                aria-hidden="true">
+                                ♡
+                            </span>
+
+                            <h3>
+                                Pacientes
+                            </h3>
+
+                            <p>
+                                Acesse os registros
+                                fictícios da plataforma.
+                            </p>
+
+                            <span class="finance-shortcut-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <!-- RELATÓRIOS -->
+
+                        <a
+                            href="relatorios.html"
+                            class="finance-shortcut-card">
+
+                            <span
+                                class="finance-shortcut-icon"
+                                aria-hidden="true">
+                                ▤
+                            </span>
+
+                            <h3>
+                                Relatórios
+                            </h3>
+
+                            <p>
+                                Explore indicadores
+                                e resumos ilustrativos.
+                            </p>
+
+                            <span class="finance-shortcut-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ======================================
+                     11. RODAPÉ
+                ======================================= -->
+
+                <footer class="admin-dashboard-footer">
+
+                    <p>
+                        © 2026 Dra. Maurícia Mbani
+                    </p>
+
+                    <p>
+                        Financeiro demonstrativo —
+                        Sem transações reais
+                    </p>
+
+                </footer>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <!-- ======================================
+         12. MODAL DE NOVA TRANSAÇÃO
+    ======================================= -->
+
+    <dialog
+        id="finance-modal"
+        class="finance-modal"
+        aria-labelledby="finance-modal-title">
+
+        <div class="finance-modal-content">
+
+            <div class="finance-modal-header">
+
+                <div>
+
+                    <p class="admin-panel-eyebrow">
+                        LANÇAMENTO DEMONSTRATIVO
+                    </p>
+
+                    <h2 id="finance-modal-title">
+                        Nova transação fictícia
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="finance-modal-close"
+                    class="finance-modal-close"
+                    aria-label="Fechar formulário">
+                    ×
+                </button>
+
+            </div>
+
+
+            <p class="finance-modal-description">
+                Utilize somente opções demonstrativas.
+                Nenhum pagamento será realizado
+                ou enviado para servidores.
+            </p>
+
+
+            <form
+                id="finance-form"
+                class="finance-form"
+                autocomplete="off">
+
+
+                <!-- REFERÊNCIA FICTÍCIA -->
+
+                <div class="finance-form-field">
+
+                    <label for="finance-form-patient">
+                        Referência fictícia
+                    </label>
+
+                    <select
+                        id="finance-form-patient"
+                        required>
+
+                        <option value="">
+                            Selecione uma referência
+                        </option>
+
+                        <option value="Paciente Exemplo 09">
+                            Paciente Exemplo 09
+                        </option>
+
+                        <option value="Paciente Exemplo 10">
+                            Paciente Exemplo 10
+                        </option>
+
+                        <option value="Paciente Exemplo 11">
+                            Paciente Exemplo 11
+                        </option>
+
+                        <option value="Paciente Exemplo 12">
+                            Paciente Exemplo 12
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- SERVIÇO -->
+
+                <div class="finance-form-field">
+
+                    <label for="finance-form-service">
+                        Atendimento
+                    </label>
+
+                    <select
+                        id="finance-form-service"
+                        required>
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Saúde Capilar">
+                            Saúde Capilar
+                        </option>
+
+                        <option value="Clínica Geral">
+                            Clínica Geral
+                        </option>
+
+                        <option value="Consulta Online">
+                            Consulta Online
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- DATA E VALOR -->
+
+                <div class="finance-form-row">
+
+                    <div class="finance-form-field">
+
+                        <label for="finance-form-date">
+                            Data
+                        </label>
+
+                        <input
+                            type="date"
+                            id="finance-form-date"
+                            required>
+
+                    </div>
+
+
+                    <div class="finance-form-field">
+
+                        <label for="finance-form-value">
+                            Valor fictício (R$)
+                        </label>
+
+                        <select
+                            id="finance-form-value"
+                            required>
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                            <option value="150">
+                                R$ 150,00
+                            </option>
+
+                            <option value="250">
+                                R$ 250,00
+                            </option>
+
+                            <option value="350">
+                                R$ 350,00
+                            </option>
+
+                            <option value="450">
+                                R$ 450,00
+                            </option>
+
+                            <option value="600">
+                                R$ 600,00
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PAGAMENTO -->
+
+                <div class="finance-form-field">
+
+                    <label for="finance-form-method">
+                        Forma de pagamento
+                    </label>
+
+                    <select
+                        id="finance-form-method"
+                        required>
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="PIX">
+                            PIX demonstrativo
+                        </option>
+
+                        <option value="Crédito">
+                            Cartão de crédito
+                        </option>
+
+                        <option value="Débito">
+                            Cartão de débito
+                        </option>
+
+                        <option value="Dinheiro">
+                            Dinheiro
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- SITUAÇÃO -->
+
+                <div class="finance-form-field">
+
+                    <label for="finance-form-status">
+                        Situação
+                    </label>
+
+                    <select
+                        id="finance-form-status"
+                        required>
+
+                        <option value="Pendente">
+                            Pendente
+                        </option>
+
+                        <option value="Pago">
+                            Pago (simulado)
+                        </option>
+
+                        <option value="Cancelado">
+                            Cancelado
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- AVISO -->
+
+                <div class="finance-form-notice">
+
+                    <strong>
+                        Atenção
+                    </strong>
+
+                    <p>
+                        O lançamento é somente
+                        uma simulação visual.
+                        Não gera comprovante fiscal
+                        ou movimentação financeira real.
+                    </p>
+
+                </div>
+
+
+                <!-- FEEDBACK -->
+
+                <p
+                    id="finance-form-message"
+                    class="finance-form-message"
+                    role="status"
+                    aria-live="polite"
+                    hidden>
+                </p>
+
+
+                <!-- BOTÕES -->
+
+                <div class="finance-form-actions">
+
+                    <button
+                        type="button"
+                        id="finance-form-cancel"
+                        class="finance-secondary-button">
+                        Cancelar
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="admin-primary-action">
+                        Salvar simulação
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </dialog>
+
+
+    <!-- ======================================
+         13. MODAL DE DETALHES
+    ======================================= -->
+
+    <dialog
+        id="finance-details-modal"
+        class="finance-modal"
+        aria-labelledby="finance-details-title">
+
+        <div class="finance-modal-content">
+
+            <div class="finance-modal-header">
+
+                <div>
+
+                    <p class="admin-panel-eyebrow">
+                        TRANSAÇÃO FICTÍCIA
+                    </p>
+
+                    <h2 id="finance-details-title">
+                        Detalhes do pagamento
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="finance-details-close"
+                    class="finance-modal-close"
+                    aria-label="Fechar detalhes">
+                    ×
+                </button>
+
+            </div>
+
+
+            <div
+                id="finance-details-content"
+                class="finance-details-content">
+
+                <p>
+                    Selecione uma transação
+                    para visualizar os detalhes.
+                </p>
+
+            </div>
+
+
+            <div class="finance-form-actions">
+
+                <button
+                    type="button"
+                    id="finance-details-dismiss"
+                    class="finance-secondary-button">
+                    Fechar
+                </button>
+
+                <button
+                    type="button"
+                    id="finance-details-confirm"
+                    class="admin-primary-action">
+                    Marcar como pago
+                </button>
+
+            </div>
+
+        </div>
+
+    </dialog>
+
+</body>
+</html>

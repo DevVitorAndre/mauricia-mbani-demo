@@ -5415,3 +5415,5210 @@ button.agenda-event:hover {
 
 }
 
+
+/* =====================================================
+   DRA. MAURÍCIA MBANI
+   FINANCEIRO ADMINISTRATIVO
+
+   ADICIONAR AO FINAL DE:
+   assets/css/admin.css
+
+   PROTÓTIPO DEMONSTRATIVO
+   SEM TRANSAÇÕES FINANCEIRAS REAIS
+===================================================== */
+
+
+/* =====================================================
+   100. CONFIGURAÇÕES GERAIS DO FINANCEIRO
+===================================================== */
+
+.admin-finance-page {
+    background: #F5F6F4;
+}
+
+.admin-finance-page button,
+.admin-finance-page input,
+.admin-finance-page select {
+    font-family: "DM Sans", sans-serif;
+}
+
+.admin-finance-page button {
+    cursor: pointer;
+}
+
+.admin-finance-page [hidden] {
+    display: none !important;
+}
+
+
+/* =====================================================
+   101. INDICADORES FINANCEIROS
+===================================================== */
+
+.finance-summary {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+    margin-bottom: 26px;
+}
+
+.finance-summary-card {
+    min-width: 0;
+
+    padding: 24px 21px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E6E8E2;
+    border-radius: 18px;
+
+    box-shadow:
+        0 5px 20px rgba(35, 38, 58, 0.035);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.finance-summary-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 14px 30px rgba(35, 38, 58, 0.07);
+}
+
+.finance-summary-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+    margin-bottom: 23px;
+}
+
+.finance-summary-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.finance-summary-icon.green {
+    background: #E7EFE5;
+    color: #45594C;
+}
+
+.finance-summary-icon.copper {
+    background: #F6E8DF;
+    color: #B76E4F;
+}
+
+.finance-summary-icon.gold {
+    background: #F7EFDF;
+    color: #A17B38;
+}
+
+.finance-summary-icon.navy {
+    background: #E9EAF0;
+    color: #23263A;
+}
+
+.finance-summary-tag {
+    padding: 6px 10px;
+
+    background: #F5F3EF;
+    color: #858084;
+
+    border-radius: 30px;
+
+    font-size: 0.65rem;
+    font-weight: 700;
+}
+
+.finance-summary-value {
+    margin-bottom: 12px;
+
+    color: #23263A;
+
+    font-size: clamp(1.45rem, 2.1vw, 2rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.25;
+
+    overflow-wrap: anywhere;
+}
+
+.finance-summary-card h2 {
+    margin-bottom: 8px;
+
+    color: #444752;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.84rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.finance-summary-card small {
+    color: #88888D;
+
+    font-size: 0.74rem;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   102. GRID DE GRÁFICOS
+===================================================== */
+
+.finance-overview-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.4fr)
+        minmax(0, 1fr);
+
+    gap: 20px;
+
+    align-items: stretch;
+
+    margin-bottom: 25px;
+}
+
+.finance-chart-panel,
+.finance-methods-panel {
+    min-width: 0;
+}
+
+.finance-chart-period {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 8px 12px;
+
+    background: #EDF3EA;
+    color: #45594C;
+
+    border-radius: 25px;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.finance-chart-description,
+.finance-methods-description {
+    margin-bottom: 22px;
+
+    color: #777B80;
+
+    font-size: 0.82rem;
+    line-height: 1.75;
+}
+
+
+/* =====================================================
+   103. GRÁFICO FINANCEIRO
+===================================================== */
+
+.finance-chart {
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, minmax(0, 1fr));
+
+    align-items: end;
+
+    gap: 12px;
+
+    width: 100%;
+    min-height: 240px;
+
+    padding: 12px 8px 0;
+
+    border-bottom: 1px solid #E7E8E3;
+
+    background:
+        repeating-linear-gradient(
+            to top,
+            transparent,
+            transparent 54px,
+            #F0F0ED 54px,
+            #F0F0ED 55px
+        );
+}
+
+.finance-chart-month {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 13px;
+
+    min-width: 0;
+    height: 225px;
+}
+
+.finance-chart-bars {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    gap: 5px;
+
+    width: 100%;
+    height: 190px;
+}
+
+.finance-chart-bar {
+    display: block;
+
+    width: min(25px, 43%);
+    height: var(--bar-height, 30%);
+
+    min-height: 4px;
+
+    border-radius: 7px 7px 0 0;
+
+    transition:
+        filter 0.2s ease,
+        height 0.25s ease;
+}
+
+.finance-chart-bar.paid {
+    background: #45594C;
+}
+
+.finance-chart-bar.pending {
+    background: #C8A66A;
+}
+
+.finance-chart-bar:hover {
+    filter: brightness(1.15);
+}
+
+.finance-chart-month small {
+    color: #777B80;
+
+    font-size: 0.73rem;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   104. LEGENDA DO GRÁFICO
+===================================================== */
+
+.finance-chart-legend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 23px;
+    margin-top: 24px;
+}
+
+.finance-chart-legend > span {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 9px;
+
+    color: #777B80;
+
+    font-size: 0.76rem;
+    font-weight: 600;
+}
+
+.finance-legend-dot {
+    display: inline-block;
+
+    width: 11px;
+    height: 11px;
+
+    border-radius: 50%;
+}
+
+.finance-legend-dot.paid {
+    background: #45594C;
+}
+
+.finance-legend-dot.pending {
+    background: #C8A66A;
+}
+
+
+/* =====================================================
+   105. FORMAS DE PAGAMENTO
+===================================================== */
+
+.finance-methods-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 26px;
+    margin-top: 30px;
+}
+
+.finance-method-item {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.finance-method-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.finance-method-heading span {
+    color: #555963;
+
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.finance-method-heading strong {
+    color: #23263A;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.finance-method-track {
+    width: 100%;
+    height: 11px;
+
+    overflow: hidden;
+
+    background: #EFF0EC;
+
+    border-radius: 30px;
+}
+
+.finance-method-fill {
+    display: block;
+    height: 100%;
+
+    border-radius: inherit;
+
+    transition: width 0.25s ease;
+}
+
+.finance-method-fill.pix {
+    background: #45594C;
+}
+
+.finance-method-fill.credit {
+    background: #B76E4F;
+}
+
+.finance-method-fill.debit {
+    background: #C8A66A;
+}
+
+.finance-method-fill.cash {
+    background: #23263A;
+}
+
+
+/* =====================================================
+   106. MOVIMENTAÇÕES FINANCEIRAS
+===================================================== */
+
+.finance-transactions-panel {
+    margin-bottom: 35px;
+}
+
+.finance-results-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 34px;
+
+    padding: 8px 13px;
+
+    background: #EDF3EA;
+    color: #45594C;
+
+    border: 1px solid #D8E3D4;
+    border-radius: 30px;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   107. FILTROS FINANCEIROS
+===================================================== */
+
+.finance-filters {
+    display: grid;
+
+    grid-template-columns:
+        minmax(160px, 1.4fr)
+        minmax(115px, 1fr)
+        minmax(115px, 1fr)
+        minmax(115px, 1fr)
+        auto;
+
+    align-items: end;
+
+    gap: 13px;
+
+    padding: 20px;
+    margin-bottom: 25px;
+
+    background: #F9F8F5;
+
+    border: 1px solid #EAE7E0;
+    border-radius: 16px;
+}
+
+.finance-filter-field {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+    min-width: 0;
+}
+
+.finance-filter-field label {
+    color: #454854;
+
+    font-size: 0.76rem;
+    font-weight: 700;
+}
+
+.finance-filter-field input,
+.finance-filter-field select {
+    width: 100%;
+    min-width: 0;
+    min-height: 45px;
+
+    padding: 10px 12px;
+
+    background: #FFFFFF;
+    color: #23263A;
+
+    border: 1px solid #DDDED8;
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 0.8rem;
+}
+
+.finance-filter-field input::placeholder {
+    color: #A09BA0;
+}
+
+.finance-filter-field input:focus,
+.finance-filter-field select:focus {
+    border-color: #B76E4F;
+
+    box-shadow:
+        0 0 0 3px rgba(183, 110, 79, 0.1);
+}
+
+.finance-clear-filters {
+    min-height: 45px;
+
+    padding: 10px 14px;
+
+    background: #FFFFFF;
+    color: #77717A;
+
+    border: 1px solid #DEDAD3;
+    border-radius: 10px;
+
+    font-size: 0.77rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.finance-clear-filters:hover {
+    background: #F3E9E0;
+    border-color: #D9B9A8;
+    color: #95563D;
+}
+
+
+/* =====================================================
+   108. TABELA FINANCEIRA
+===================================================== */
+
+.finance-table {
+    min-width: 1050px;
+}
+
+.finance-table th {
+    padding: 15px 13px;
+}
+
+.finance-table td {
+    padding: 17px 13px;
+    vertical-align: middle;
+}
+
+.finance-table td strong {
+    color: #23263A;
+}
+
+.finance-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 29px;
+
+    padding: 6px 12px;
+
+    border-radius: 30px;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.finance-status.paid {
+    background: #E7F0E6;
+    color: #45594C;
+}
+
+.finance-status.pending {
+    background: #FFF0DA;
+    color: #9F702D;
+}
+
+.finance-status.cancelled {
+    background: #FBE7E5;
+    color: #A34B45;
+}
+
+.finance-detail-button {
+    min-height: 34px;
+
+    padding: 8px 12px;
+
+    background: #F5EFE6;
+    color: #95563D;
+
+    border: 1px solid #E3D4C6;
+    border-radius: 9px;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.finance-detail-button:hover {
+    background: #B76E4F;
+    border-color: #B76E4F;
+    color: #FFFFFF;
+}
+
+
+/* =====================================================
+   109. NENHUMA TRANSAÇÃO ENCONTRADA
+===================================================== */
+
+.finance-empty-state {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 12px;
+
+    padding: 50px 20px;
+
+    text-align: center;
+}
+
+.finance-empty-state[hidden] {
+    display: none !important;
+}
+
+.finance-empty-state > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 65px;
+    height: 65px;
+
+    background: #F5EFE6;
+    color: #B76E4F;
+
+    border-radius: 20px;
+
+    font-size: 2rem;
+}
+
+.finance-empty-state strong {
+    color: #23263A;
+
+    font-family: "Playfair Display", serif;
+    font-size: 1.3rem;
+}
+
+.finance-empty-state p {
+    max-width: 400px;
+
+    color: #828288;
+
+    font-size: 0.84rem;
+    line-height: 1.75;
+}
+
+
+/* =====================================================
+   110. RODAPÉ DA TABELA
+===================================================== */
+
+.finance-table-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 20px;
+    padding-top: 18px;
+
+    border-top: 1px solid #ECECE7;
+}
+
+.finance-table-footer p {
+    color: #8B8B90;
+
+    font-size: 0.73rem;
+    line-height: 1.7;
+}
+
+.finance-table-footer > span {
+    color: #45594C;
+
+    font-size: 0.73rem;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   111. ACESSOS RÁPIDOS
+===================================================== */
+
+.finance-shortcuts {
+    margin-bottom: 38px;
+}
+
+.finance-shortcuts-heading {
+    margin-bottom: 23px;
+}
+
+.finance-shortcuts-heading .admin-eyebrow {
+    margin-bottom: 11px;
+}
+
+.finance-shortcuts-heading h2 {
+    color: #23263A;
+
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.finance-shortcuts-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.finance-shortcut-card {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    min-width: 0;
+    min-height: 190px;
+
+    padding: 26px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E6E8E2;
+    border-radius: 17px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.finance-shortcut-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #D7B8A8;
+
+    box-shadow:
+        0 12px 30px rgba(35, 38, 58, 0.07);
+}
+
+.finance-shortcut-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 19px;
+
+    background: #E7EFE5;
+    color: #45594C;
+
+    border-radius: 14px;
+
+    font-size: 1.6rem;
+}
+
+.finance-shortcut-card:nth-child(2)
+.finance-shortcut-icon {
+    background: #F6E8DF;
+    color: #B76E4F;
+}
+
+.finance-shortcut-card:nth-child(3)
+.finance-shortcut-icon {
+    background: #F7EFDF;
+    color: #A17B38;
+}
+
+.finance-shortcut-card h3 {
+    margin-bottom: 9px;
+
+    color: #23263A;
+
+    font-family: "Playfair Display", serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.finance-shortcut-card p {
+    max-width: 270px;
+
+    color: #777B80;
+
+    font-size: 0.82rem;
+    line-height: 1.75;
+}
+
+.finance-shortcut-arrow {
+    position: absolute;
+
+    top: 28px;
+    right: 25px;
+
+    color: #B76E4F;
+    font-size: 1.2rem;
+}
+
+
+/* =====================================================
+   112. MODAL FINANCEIRO
+===================================================== */
+
+.finance-modal {
+    position: fixed;
+
+    width: min(540px, calc(100vw - 28px));
+    max-width: 540px;
+    max-height: min(90vh, 90dvh);
+
+    margin: auto;
+    padding: 0;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    background: #FFFFFF;
+    color: #23263A;
+
+    border: 1px solid #E4D9CE;
+    border-radius: 22px;
+
+    box-shadow:
+        0 25px 80px rgba(20, 24, 35, 0.24);
+
+    font-family: "DM Sans", sans-serif;
+}
+
+.finance-modal:not([open]) {
+    display: none;
+}
+
+.finance-modal::backdrop {
+    background: rgba(20, 23, 36, 0.65);
+    backdrop-filter: blur(3px);
+}
+
+.finance-modal-content {
+    padding: 31px;
+}
+
+
+/* =====================================================
+   113. CABEÇALHO DO MODAL
+===================================================== */
+
+.finance-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+    margin-bottom: 19px;
+}
+
+.finance-modal-header .admin-panel-eyebrow {
+    margin-bottom: 11px;
+}
+
+.finance-modal-header h2 {
+    color: #23263A;
+
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.finance-modal-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 39px;
+    height: 39px;
+
+    flex-shrink: 0;
+    padding: 0;
+
+    background: #F6F3EF;
+    color: #68656A;
+
+    border: 1px solid #E6E0D9;
+    border-radius: 11px;
+
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.finance-modal-close:hover {
+    background: #B76E4F;
+    color: #FFFFFF;
+}
+
+.finance-modal-description {
+    margin-bottom: 25px;
+
+    color: #76767B;
+
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   114. FORMULÁRIO FINANCEIRO
+===================================================== */
+
+.finance-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 19px;
+}
+
+.finance-form-field {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+    min-width: 0;
+}
+
+.finance-form-field label {
+    color: #42454F;
+
+    font-size: 0.81rem;
+    font-weight: 700;
+}
+
+.finance-form-field input,
+.finance-form-field select {
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+
+    padding: 11px 13px;
+
+    background: #FAF8F5;
+    color: #23263A;
+
+    border: 1px solid #DDD8D0;
+    border-radius: 11px;
+
+    outline: none;
+
+    font-size: 0.87rem;
+}
+
+.finance-form-field input:focus,
+.finance-form-field select:focus {
+    background: #FFFFFF;
+    border-color: #B76E4F;
+
+    box-shadow:
+        0 0 0 3px rgba(183, 110, 79, 0.1);
+}
+
+.finance-form-row {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+
+/* =====================================================
+   115. AVISO DO FORMULÁRIO
+===================================================== */
+
+.finance-form-notice {
+    padding: 17px;
+
+    background: #FFF8F1;
+
+    border: 1px solid #E7CDBB;
+    border-left: 4px solid #B76E4F;
+    border-radius: 12px;
+}
+
+.finance-form-notice strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #95563D;
+
+    font-size: 0.83rem;
+}
+
+.finance-form-notice p {
+    color: #795F51;
+
+    font-size: 0.78rem;
+    line-height: 1.75;
+}
+
+
+/* =====================================================
+   116. FEEDBACK DO FORMULÁRIO
+===================================================== */
+
+.finance-form-message {
+    padding: 14px 16px;
+
+    background: #EDF3EA;
+    color: #45594C;
+
+    border: 1px solid #D4E0D1;
+    border-radius: 11px;
+
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+.finance-form-message[hidden] {
+    display: none !important;
+}
+
+.finance-form-message.is-error {
+    background: #FFF0EE;
+    color: #A34B45;
+    border-color: #E4B9B4;
+}
+
+.finance-form-message.is-success {
+    background: #EDF3EA;
+    color: #45594C;
+    border-color: #D4E0D1;
+}
+
+
+/* =====================================================
+   117. BOTÕES DO FORMULÁRIO
+===================================================== */
+
+.finance-form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.finance-form-actions .admin-primary-action {
+    border: 1px solid #45594C;
+    cursor: pointer;
+}
+
+.finance-form-actions .admin-primary-action:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.finance-secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 47px;
+
+    padding: 12px 19px;
+
+    background: #FFFFFF;
+    color: #62646B;
+
+    border: 1px solid #DDDFD9;
+    border-radius: 11px;
+
+    font-size: 0.83rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.finance-secondary-button:hover {
+    background: #F5EFE6;
+    color: #95563D;
+    border-color: #D9B9A8;
+}
+
+
+/* =====================================================
+   118. DETALHES DA TRANSAÇÃO
+===================================================== */
+
+.finance-details-content {
+    display: flex;
+    flex-direction: column;
+
+    gap: 11px;
+
+    padding: 20px;
+
+    background: #FAF8F5;
+
+    border: 1px solid #ECE5DE;
+    border-radius: 13px;
+}
+
+.finance-details-content p {
+    color: #686A70;
+
+    font-size: 0.84rem;
+    line-height: 1.7;
+}
+
+.finance-detail-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 15px;
+    padding: 11px 0;
+
+    border-bottom: 1px solid #EAE4DB;
+}
+
+.finance-detail-row:last-child {
+    border-bottom: none;
+}
+
+.finance-detail-row > span {
+    color: #77777D;
+    font-size: 0.79rem;
+}
+
+.finance-detail-row > strong {
+    color: #23263A;
+
+    font-size: 0.81rem;
+    text-align: right;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =====================================================
+   119. TELAS INTERMEDIÁRIAS
+===================================================== */
+
+@media (max-width: 1250px) {
+
+    .finance-summary {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .finance-overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .finance-filters {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .finance-clear-filters {
+        width: 100%;
+    }
+
+}
+
+
+/* =====================================================
+   120. TABLETS
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .finance-shortcuts-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .finance-overview-grid {
+        gap: 16px;
+    }
+
+}
+
+
+/* =====================================================
+   121. CELULARES
+===================================================== */
+
+@media (max-width: 767px) {
+
+    /* INDICADORES */
+
+    .finance-summary {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 11px;
+        margin-bottom: 20px;
+    }
+
+    .finance-summary-card {
+        padding: 17px 13px;
+        border-radius: 14px;
+    }
+
+    .finance-summary-top {
+        margin-bottom: 18px;
+        gap: 6px;
+    }
+
+    .finance-summary-icon {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 11px;
+        font-size: 1.3rem;
+    }
+
+    .finance-summary-tag {
+        padding: 5px 7px;
+        font-size: 0.58rem;
+    }
+
+    .finance-summary-value {
+        font-size: clamp(1.12rem, 4.1vw, 1.55rem);
+    }
+
+    .finance-summary-card h2 {
+        font-size: 0.74rem;
+    }
+
+    .finance-summary-card small {
+        font-size: 0.68rem;
+    }
+
+
+    /* PAINÉIS */
+
+    .finance-overview-grid {
+        gap: 15px;
+        margin-bottom: 18px;
+    }
+
+    .finance-chart-panel,
+    .finance-methods-panel,
+    .finance-transactions-panel {
+        padding: 20px 15px;
+    }
+
+    .finance-chart-period {
+        font-size: 0.66rem;
+    }
+
+
+    /* GRÁFICO */
+
+    .finance-chart {
+        gap: 6px;
+        min-height: 205px;
+        padding: 8px 0 0;
+    }
+
+    .finance-chart-month {
+        height: 190px;
+        gap: 10px;
+    }
+
+    .finance-chart-bars {
+        gap: 3px;
+        height: 160px;
+    }
+
+    .finance-chart-bar {
+        border-radius: 5px 5px 0 0;
+    }
+
+    .finance-chart-month small {
+        font-size: 0.65rem;
+    }
+
+
+    /* FILTROS */
+
+    .finance-filters {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+        padding: 15px;
+    }
+
+    .finance-filter-field input,
+    .finance-filter-field select {
+        font-size: 16px;
+    }
+
+    .finance-clear-filters {
+        width: 100%;
+    }
+
+
+    /* TABELA */
+
+    .finance-table {
+        min-width: 950px;
+    }
+
+    .finance-results-count {
+        font-size: 0.68rem;
+    }
+
+
+    /* ACESSOS RÁPIDOS */
+
+    .finance-shortcuts-heading h2 {
+        font-size: 1.55rem;
+    }
+
+    .finance-shortcuts-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .finance-shortcut-card {
+        min-height: 160px;
+        padding: 22px 20px;
+    }
+
+
+    /* MODAIS */
+
+    .finance-modal {
+        width: calc(100vw - 20px);
+        max-height: calc(100dvh - 20px);
+
+        border-radius: 17px;
+    }
+
+    .finance-modal-content {
+        padding: 23px 18px;
+    }
+
+    .finance-modal-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .finance-form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .finance-form-field input,
+    .finance-form-field select {
+        font-size: 16px;
+    }
+
+    .finance-form-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .finance-form-actions button {
+        width: 100%;
+    }
+
+    .finance-detail-row > span,
+    .finance-detail-row > strong {
+        font-size: 0.75rem;
+    }
+
+}
+
+
+/* =====================================================
+   122. CELULARES PEQUENOS
+===================================================== */
+
+@media (max-width: 390px) {
+
+    .finance-summary-card {
+        padding: 14px 11px;
+    }
+
+    .finance-summary-value {
+        font-size: 1.1rem;
+    }
+
+    .finance-chart-panel,
+    .finance-methods-panel,
+    .finance-transactions-panel {
+        padding: 17px 11px;
+    }
+
+    .finance-modal-content {
+        padding: 20px 14px;
+    }
+
+    .finance-table-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =====================================================
+   123. ACESSIBILIDADE
+===================================================== */
+
+.admin-finance-page button:focus-visible,
+.admin-finance-page a:focus-visible,
+.admin-finance-page input:focus-visible,
+.admin-finance-page select:focus-visible,
+.finance-modal button:focus-visible,
+.finance-modal input:focus-visible,
+.finance-modal select:focus-visible {
+    outline: 3px solid #B76E4F;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .finance-summary-card,
+    .finance-chart-bar,
+    .finance-method-fill,
+    .finance-shortcut-card,
+    .finance-detail-button {
+        transition: none !important;
+    }
+
+}
+
+
+/* =====================================================
+   DRA. MAURÍCIA MBANI
+   GESTÃO DE SERVIÇOS ADMINISTRATIVOS
+
+   ARQUIVO: assets/css/admin.css
+   ADICIONAR AO FINAL DO ARQUIVO
+
+   AMBIENTE DEMONSTRATIVO
+===================================================== */
+
+
+/* =====================================================
+   124. CONFIGURAÇÕES DA PÁGINA
+===================================================== */
+
+.admin-services-page {
+    background: #F5F6F4;
+}
+
+.admin-services-page button,
+.admin-services-page input,
+.admin-services-page select,
+.admin-services-page textarea {
+    font-family: "DM Sans", sans-serif;
+}
+
+.admin-services-page button {
+    cursor: pointer;
+}
+
+.admin-services-page [hidden] {
+    display: none !important;
+}
+
+
+/* =====================================================
+   125. INDICADORES DE SERVIÇOS
+===================================================== */
+
+.services-summary {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+    margin-bottom: 26px;
+}
+
+.services-summary-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    min-width: 0;
+    padding: 25px 23px;
+
+    background: #FFFFFF;
+    border: 1px solid #E6E8E2;
+    border-radius: 18px;
+
+    box-shadow: 0 5px 20px rgba(35, 38, 58, 0.035);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.services-summary-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(35, 38, 58, 0.07);
+}
+
+.services-summary-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+
+    border-radius: 16px;
+
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.services-summary-icon.green {
+    background: #E7EFE5;
+    color: #45594C;
+}
+
+.services-summary-icon.copper {
+    background: #F6E8DF;
+    color: #B76E4F;
+}
+
+.services-summary-icon.gold {
+    background: #F7EFDF;
+    color: #A17B38;
+}
+
+.services-summary-card > div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+    min-width: 0;
+}
+
+.services-summary-card strong {
+    color: #23263A;
+
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.services-summary-card div > span {
+    color: #777B80;
+
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   126. PAINEL DE GERENCIAMENTO
+===================================================== */
+
+.services-management-panel {
+    margin-bottom: 28px;
+}
+
+.services-results-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 34px;
+    padding: 8px 14px;
+
+    background: #EDF3EA;
+    border: 1px solid #D8E3D4;
+    border-radius: 30px;
+
+    color: #45594C;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   127. FILTROS DOS SERVIÇOS
+===================================================== */
+
+.services-filters {
+    display: grid;
+
+    grid-template-columns:
+        minmax(180px, 1.5fr)
+        minmax(145px, 1fr)
+        minmax(130px, 1fr)
+        auto;
+
+    align-items: end;
+
+    gap: 15px;
+    margin-bottom: 26px;
+    padding: 20px;
+
+    background: #F9F8F5;
+    border: 1px solid #EAE7E0;
+    border-radius: 15px;
+}
+
+.services-filter-field {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+    min-width: 0;
+}
+
+.services-filter-field label {
+    color: #454854;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.services-filter-field input,
+.services-filter-field select {
+    width: 100%;
+    min-width: 0;
+    min-height: 46px;
+
+    padding: 11px 13px;
+
+    background: #FFFFFF;
+    color: #23263A;
+
+    border: 1px solid #DDDED8;
+    border-radius: 11px;
+
+    outline: none;
+
+    font-size: 0.82rem;
+}
+
+.services-filter-field input::placeholder {
+    color: #A09BA0;
+}
+
+.services-filter-field input:focus,
+.services-filter-field select:focus {
+    border-color: #B76E4F;
+
+    box-shadow:
+        0 0 0 3px rgba(183, 110, 79, 0.1);
+}
+
+.services-clear-filters {
+    min-height: 46px;
+
+    padding: 11px 16px;
+
+    background: #FFFFFF;
+    color: #77717A;
+
+    border: 1px solid #DEDAD3;
+    border-radius: 11px;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.services-clear-filters:hover {
+    background: #F3E9E0;
+    border-color: #D9B9A8;
+    color: #95563D;
+}
+
+
+/* =====================================================
+   128. GRID DOS CARTÕES
+===================================================== */
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    align-items: stretch;
+
+    gap: 20px;
+}
+
+.services-card {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    min-height: 375px;
+
+    padding: 24px;
+
+    background: #FFFFFF;
+    border: 1px solid #E5E7E1;
+    border-radius: 18px;
+
+    box-shadow: 0 4px 18px rgba(35, 38, 58, 0.03);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.services-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #D9BAA9;
+
+    box-shadow: 0 13px 30px rgba(35, 38, 58, 0.07);
+}
+
+/* Cartões ocultos somente no gerenciamento */
+
+.services-card.is-hidden {
+    background: #FAFAF9;
+    border-style: dashed;
+    opacity: 0.78;
+}
+
+
+/* =====================================================
+   129. TOPO DOS CARTÕES
+===================================================== */
+
+.services-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.services-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 53px;
+    height: 53px;
+
+    flex-shrink: 0;
+
+    border-radius: 15px;
+
+    font-size: 1.7rem;
+}
+
+.services-card-icon.green {
+    background: #E7EFE5;
+    color: #45594C;
+}
+
+.services-card-icon.copper {
+    background: #F6E8DF;
+    color: #B76E4F;
+}
+
+.services-card-icon.gold {
+    background: #F7EFDF;
+    color: #A17B38;
+}
+
+.services-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    min-height: 29px;
+    padding: 6px 11px;
+
+    border-radius: 25px;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.services-status.visible {
+    background: #E7F0E6;
+    color: #45594C;
+}
+
+.services-status.hidden {
+    background: #F1EFEF;
+    color: #77757B;
+}
+
+
+/* =====================================================
+   130. CONTEÚDO DOS CARTÕES
+===================================================== */
+
+.services-card-category {
+    margin-bottom: 10px;
+
+    color: #B76E4F;
+
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.services-card h3 {
+    margin-bottom: 14px;
+
+    color: #23263A;
+
+    font-family: "Playfair Display", serif;
+    font-size: 1.45rem;
+    font-weight: 600;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.services-card-description {
+    margin-bottom: 23px;
+
+    color: #74777D;
+
+    font-size: 0.81rem;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+
+/* =====================================================
+   131. INFORMAÇÕES DOS SERVIÇOS
+===================================================== */
+
+.services-card-details {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+
+    margin-top: auto;
+    padding: 18px 0;
+
+    border-top: 1px solid #EFEFEA;
+    border-bottom: 1px solid #EFEFEA;
+}
+
+.services-card-details > div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 14px;
+}
+
+.services-card-details span {
+    color: #88898D;
+
+    font-size: 0.73rem;
+    line-height: 1.6;
+}
+
+.services-card-details strong {
+    color: #45594C;
+
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-align: right;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   132. AÇÕES DOS CARTÕES
+===================================================== */
+
+.services-card-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.services-card-actions button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 38px;
+    padding: 9px 13px;
+
+    border-radius: 9px;
+
+    font-size: 0.76rem;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.services-edit-button {
+    background: #45594C;
+    color: #FFFFFF;
+
+    border: 1px solid #45594C;
+}
+
+.services-edit-button:hover {
+    background: #36483D;
+    border-color: #36483D;
+}
+
+.services-details-button {
+    background: #F5EFE6;
+    color: #95563D;
+
+    border: 1px solid #E2D3C6;
+}
+
+.services-details-button:hover {
+    background: #EFE0D3;
+}
+
+.services-visibility-button {
+    background: #FFFFFF;
+    color: #73747A;
+
+    border: 1px solid #E0E1DD;
+}
+
+.services-visibility-button:hover {
+    background: #F3F3EF;
+    color: #23263A;
+}
+
+
+/* =====================================================
+   133. NENHUM SERVIÇO ENCONTRADO
+===================================================== */
+
+.services-empty-state {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 13px;
+    padding: 48px 20px;
+
+    text-align: center;
+}
+
+.services-empty-state[hidden] {
+    display: none !important;
+}
+
+.services-empty-state > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 66px;
+    height: 66px;
+
+    background: #F5EFE6;
+    color: #B76E4F;
+
+    border-radius: 19px;
+    font-size: 2rem;
+}
+
+.services-empty-state strong {
+    color: #23263A;
+
+    font-family: "Playfair Display", serif;
+    font-size: 1.3rem;
+}
+
+.services-empty-state p {
+    color: #828288;
+
+    font-size: 0.84rem;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   134. PAINEL DE REVISÃO
+===================================================== */
+
+.services-review-panel {
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+
+    padding: 28px 30px;
+    margin-bottom: 36px;
+
+    background: #F1F3EF;
+    border: 1px solid #DDE4DA;
+    border-radius: 19px;
+}
+
+.services-review-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 64px;
+    height: 64px;
+
+    flex-shrink: 0;
+
+    background: #45594C;
+    color: #FFFFFF;
+
+    border-radius: 18px;
+    font-size: 1.9rem;
+}
+
+.services-review-panel > div:nth-child(2) {
+    flex: 1;
+    min-width: 0;
+}
+
+.services-review-panel .admin-eyebrow {
+    margin-bottom: 9px;
+}
+
+.services-review-panel h2 {
+    margin-bottom: 10px;
+
+    color: #23263A;
+
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.services-review-panel p:last-child {
+    color: #6F7771;
+
+    font-size: 0.81rem;
+    line-height: 1.8;
+}
+
+.services-preview-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+    flex-shrink: 0;
+
+    min-height: 44px;
+    padding: 11px 17px;
+
+    background: #FFFFFF;
+    color: #45594C;
+
+    border: 1px solid #CDD8CA;
+    border-radius: 11px;
+
+    font-size: 0.79rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.services-preview-link:hover {
+    background: #45594C;
+    color: #FFFFFF;
+}
+
+
+/* =====================================================
+   135. MODAIS DE SERVIÇOS
+===================================================== */
+
+.services-modal {
+    position: fixed;
+
+    width: min(570px, calc(100vw - 28px));
+    max-width: 570px;
+    max-height: min(90vh, 90dvh);
+
+    margin: auto;
+    padding: 0;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    background: #FFFFFF;
+    color: #23263A;
+
+    border: 1px solid #E4D9CE;
+    border-radius: 22px;
+
+    box-shadow: 0 25px 80px rgba(20, 24, 35, 0.24);
+
+    font-family: "DM Sans", sans-serif;
+}
+
+.services-modal:not([open]) {
+    display: none;
+}
+
+.services-modal::backdrop {
+    background: rgba(20, 23, 36, 0.65);
+    backdrop-filter: blur(3px);
+}
+
+.services-modal-content {
+    padding: 31px;
+}
+
+
+/* =====================================================
+   136. CABEÇALHO DO MODAL
+===================================================== */
+
+.services-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 18px;
+    margin-bottom: 19px;
+}
+
+.services-modal-header .admin-panel-eyebrow {
+    margin-bottom: 10px;
+}
+
+.services-modal-header h2 {
+    color: #23263A;
+
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.services-modal-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 39px;
+    height: 39px;
+
+    flex-shrink: 0;
+    padding: 0;
+
+    background: #F6F3EF;
+    color: #68656A;
+
+    border: 1px solid #E6E0D9;
+    border-radius: 11px;
+
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.services-modal-close:hover {
+    background: #B76E4F;
+    color: #FFFFFF;
+}
+
+.services-modal-description {
+    margin-bottom: 24px;
+
+    color: #76767B;
+
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   137. FORMULÁRIO DE SERVIÇOS
+===================================================== */
+
+.services-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 19px;
+}
+
+.services-form-field {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+    min-width: 0;
+}
+
+.services-form-field label {
+    color: #42454F;
+
+    font-size: 0.81rem;
+    font-weight: 700;
+}
+
+.services-form-field input,
+.services-form-field select,
+.services-form-field textarea {
+    width: 100%;
+    min-width: 0;
+
+    padding: 12px 14px;
+
+    background: #FAF8F5;
+    color: #23263A;
+
+    border: 1px solid #DDD8D0;
+    border-radius: 11px;
+
+    outline: none;
+
+    font-size: 0.87rem;
+    line-height: 1.6;
+}
+
+.services-form-field input,
+.services-form-field select {
+    min-height: 48px;
+}
+
+.services-form-field textarea {
+    min-height: 118px;
+    resize: vertical;
+}
+
+.services-form-field input:focus,
+.services-form-field select:focus,
+.services-form-field textarea:focus {
+    background: #FFFFFF;
+    border-color: #B76E4F;
+
+    box-shadow:
+        0 0 0 3px rgba(183, 110, 79, 0.1);
+}
+
+.services-form-field input::placeholder,
+.services-form-field textarea::placeholder {
+    color: #A09BA0;
+}
+
+.services-form-field small {
+    color: #8C8D91;
+
+    font-size: 0.73rem;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   138. AVISO DOS VALORES
+===================================================== */
+
+.services-form-note {
+    padding: 18px;
+
+    background: #FFF8F1;
+
+    border: 1px solid #E7CDBB;
+    border-left: 4px solid #B76E4F;
+    border-radius: 12px;
+}
+
+.services-form-note strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #95563D;
+
+    font-size: 0.83rem;
+}
+
+.services-form-note p {
+    color: #795F51;
+
+    font-size: 0.78rem;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   139. FEEDBACK DO FORMULÁRIO
+===================================================== */
+
+.services-form-message {
+    padding: 14px 16px;
+
+    background: #EDF3EA;
+    color: #45594C;
+
+    border: 1px solid #D4E0D1;
+    border-radius: 11px;
+
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+.services-form-message[hidden] {
+    display: none !important;
+}
+
+.services-form-message.is-error {
+    background: #FFF0EE;
+    color: #A34B45;
+    border-color: #E4B9B4;
+}
+
+.services-form-message.is-success {
+    background: #EDF3EA;
+    color: #45594C;
+    border-color: #D4E0D1;
+}
+
+
+/* =====================================================
+   140. BOTÕES DO MODAL
+===================================================== */
+
+.services-form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.services-form-actions .admin-primary-action {
+    border: 1px solid #45594C;
+    cursor: pointer;
+}
+
+.services-secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 47px;
+    padding: 12px 19px;
+
+    background: #FFFFFF;
+    color: #62646B;
+
+    border: 1px solid #DDDFD9;
+    border-radius: 11px;
+
+    font-size: 0.83rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.services-secondary-button:hover {
+    background: #F5EFE6;
+    color: #95563D;
+    border-color: #D9B9A8;
+}
+
+
+/* =====================================================
+   141. DETALHES DO SERVIÇO
+===================================================== */
+
+.services-details-content {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+    padding: 20px;
+
+    background: #FAF8F5;
+    border: 1px solid #ECE5DE;
+    border-radius: 13px;
+}
+
+.services-details-content p {
+    color: #686A70;
+
+    font-size: 0.83rem;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.services-detail-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 15px;
+    padding: 11px 0;
+
+    border-bottom: 1px solid #EAE4DB;
+}
+
+.services-detail-row:last-child {
+    border-bottom: none;
+}
+
+.services-detail-row > span {
+    color: #77777D;
+
+    font-size: 0.79rem;
+}
+
+.services-detail-row > strong {
+    max-width: 65%;
+
+    color: #23263A;
+
+    font-size: 0.81rem;
+    line-height: 1.6;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+
+/* =====================================================
+   142. TELAS INTERMEDIÁRIAS
+===================================================== */
+
+@media (max-width: 1300px) {
+
+    .services-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .services-filters {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .services-clear-filters {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 1050px) {
+
+    .services-summary {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .services-summary-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .services-review-panel {
+        flex-wrap: wrap;
+    }
+
+    .services-preview-link {
+        margin-left: 86px;
+    }
+
+}
+
+
+/* =====================================================
+   143. TABLETS
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .services-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .services-card {
+        min-height: 355px;
+    }
+
+    .services-preview-link {
+        margin-left: 0;
+    }
+
+}
+
+
+/* =====================================================
+   144. CELULARES
+===================================================== */
+
+@media (max-width: 767px) {
+
+    /* INDICADORES */
+
+    .services-summary {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 11px;
+        margin-bottom: 20px;
+    }
+
+    .services-summary-card {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 12px;
+        padding: 17px 14px;
+    }
+
+    .services-summary-card:last-child {
+        grid-column: 1 / -1;
+
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .services-summary-icon {
+        width: 45px;
+        height: 45px;
+
+        border-radius: 12px;
+        font-size: 1.4rem;
+    }
+
+    .services-summary-card strong {
+        font-size: 1.65rem;
+    }
+
+    .services-summary-card div > span {
+        font-size: 0.73rem;
+    }
+
+
+    /* PAINEL */
+
+    .services-management-panel {
+        padding: 20px 15px;
+    }
+
+    .services-results-count {
+        font-size: 0.7rem;
+    }
+
+
+    /* FILTROS */
+
+    .services-filters {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+        padding: 15px;
+    }
+
+    .services-filter-field input,
+    .services-filter-field select {
+        font-size: 16px;
+    }
+
+
+    /* CARTÕES */
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .services-card {
+        min-height: auto;
+        padding: 21px 18px;
+    }
+
+    .services-card h3 {
+        font-size: 1.38rem;
+    }
+
+    .services-card-description {
+        font-size: 0.8rem;
+    }
+
+    .services-card-actions button {
+        flex: 1;
+    }
+
+
+    /* REVISÃO */
+
+    .services-review-panel {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 17px;
+        padding: 23px 19px;
+    }
+
+    .services-review-icon {
+        width: 52px;
+        height: 52px;
+
+        border-radius: 14px;
+    }
+
+    .services-review-panel h2 {
+        font-size: 1.3rem;
+    }
+
+    .services-preview-link {
+        width: 100%;
+    }
+
+
+    /* MODAIS */
+
+    .services-modal {
+        width: calc(100vw - 20px);
+        max-height: calc(100dvh - 20px);
+
+        border-radius: 17px;
+    }
+
+    .services-modal-content {
+        padding: 23px 18px;
+    }
+
+    .services-modal-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .services-form-field input,
+    .services-form-field select,
+    .services-form-field textarea {
+        font-size: 16px;
+    }
+
+    .services-form-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .services-form-actions button {
+        width: 100%;
+    }
+
+}
+
+
+/* =====================================================
+   145. CELULARES PEQUENOS
+===================================================== */
+
+@media (max-width: 390px) {
+
+    .services-summary-card {
+        padding: 14px 11px;
+    }
+
+    .services-summary-card strong {
+        font-size: 1.45rem;
+    }
+
+    .services-management-panel {
+        padding: 17px 11px;
+    }
+
+    .services-card {
+        padding: 18px 14px;
+    }
+
+    .services-card-actions {
+        gap: 6px;
+    }
+
+    .services-card-actions button {
+        padding: 9px 8px;
+        font-size: 0.7rem;
+    }
+
+    .services-modal-content {
+        padding: 20px 14px;
+    }
+
+}
+
+
+/* =====================================================
+   146. ACESSIBILIDADE
+===================================================== */
+
+.admin-services-page button:focus-visible,
+.admin-services-page a:focus-visible,
+.admin-services-page input:focus-visible,
+.admin-services-page select:focus-visible,
+.services-modal button:focus-visible,
+.services-modal input:focus-visible,
+.services-modal select:focus-visible,
+.services-modal textarea:focus-visible {
+    outline: 3px solid #B76E4F;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .services-summary-card,
+    .services-card,
+    .services-card-actions button {
+        transition: none !important;
+    }
+
+}
+
+
+/* =====================================================
+   DRA. MAURÍCIA MBANI
+   RELATÓRIOS ADMINISTRATIVOS
+
+   ADICIONAR AO FINAL DE:
+   assets/css/admin.css
+
+   AMBIENTE DEMONSTRATIVO
+   DADOS INTEIRAMENTE FICTÍCIOS
+===================================================== */
+
+
+/* =====================================================
+   147. CONFIGURAÇÕES GERAIS
+===================================================== */
+
+.admin-reports-page {
+    background: #F5F6F4;
+}
+
+.admin-reports-page button,
+.admin-reports-page input,
+.admin-reports-page select {
+    font-family: "DM Sans", sans-serif;
+}
+
+.admin-reports-page button {
+    cursor: pointer;
+}
+
+.admin-reports-page [hidden] {
+    display: none !important;
+}
+
+.admin-reports-page button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+
+/* =====================================================
+   148. PAINEL DE FILTROS
+===================================================== */
+
+.reports-filter-panel {
+    margin-bottom: 26px;
+}
+
+.reports-filters {
+    display: grid;
+
+    grid-template-columns:
+        minmax(165px, 1.2fr)
+        minmax(165px, 1.2fr)
+        auto
+        auto;
+
+    align-items: end;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    background: #F9F8F5;
+
+    border: 1px solid #EAE7E0;
+    border-radius: 15px;
+}
+
+.reports-filter-field {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+    min-width: 0;
+}
+
+.reports-filter-field label {
+    color: #454854;
+
+    font-size: 0.79rem;
+    font-weight: 700;
+}
+
+.reports-filter-field select {
+    width: 100%;
+    min-width: 0;
+    min-height: 46px;
+
+    padding: 11px 13px;
+
+    background: #FFFFFF;
+    color: #23263A;
+
+    border: 1px solid #DDDED8;
+    border-radius: 11px;
+
+    outline: none;
+
+    font-size: 0.82rem;
+    cursor: pointer;
+}
+
+.reports-filter-field select:focus {
+    border-color: #B76E4F;
+
+    box-shadow:
+        0 0 0 3px rgba(183, 110, 79, 0.10);
+}
+
+
+/* =====================================================
+   149. BOTÕES DOS FILTROS
+===================================================== */
+
+.reports-clear-button,
+.reports-print-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 46px;
+
+    padding: 11px 16px;
+
+    border-radius: 11px;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+    white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.reports-clear-button {
+    background: #FFFFFF;
+    color: #74747B;
+
+    border: 1px solid #DDDED8;
+}
+
+.reports-clear-button:not(:disabled):hover {
+    background: #F5EFE6;
+    color: #95563D;
+    border-color: #D9B9A8;
+}
+
+.reports-print-button {
+    background: #45594C;
+    color: #FFFFFF;
+
+    border: 1px solid #45594C;
+}
+
+.reports-print-button:not(:disabled):hover {
+    background: #36483D;
+    border-color: #36483D;
+}
+
+.reports-filter-description {
+    margin-top: 15px;
+
+    color: #88898D;
+
+    font-size: 0.76rem;
+    line-height: 1.75;
+}
+
+
+/* =====================================================
+   150. INDICADORES PRINCIPAIS
+===================================================== */
+
+.reports-summary {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+    margin-bottom: 26px;
+}
+
+.reports-summary-card {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    min-width: 0;
+
+    padding: 24px 22px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E6E8E2;
+    border-radius: 18px;
+
+    box-shadow:
+        0 5px 20px rgba(35, 38, 58, 0.035);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.reports-summary-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(35, 38, 58, 0.07);
+}
+
+.reports-summary-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 51px;
+    height: 51px;
+
+    margin-bottom: 22px;
+
+    border-radius: 15px;
+
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.reports-summary-icon.green {
+    background: #E7EFE5;
+    color: #45594C;
+}
+
+.reports-summary-icon.copper {
+    background: #F6E8DF;
+    color: #B76E4F;
+}
+
+.reports-summary-icon.gold {
+    background: #F7EFDF;
+    color: #A17B38;
+}
+
+.reports-summary-icon.navy {
+    background: #E9EAF0;
+    color: #23263A;
+}
+
+.reports-summary-value {
+    margin-bottom: 12px;
+
+    color: #23263A;
+
+    font-size: clamp(1.5rem, 2.1vw, 2rem);
+    font-weight: 700;
+
+    letter-spacing: -0.04em;
+    line-height: 1.2;
+
+    overflow-wrap: anywhere;
+}
+
+.reports-summary-card h2 {
+    margin-bottom: 8px;
+
+    color: #454854;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.84rem;
+    font-weight: 700;
+
+    line-height: 1.5;
+}
+
+.reports-summary-card small {
+    color: #85878C;
+
+    font-size: 0.74rem;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   151. ORGANIZAÇÃO DOS GRÁFICOS
+===================================================== */
+
+.reports-charts-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.4fr)
+        minmax(0, 1fr);
+
+    align-items: stretch;
+
+    gap: 20px;
+    margin-bottom: 26px;
+}
+
+.reports-appointments-panel,
+.reports-services-panel {
+    min-width: 0;
+}
+
+.reports-period-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 12px;
+
+    background: #EDF3EA;
+    color: #45594C;
+
+    border-radius: 25px;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.reports-chart-description {
+    margin-bottom: 22px;
+
+    color: #777B80;
+
+    font-size: 0.82rem;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   152. GRÁFICO DE CONSULTAS
+===================================================== */
+
+.reports-appointments-chart {
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, minmax(0, 1fr));
+
+    align-items: end;
+
+    gap: 12px;
+
+    min-height: 250px;
+
+    padding: 12px 8px 0;
+
+    border-bottom: 1px solid #E7E8E3;
+
+    background:
+        repeating-linear-gradient(
+            to top,
+            transparent,
+            transparent 54px,
+            #F0F0ED 54px,
+            #F0F0ED 55px
+        );
+}
+
+.reports-chart-month {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 13px;
+
+    min-width: 0;
+    height: 235px;
+}
+
+.reports-chart-bar-wrap {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    width: 100%;
+    height: 195px;
+}
+
+.reports-chart-bar {
+    display: block;
+
+    width: min(37px, 70%);
+    height: var(--bar-height, 30%);
+
+    min-height: 4px;
+
+    background: #45594C;
+
+    border-radius: 8px 8px 0 0;
+
+    transition:
+        height 0.25s ease,
+        filter 0.2s ease;
+}
+
+.reports-chart-bar.highlight {
+    background: #B76E4F;
+}
+
+.reports-chart-bar:hover {
+    filter: brightness(1.15);
+}
+
+.reports-chart-month small {
+    color: #777B80;
+
+    font-size: 0.74rem;
+    font-weight: 600;
+}
+
+.reports-panel-footnote {
+    margin-top: 19px;
+
+    color: #949498;
+
+    font-size: 0.73rem;
+    line-height: 1.75;
+}
+
+
+/* =====================================================
+   153. DISTRIBUIÇÃO POR SERVIÇO
+===================================================== */
+
+.reports-services-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 27px;
+    margin-top: 30px;
+}
+
+.reports-service-item {
+    display: flex;
+    flex-direction: column;
+
+    gap: 11px;
+}
+
+.reports-service-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 14px;
+}
+
+.reports-service-heading span {
+    color: #555963;
+
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.reports-service-heading strong {
+    color: #23263A;
+
+    font-size: 0.81rem;
+    font-weight: 700;
+}
+
+.reports-service-track {
+    width: 100%;
+    height: 12px;
+
+    overflow: hidden;
+
+    background: #EFF0EC;
+
+    border-radius: 30px;
+}
+
+.reports-service-fill {
+    display: block;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    transition: width 0.25s ease;
+}
+
+.reports-service-fill.capilar {
+    background: #45594C;
+}
+
+.reports-service-fill.geral {
+    background: #B76E4F;
+}
+
+.reports-service-fill.online {
+    background: #C8A66A;
+}
+
+
+/* =====================================================
+   154. SITUAÇÃO DOS AGENDAMENTOS
+===================================================== */
+
+.reports-status-panel {
+    margin-bottom: 26px;
+}
+
+.reports-status-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.reports-status-card {
+    display: flex;
+    align-items: center;
+
+    gap: 17px;
+
+    min-width: 0;
+
+    padding: 21px;
+
+    background: #FAF9F6;
+
+    border: 1px solid #EAE9E3;
+    border-radius: 15px;
+}
+
+.reports-status-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 49px;
+    height: 49px;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.reports-status-icon.confirmed {
+    background: #E7F0E6;
+    color: #45594C;
+}
+
+.reports-status-icon.pending {
+    background: #FFF0DA;
+    color: #A17B38;
+}
+
+.reports-status-icon.cancelled {
+    background: #FBE7E5;
+    color: #A34B45;
+}
+
+.reports-status-card > div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+    min-width: 0;
+}
+
+.reports-status-card strong {
+    color: #23263A;
+
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.reports-status-card p {
+    color: #777B80;
+
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   155. BARRA DE SITUAÇÃO
+===================================================== */
+
+.reports-status-progress {
+    display: flex;
+
+    width: 100%;
+    height: 17px;
+
+    overflow: hidden;
+
+    background: #EFF0EC;
+
+    border-radius: 30px;
+}
+
+.reports-status-progress > span {
+    display: block;
+
+    height: 100%;
+    flex-shrink: 0;
+
+    transition: width 0.25s ease;
+}
+
+.reports-status-progress .confirmed {
+    background: #45594C;
+}
+
+.reports-status-progress .pending {
+    background: #C8A66A;
+}
+
+.reports-status-progress .cancelled {
+    background: #C66C66;
+}
+
+
+/* =====================================================
+   156. TABELA DE RELATÓRIOS
+===================================================== */
+
+.reports-table-panel {
+    margin-bottom: 35px;
+}
+
+.reports-results-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 34px;
+
+    padding: 8px 13px;
+
+    background: #EDF3EA;
+    color: #45594C;
+
+    border: 1px solid #D8E3D4;
+    border-radius: 30px;
+
+    font-size: 0.73rem;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.reports-table {
+    min-width: 800px;
+}
+
+.reports-table th {
+    padding: 15px 13px;
+}
+
+.reports-table td {
+    padding: 17px 13px;
+
+    vertical-align: middle;
+
+    font-size: 0.81rem;
+}
+
+.reports-table td strong {
+    color: #23263A;
+}
+
+.reports-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.reports-table tbody tr:hover {
+    background: #F9F8F5;
+}
+
+
+/* =====================================================
+   157. ESTADO SEM RESULTADOS
+===================================================== */
+
+.reports-empty-state {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 11px;
+
+    padding: 45px 20px;
+
+    text-align: center;
+}
+
+.reports-empty-state[hidden] {
+    display: none !important;
+}
+
+.reports-empty-state strong {
+    color: #23263A;
+
+    font-family: "Playfair Display", serif;
+    font-size: 1.3rem;
+}
+
+.reports-empty-state p {
+    color: #828288;
+
+    font-size: 0.84rem;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   158. ACESSOS RÁPIDOS
+===================================================== */
+
+.reports-shortcuts {
+    margin-bottom: 38px;
+}
+
+.reports-shortcuts-heading {
+    margin-bottom: 22px;
+}
+
+.reports-shortcuts-heading .admin-eyebrow {
+    margin-bottom: 11px;
+}
+
+.reports-shortcuts-heading h2 {
+    color: #23263A;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.reports-shortcuts-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.reports-shortcut-card {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 15px;
+
+    min-width: 0;
+
+    padding: 24px 20px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E6E8E2;
+    border-radius: 17px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.reports-shortcut-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #D9BAA9;
+
+    box-shadow:
+        0 12px 28px rgba(35, 38, 58, 0.07);
+}
+
+.reports-shortcut-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    background: #E7EFE5;
+    color: #45594C;
+
+    border-radius: 14px;
+
+    font-size: 1.5rem;
+}
+
+.reports-shortcut-card:nth-child(2)
+.reports-shortcut-icon {
+    background: #F6E8DF;
+    color: #B76E4F;
+}
+
+.reports-shortcut-card:nth-child(3)
+.reports-shortcut-icon {
+    background: #F7EFDF;
+    color: #A17B38;
+}
+
+.reports-shortcut-card > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.reports-shortcut-card h3 {
+    margin-bottom: 8px;
+
+    color: #23263A;
+
+    font-family: "Playfair Display", serif;
+    font-size: 1.19rem;
+    font-weight: 600;
+}
+
+.reports-shortcut-card p {
+    color: #777B80;
+
+    font-size: 0.79rem;
+    line-height: 1.7;
+}
+
+.reports-shortcut-card > span:last-child {
+    color: #B76E4F;
+
+    font-size: 1.2rem;
+}
+
+
+/* =====================================================
+   159. RESPONSIVIDADE - NOTEBOOK
+===================================================== */
+
+@media (max-width: 1300px) {
+
+    .reports-summary {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .reports-filters {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .reports-clear-button,
+    .reports-print-button {
+        width: 100%;
+    }
+
+    .reports-shortcuts-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =====================================================
+   160. RESPONSIVIDADE - TABLET
+===================================================== */
+
+@media (max-width: 1050px) {
+
+    .reports-charts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reports-appointments-chart {
+        min-height: 235px;
+    }
+
+    .reports-status-grid {
+        gap: 11px;
+    }
+
+    .reports-status-card {
+        padding: 17px 13px;
+        gap: 10px;
+    }
+
+    .reports-status-card strong {
+        font-size: 1.5rem;
+    }
+
+}
+
+
+/* =====================================================
+   161. RESPONSIVIDADE - CELULAR
+===================================================== */
+
+@media (max-width: 767px) {
+
+    /* FILTROS */
+
+    .reports-filter-panel {
+        padding: 20px 15px;
+    }
+
+    .reports-filters {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+        padding: 15px;
+    }
+
+    .reports-filter-field select {
+        font-size: 16px;
+    }
+
+    .reports-clear-button,
+    .reports-print-button {
+        width: 100%;
+    }
+
+
+    /* INDICADORES */
+
+    .reports-summary {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 11px;
+        margin-bottom: 20px;
+    }
+
+    .reports-summary-card {
+        padding: 18px 14px;
+
+        border-radius: 14px;
+    }
+
+    .reports-summary-icon {
+        width: 42px;
+        height: 42px;
+
+        margin-bottom: 17px;
+
+        border-radius: 12px;
+        font-size: 1.4rem;
+    }
+
+    .reports-summary-value {
+        font-size: clamp(1.16rem, 4vw, 1.6rem);
+    }
+
+    .reports-summary-card h2 {
+        font-size: 0.75rem;
+    }
+
+    .reports-summary-card small {
+        font-size: 0.68rem;
+    }
+
+
+    /* GRÁFICOS */
+
+    .reports-charts-grid {
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .reports-appointments-panel,
+    .reports-services-panel {
+        padding: 20px 15px;
+    }
+
+    .reports-appointments-chart {
+        gap: 6px;
+
+        min-height: 200px;
+        padding: 8px 0 0;
+    }
+
+    .reports-chart-month {
+        height: 188px;
+        gap: 10px;
+    }
+
+    .reports-chart-bar-wrap {
+        height: 155px;
+    }
+
+    .reports-chart-bar {
+        border-radius: 5px 5px 0 0;
+    }
+
+    .reports-chart-month small {
+        font-size: 0.65rem;
+    }
+
+    .reports-period-badge {
+        font-size: 0.65rem;
+    }
+
+
+    /* SITUAÇÃO */
+
+    .reports-status-panel {
+        padding: 20px 15px;
+    }
+
+    .reports-status-grid {
+        grid-template-columns: 1fr;
+
+        gap: 11px;
+    }
+
+    .reports-status-card {
+        padding: 15px;
+    }
+
+    .reports-status-icon {
+        width: 42px;
+        height: 42px;
+
+        border-radius: 12px;
+    }
+
+    .reports-status-card strong {
+        font-size: 1.55rem;
+    }
+
+    .reports-status-progress {
+        height: 14px;
+    }
+
+
+    /* TABELA */
+
+    .reports-table-panel {
+        padding: 20px 15px;
+    }
+
+    .reports-table {
+        min-width: 760px;
+    }
+
+    .reports-results-count {
+        font-size: 0.67rem;
+    }
+
+
+    /* ACESSOS RÁPIDOS */
+
+    .reports-shortcuts-heading h2 {
+        font-size: 1.55rem;
+    }
+
+    .reports-shortcuts-grid {
+        grid-template-columns: 1fr;
+
+        gap: 13px;
+    }
+
+    .reports-shortcut-card {
+        padding: 21px 18px;
+    }
+
+}
+
+
+/* =====================================================
+   162. CELULARES PEQUENOS
+===================================================== */
+
+@media (max-width: 390px) {
+
+    .reports-summary-card {
+        padding: 15px 11px;
+    }
+
+    .reports-summary-value {
+        font-size: 1.1rem;
+    }
+
+    .reports-filter-panel,
+    .reports-appointments-panel,
+    .reports-services-panel,
+    .reports-status-panel,
+    .reports-table-panel {
+        padding: 17px 11px;
+    }
+
+    .reports-shortcut-card {
+        padding: 18px 14px;
+    }
+
+}
+
+
+/* =====================================================
+   163. ACESSIBILIDADE
+===================================================== */
+
+.admin-reports-page button:focus-visible,
+.admin-reports-page a:focus-visible,
+.admin-reports-page input:focus-visible,
+.admin-reports-page select:focus-visible {
+    outline: 3px solid #B76E4F;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .reports-summary-card,
+    .reports-chart-bar,
+    .reports-service-fill,
+    .reports-shortcut-card,
+    .reports-status-progress > span {
+        transition: none !important;
+    }
+
+}
+
+
+/* =====================================================
+   164. ESTILOS PARA IMPRESSÃO
+
+   Usados futuramente pelo botão
+   "Imprimir relatório".
+===================================================== */
+
+@media print {
+
+    @page {
+        size: A4;
+        margin: 12mm;
+    }
+
+    .admin-reports-page {
+        background: #FFFFFF !important;
+        color: #23263A;
+    }
+
+    .admin-reports-page .admin-demo-strip,
+    .admin-reports-page .admin-sidebar,
+    .admin-reports-page .admin-sidebar-overlay,
+    .admin-reports-page .admin-topbar,
+    .admin-reports-page .reports-filter-panel,
+    .admin-reports-page .reports-shortcuts,
+    .admin-reports-page .admin-dashboard-footer,
+    .admin-reports-page #reports-export-button {
+        display: none !important;
+    }
+
+    .admin-reports-page .admin-app,
+    .admin-reports-page .admin-main-area,
+    .admin-reports-page .admin-content {
+        display: block !important;
+
+        width: 100% !important;
+        max-width: none !important;
+
+        min-height: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        background: #FFFFFF !important;
+    }
+
+    .admin-reports-page .reports-summary,
+    .admin-reports-page .reports-charts-grid,
+    .admin-reports-page .reports-status-grid {
+        break-inside: avoid;
+    }
+
+    .admin-reports-page .admin-panel,
+    .admin-reports-page .reports-summary-card {
+        box-shadow: none !important;
+        break-inside: avoid;
+    }
+
+    .admin-reports-page .admin-table-scroll {
+        overflow: visible !important;
+    }
+
+    .admin-reports-page .reports-table {
+        min-width: 0;
+        width: 100%;
+
+        font-size: 9px;
+    }
+
+    .admin-reports-page .reports-table th,
+    .admin-reports-page .reports-table td {
+        padding: 7px 5px;
+        font-size: 9px;
+    }
+
+    .admin-reports-page .reports-chart-bar,
+    .admin-reports-page .reports-service-fill,
+    .admin-reports-page .reports-status-progress > span {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+}
+
+/* =====================================================
+   DRA. MAURÍCIA MBANI
+   CONFIGURAÇÕES ADMINISTRATIVAS
+
+   ARQUIVO: assets/css/admin.css
+
+   ADICIONAR AO FINAL DO ARQUIVO
+   NÃO APAGAR OS ESTILOS ANTERIORES
+
+   AMBIENTE DEMONSTRATIVO
+===================================================== */
+
+
+/* =====================================================
+   165. CONFIGURAÇÕES GERAIS
+===================================================== */
+
+.admin-settings-page {
+    background: #F5F6F4;
+}
+
+.admin-settings-page button,
+.admin-settings-page input,
+.admin-settings-page select,
+.admin-settings-page textarea {
+    font-family: "DM Sans", sans-serif;
+}
+
+.admin-settings-page button {
+    cursor: pointer;
+}
+
+.admin-settings-page [hidden] {
+    display: none !important;
+}
+
+.admin-settings-page button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.admin-settings-page * {
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   166. NAVEGAÇÃO DAS CONFIGURAÇÕES
+===================================================== */
+
+.settings-navigation {
+    display: flex;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 27px;
+    padding: 9px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E5E8E1;
+    border-radius: 15px;
+
+    box-shadow:
+        0 4px 16px rgba(35, 38, 58, 0.025);
+}
+
+.settings-navigation a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 40px;
+
+    padding: 10px 17px;
+
+    color: #6F7475;
+    background: transparent;
+
+    border: 1px solid transparent;
+    border-radius: 10px;
+
+    font-size: 0.81rem;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.settings-navigation a:hover {
+    background: #F5EFE6;
+    color: #95563D;
+}
+
+.settings-navigation a.is-active {
+    background: #45594C;
+    color: #FFFFFF;
+    border-color: #45594C;
+}
+
+
+/* =====================================================
+   167. FORMULÁRIO PRINCIPAL
+===================================================== */
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 25px;
+
+    width: 100%;
+}
+
+.settings-panel {
+    min-width: 0;
+
+    scroll-margin-top: 90px;
+}
+
+.settings-panel .admin-panel-header {
+    align-items: flex-start;
+
+    gap: 18px;
+    margin-bottom: 27px;
+}
+
+.settings-panel .admin-panel-header > div {
+    min-width: 0;
+}
+
+.settings-panel-description {
+    max-width: 660px;
+
+    margin-top: 11px;
+
+    color: #777B80;
+
+    font-size: 0.82rem;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   168. ÍCONES DAS SEÇÕES
+===================================================== */
+
+.settings-section-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 51px;
+    height: 51px;
+
+    flex-shrink: 0;
+
+    background: #E7EFE5;
+    color: #45594C;
+
+    border-radius: 15px;
+
+    font-size: 1.65rem;
+    font-weight: 600;
+}
+
+.settings-section-icon.copper {
+    background: #F6E8DF;
+    color: #B76E4F;
+}
+
+.settings-section-icon.gold {
+    background: #F7EFDF;
+    color: #A17B38;
+}
+
+
+/* =====================================================
+   169. GRID DOS CAMPOS
+===================================================== */
+
+.settings-fields-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 21px;
+}
+
+.settings-field {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    min-width: 0;
+}
+
+.settings-field-full {
+    grid-column: 1 / -1;
+}
+
+.settings-field label {
+    color: #454854;
+
+    font-size: 0.81rem;
+    font-weight: 700;
+}
+
+.settings-field input,
+.settings-field select,
+.settings-field textarea {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+
+    padding: 12px 14px;
+
+    background: #FAF8F5;
+    color: #23263A;
+
+    border: 1px solid #DDD8D0;
+    border-radius: 11px;
+
+    outline: none;
+
+    font-size: 0.87rem;
+    line-height: 1.6;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.settings-field input,
+.settings-field select {
+    min-height: 48px;
+}
+
+.settings-field textarea {
+    min-height: 112px;
+    resize: vertical;
+}
+
+.settings-field input::placeholder,
+.settings-field textarea::placeholder {
+    color: #A09BA0;
+}
+
+.settings-field input:focus,
+.settings-field select:focus,
+.settings-field textarea:focus {
+    background: #FFFFFF;
+
+    border-color: #B76E4F;
+
+    box-shadow:
+        0 0 0 3px rgba(183, 110, 79, 0.10);
+}
+
+.settings-field small {
+    color: #939296;
+
+    font-size: 0.74rem;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   170. NOTAS INFORMATIVAS
+===================================================== */
+
+.settings-info-note {
+    margin-top: 26px;
+    padding: 19px 21px;
+
+    background: #F3F6F1;
+
+    border: 1px solid #DCE5D9;
+    border-left: 4px solid #45594C;
+    border-radius: 13px;
+}
+
+.settings-info-note strong {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #45594C;
+
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.settings-info-note p {
+    max-width: 850px;
+
+    color: #68746A;
+
+    font-size: 0.79rem;
+    line-height: 1.85;
+}
+
+
+/* =====================================================
+   171. LISTA DE HORÁRIOS
+===================================================== */
+
+.settings-schedule-list {
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border: 1px solid #E8E8E2;
+    border-radius: 15px;
+
+    background: #FFFFFF;
+}
+
+.settings-schedule-row {
+    display: grid;
+
+    grid-template-columns:
+        minmax(125px, 1.25fr)
+        minmax(90px, 0.85fr)
+        minmax(110px, 1fr)
+        30px
+        minmax(110px, 1fr);
+
+    align-items: center;
+
+    column-gap: 16px;
+    row-gap: 13px;
+
+    min-width: 0;
+
+    padding: 18px 20px;
+
+    border-bottom: 1px solid #ECECE7;
+
+    transition: background 0.2s ease;
+}
+
+.settings-schedule-row:last-child {
+    border-bottom: none;
+}
+
+.settings-schedule-row:hover {
+    background: #FBFAF7;
+}
+
+.settings-day {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+    min-width: 0;
+}
+
+.settings-day strong {
+    color: #23263A;
+
+    font-size: 0.83rem;
+    font-weight: 700;
+}
+
+.settings-day small {
+    color: #99999E;
+
+    font-size: 0.71rem;
+}
+
+.settings-schedule-row > input[type="time"] {
+    width: 100%;
+    min-width: 0;
+    min-height: 43px;
+
+    padding: 9px 11px;
+
+    background: #FAF8F5;
+    color: #23263A;
+
+    border: 1px solid #DDDED8;
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 0.83rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.settings-schedule-row > input[type="time"]:focus {
+    border-color: #B76E4F;
+
+    box-shadow:
+        0 0 0 3px rgba(183, 110, 79, 0.10);
+}
+
+.settings-schedule-row > input[type="time"]:disabled {
+    background: #F1F1EF;
+    color: #A1A2A3;
+
+    border-color: #E6E7E3;
+
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.settings-time-separator {
+    color: #92939A;
+
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+
+/* =====================================================
+   172. INTERRUPTORES DE ATIVAÇÃO
+
+   O input continua acessível ao teclado.
+   O visual é controlado pelo CSS.
+===================================================== */
+
+.settings-switch {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 10px;
+
+    width: fit-content;
+    min-height: 36px;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.settings-switch input[type="checkbox"] {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    margin: 0;
+    padding: 0;
+
+    opacity: 0;
+}
+
+.settings-switch-track {
+    position: relative;
+
+    display: inline-block;
+
+    width: 45px;
+    height: 25px;
+
+    flex-shrink: 0;
+
+    background: #CCD0CA;
+
+    border: 1px solid #BEC4BB;
+    border-radius: 30px;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.settings-switch-track::after {
+    content: "";
+
+    position: absolute;
+
+    top: 3px;
+    left: 3px;
+
+    width: 17px;
+    height: 17px;
+
+    background: #FFFFFF;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 1px 4px rgba(20, 24, 35, 0.15);
+
+    transition: transform 0.2s ease;
+}
+
+
+/* ESTADO ATIVADO */
+
+.settings-switch input:checked
++ .settings-switch-track {
+    background: #45594C;
+    border-color: #45594C;
+}
+
+.settings-switch input:checked
++ .settings-switch-track::after {
+    transform: translateX(20px);
+}
+
+
+/* FOCO VIA TECLADO */
+
+.settings-switch input:focus-visible
++ .settings-switch-track {
+    outline: 3px solid #B76E4F;
+    outline-offset: 3px;
+}
+
+
+/* TEXTO */
+
+.settings-switch-label {
+    color: #85878C;
+
+    font-size: 0.74rem;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.settings-switch input:checked
+~ .settings-switch-label {
+    color: #45594C;
+}
+
+
+/* =====================================================
+   173. LISTA DE NOTIFICAÇÕES
+===================================================== */
+
+.settings-options-list {
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E8E8E2;
+    border-radius: 15px;
+}
+
+.settings-option-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+
+    padding: 23px 21px;
+
+    border-bottom: 1px solid #ECECE7;
+
+    transition: background 0.2s ease;
+}
+
+.settings-option-row:last-child {
+    border-bottom: none;
+}
+
+.settings-option-row:hover {
+    background: #FBFAF7;
+}
+
+.settings-option-row > div {
+    min-width: 0;
+}
+
+.settings-option-row strong {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #23263A;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.settings-option-row p {
+    max-width: 550px;
+
+    color: #7D8185;
+
+    font-size: 0.78rem;
+    line-height: 1.8;
+}
+
+.settings-option-row .settings-switch {
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   174. PALETA DE CORES
+===================================================== */
+
+.settings-colors {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 15px;
+
+    margin-bottom: 27px;
+}
+
+.settings-color-item {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    min-width: 0;
+
+    padding: 17px 14px;
+
+    background: #FAF9F7;
+
+    border: 1px solid #E9E8E3;
+    border-radius: 13px;
+}
+
+.settings-color-swatch {
+    display: inline-block;
+
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    border: 1px solid rgba(35, 38, 58, 0.08);
+    border-radius: 12px;
+}
+
+.settings-color-swatch.green {
+    background: #45594C;
+}
+
+.settings-color-swatch.copper {
+    background: #B76E4F;
+}
+
+.settings-color-swatch.navy {
+    background: #23263A;
+}
+
+.settings-color-swatch.ivory {
+    background: #F5EFE6;
+}
+
+.settings-color-item > div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+    min-width: 0;
+}
+
+.settings-color-item strong {
+    color: #454854;
+
+    font-size: 0.74rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.settings-color-item small {
+    color: #8D8F94;
+
+    font-size: 0.72rem;
+    font-variant-numeric: tabular-nums;
+}
+
+
+/* =====================================================
+   175. PAINEL DE SALVAMENTO
+===================================================== */
+
+.settings-save-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 29px 30px;
+
+    background: #F1F3EF;
+
+    border: 1px solid #DCE4D9;
+    border-radius: 18px;
+}
+
+.settings-save-panel > div:first-child {
+    flex: 1;
+    min-width: 0;
+}
+
+.settings-save-panel .admin-eyebrow {
+    margin-bottom: 10px;
+}
+
+.settings-save-panel h2 {
+    margin-bottom: 10px;
+
+    color: #23263A;
+
+    font-family: "Playfair Display", serif;
+    font-size: 1.55rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.settings-save-panel p:last-child {
+    max-width: 600px;
+
+    color: #6F7771;
+
+    font-size: 0.8rem;
+    line-height: 1.8;
+}
+
+.settings-save-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.settings-save-actions .admin-primary-action {
+    min-height: 47px;
+
+    border: 1px solid #45594C;
+}
+
+.settings-secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 47px;
+
+    padding: 12px 19px;
+
+    background: #FFFFFF;
+    color: #62646B;
+
+    border: 1px solid #D6DAD3;
+    border-radius: 11px;
+
+    font-size: 0.82rem;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.settings-secondary-button:not(:disabled):hover {
+    background: #F5EFE6;
+    color: #95563D;
+}
+
+
+/* =====================================================
+   176. MENSAGEM DE FEEDBACK
+===================================================== */
+
+.settings-form-message {
+    padding: 17px 20px;
+
+    background: #EDF3EA;
+    color: #45594C;
+
+    border: 1px solid #D4E0D1;
+    border-radius: 12px;
+
+    font-size: 0.84rem;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+.settings-form-message[hidden] {
+    display: none !important;
+}
+
+.settings-form-message.is-success {
+    background: #EDF3EA;
+    color: #45594C;
+
+    border-color: #D4E0D1;
+}
+
+.settings-form-message.is-error {
+    background: #FFF0EE;
+    color: #A34B45;
+
+    border-color: #E4B9B4;
+}
+
+
+/* =====================================================
+   177. ESTADO DE ALTERAÇÕES PENDENTES
+===================================================== */
+
+.settings-save-panel.has-changes {
+    background: #FFF8F1;
+    border-color: #E7CDBB;
+}
+
+.settings-save-panel.has-changes .admin-eyebrow {
+    color: #B76E4F;
+}
+
+
+/* =====================================================
+   178. NOTEBOOK E TABLET
+===================================================== */
+
+@media (max-width: 1350px) {
+
+    .settings-colors {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .settings-save-panel {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .settings-save-actions {
+        justify-content: flex-start;
+    }
+
+}
+
+
+@media (max-width: 1100px) {
+
+    .settings-schedule-row {
+        grid-template-columns:
+            minmax(110px, 1.1fr)
+            minmax(90px, 0.85fr)
+            minmax(90px, 1fr)
+            24px
+            minmax(90px, 1fr);
+
+        column-gap: 10px;
+        padding: 17px 13px;
+    }
+
+    .settings-navigation {
+        gap: 7px;
+    }
+
+    .settings-navigation a {
+        padding: 9px 12px;
+    }
+
+}
+
+
+/* =====================================================
+   179. CELULARES
+===================================================== */
+
+@media (max-width: 767px) {
+
+    /* NAVEGAÇÃO */
+
+    .settings-navigation {
+        display: flex;
+        flex-wrap: nowrap;
+
+        gap: 7px;
+
+        overflow-x: auto;
+
+        padding: 8px;
+        margin-bottom: 20px;
+
+        scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .settings-navigation a {
+        flex-shrink: 0;
+
+        min-height: 39px;
+
+        padding: 10px 12px;
+
+        font-size: 0.76rem;
+    }
+
+
+    /* PAINÉIS */
+
+    .settings-form {
+        gap: 18px;
+    }
+
+    .settings-panel {
+        padding: 21px 16px;
+    }
+
+    .settings-panel .admin-panel-header {
+        gap: 13px;
+        margin-bottom: 22px;
+    }
+
+    .settings-section-icon {
+        width: 43px;
+        height: 43px;
+
+        border-radius: 12px;
+        font-size: 1.35rem;
+    }
+
+    .settings-panel-description {
+        font-size: 0.78rem;
+    }
+
+
+    /* CAMPOS */
+
+    .settings-fields-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .settings-field-full {
+        grid-column: auto;
+    }
+
+    .settings-field input,
+    .settings-field select,
+    .settings-field textarea {
+        font-size: 16px;
+    }
+
+
+    /* HORÁRIOS */
+
+    .settings-schedule-row {
+        grid-template-columns:
+            minmax(0, 1fr)
+            auto;
+
+        column-gap: 12px;
+        row-gap: 14px;
+
+        padding: 18px 15px;
+    }
+
+    .settings-day {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .settings-schedule-row
+    > .settings-switch {
+        grid-column: 2;
+        grid-row: 1;
+
+        justify-self: end;
+    }
+
+    .settings-schedule-row
+    > input[type="time"]:first-of-type {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .settings-schedule-row
+    > .settings-time-separator {
+        display: none;
+    }
+
+    .settings-schedule-row
+    > input[type="time"]:last-of-type {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .settings-schedule-row
+    > input[type="time"] {
+        width: 100%;
+        min-width: 0;
+
+        font-size: 16px;
+    }
+
+
+    /* NOTIFICAÇÕES */
+
+    .settings-option-row {
+        gap: 15px;
+        padding: 19px 15px;
+    }
+
+    .settings-option-row strong {
+        font-size: 0.81rem;
+    }
+
+    .settings-option-row p {
+        font-size: 0.74rem;
+    }
+
+    .settings-option-row
+    .settings-switch {
+        flex-direction: column;
+        align-items: flex-end;
+
+        gap: 5px;
+    }
+
+    .settings-option-row
+    .settings-switch-label {
+        font-size: 0.69rem;
+    }
+
+
+    /* CORES */
+
+    .settings-colors {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+    .settings-color-item {
+        gap: 10px;
+        padding: 13px 11px;
+    }
+
+    .settings-color-swatch {
+        width: 35px;
+        height: 35px;
+
+        border-radius: 10px;
+    }
+
+    .settings-color-item strong {
+        font-size: 0.7rem;
+    }
+
+    .settings-color-item small {
+        font-size: 0.68rem;
+    }
+
+
+    /* NOTAS */
+
+    .settings-info-note {
+        margin-top: 20px;
+        padding: 16px;
+    }
+
+    .settings-info-note p {
+        font-size: 0.76rem;
+    }
+
+
+    /* SALVAMENTO */
+
+    .settings-save-panel {
+        padding: 23px 18px;
+    }
+
+    .settings-save-panel h2 {
+        font-size: 1.4rem;
+    }
+
+    .settings-save-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+
+        width: 100%;
+    }
+
+    .settings-save-actions button {
+        width: 100%;
+    }
+
+    .settings-form-message {
+        padding: 15px;
+
+        font-size: 0.78rem;
+    }
+
+}
+
+
+/* =====================================================
+   180. CELULARES PEQUENOS
+===================================================== */
+
+@media (max-width: 390px) {
+
+    .settings-panel {
+        padding: 18px 12px;
+    }
+
+    .settings-schedule-row {
+        padding: 15px 10px;
+        column-gap: 8px;
+    }
+
+    .settings-switch {
+        gap: 6px;
+    }
+
+    .settings-switch-label {
+        font-size: 0.68rem;
+    }
+
+    .settings-schedule-row
+    > input[type="time"] {
+        padding: 9px 7px;
+    }
+
+    .settings-colors {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-color-item {
+        padding: 13px;
+    }
+
+    .settings-option-row {
+        gap: 9px;
+        padding: 16px 11px;
+    }
+
+    .settings-save-panel {
+        padding: 20px 14px;
+    }
+
+}
+
+
+/* =====================================================
+   181. ACESSIBILIDADE
+===================================================== */
+
+.admin-settings-page button:focus-visible,
+.admin-settings-page a:focus-visible,
+.admin-settings-page input:focus-visible,
+.admin-settings-page select:focus-visible,
+.admin-settings-page textarea:focus-visible {
+    outline: 3px solid #B76E4F;
+    outline-offset: 3px;
+}
+
+
+/* GARANTE O FOCO VISÍVEL DOS SWITCHES */
+
+.admin-settings-page
+.settings-switch input:focus-visible
++ .settings-switch-track {
+    outline: 3px solid #B76E4F;
+    outline-offset: 3px;
+}
+
+
+/* REDUÇÃO DE ANIMAÇÕES */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .settings-navigation a,
+    .settings-schedule-row,
+    .settings-switch-track,
+    .settings-switch-track::after,
+    .settings-option-row,
+    .settings-secondary-button {
+        transition: none !important;
+    }
+
+}

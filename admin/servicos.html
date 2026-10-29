@@ -1,0 +1,1348 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Gerenciamento demonstrativo dos serviços da Dra. Maurícia Mbani.">
+
+    <meta
+        name="robots"
+        content="noindex, nofollow">
+
+    <title>
+        Serviços | Dra. Maurícia Mbani
+    </title>
+
+    <!-- FONTES -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/variables.css">
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/global.css">
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/components.css">
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/admin.css">
+
+    <!-- JAVASCRIPT -->
+
+    <script
+        src="../assets/js/dashboard.js"
+        defer>
+    </script>
+
+    <script
+        src="../assets/js/servicos.js"
+        defer>
+    </script>
+
+</head>
+
+
+<body class="admin-dashboard-body admin-services-page">
+
+    <!-- =====================================
+         AVISO DEMONSTRATIVO
+    ====================================== -->
+
+    <div class="admin-demo-strip">
+        ✦ PAINEL DEMONSTRATIVO — SERVIÇOS EM REVISÃO ✦
+    </div>
+
+
+    <div class="admin-app">
+
+        <!-- =====================================
+             1. MENU LATERAL
+        ====================================== -->
+
+        <aside
+            id="admin-sidebar"
+            class="admin-sidebar"
+            aria-label="Menu administrativo">
+
+            <!-- IDENTIDADE -->
+
+            <div class="admin-sidebar-brand">
+
+                <a href="dashboard.html">
+
+                    <img
+                        src="../assets/images/logo/logo-principal.png"
+                        alt="Logotipo da Dra. Maurícia Mbani">
+
+                    <span>
+
+                        <strong>
+                            Dra. Maurícia Mbani
+                        </strong>
+
+                        <small>
+                            PAINEL ADMINISTRATIVO
+                        </small>
+
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <!-- PERFIL -->
+
+            <div class="admin-sidebar-profile">
+
+                <div
+                    class="admin-profile-avatar"
+                    aria-hidden="true">
+                    DM
+                </div>
+
+                <div class="admin-profile-info">
+
+                    <strong>
+                        Usuário Demo
+                    </strong>
+
+                    <small>
+                        Administrador demonstrativo
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- NAVEGAÇÃO -->
+
+            <nav
+                class="admin-sidebar-nav"
+                aria-label="Seções do painel">
+
+                <p class="admin-nav-label">
+                    GERENCIAMENTO
+                </p>
+
+                <a
+                    href="dashboard.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ◫
+                    </span>
+
+                    Dashboard
+
+                </a>
+
+                <a
+                    href="agenda.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ◷
+                    </span>
+
+                    Agenda
+
+                </a>
+
+                <a
+                    href="pacientes.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ♙
+                    </span>
+
+                    Pacientes
+
+                </a>
+
+                <a
+                    href="financeiro.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ◈
+                    </span>
+
+                    Financeiro
+
+                </a>
+
+
+                <p class="admin-nav-label">
+                    ADMINISTRAÇÃO
+                </p>
+
+                <a
+                    href="servicos.html"
+                    class="admin-nav-link is-active"
+                    aria-current="page">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ♡
+                    </span>
+
+                    Serviços
+
+                </a>
+
+                <a
+                    href="relatorios.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ▤
+                    </span>
+
+                    Relatórios
+
+                </a>
+
+                <a
+                    href="configuracoes.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ⚙
+                    </span>
+
+                    Configurações
+
+                </a>
+
+            </nav>
+
+
+            <!-- RODAPÉ -->
+
+            <div class="admin-sidebar-bottom">
+
+                <div class="admin-sidebar-demo-note">
+
+                    <strong>
+                        Ambiente de demonstração
+                    </strong>
+
+                    <p>
+                        Serviços, descrições e
+                        modalidades sujeitos à
+                        aprovação da médica.
+                    </p>
+
+                </div>
+
+                <a
+                    href="login.html"
+                    class="admin-logout-link">
+
+                    <span aria-hidden="true">↩</span>
+
+                    Voltar ao login
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =====================================
+             2. ÁREA PRINCIPAL
+        ====================================== -->
+
+        <div class="admin-main-area">
+
+            <!-- CABEÇALHO -->
+
+            <header class="admin-topbar">
+
+                <div class="admin-topbar-left">
+
+                    <button
+                        type="button"
+                        id="admin-menu-toggle"
+                        class="admin-menu-toggle"
+                        aria-label="Abrir menu administrativo"
+                        aria-controls="admin-sidebar"
+                        aria-expanded="false">
+                        ☰
+                    </button>
+
+                    <div>
+
+                        <span class="admin-topbar-subtitle">
+                            ADMINISTRAÇÃO
+                        </span>
+
+                        <strong>
+                            Gestão de Serviços
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-topbar-right">
+
+                    <span class="admin-topbar-demo">
+                        ● Modo demonstração
+                    </span>
+
+                    <div class="admin-topbar-avatar">
+                        DM
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- OVERLAY MOBILE -->
+
+            <button
+                type="button"
+                id="admin-sidebar-overlay"
+                class="admin-sidebar-overlay"
+                aria-label="Fechar menu administrativo"
+                hidden>
+            </button>
+
+
+            <!-- =====================================
+                 3. CONTEÚDO
+            ====================================== -->
+
+            <main class="admin-content">
+
+                <section class="admin-page-heading">
+
+                    <div>
+
+                        <p class="admin-eyebrow">
+                            PORTFÓLIO DE ATENDIMENTOS
+                        </p>
+
+                        <h1>
+                            Gestão de
+                            <em>serviços.</em>
+                        </h1>
+
+                        <p>
+                            Organize as apresentações
+                            dos atendimentos e simule
+                            alterações antes da
+                            aprovação do conteúdo.
+                        </p>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        id="services-new-button"
+                        class="admin-primary-action">
+
+                        <span aria-hidden="true">+</span>
+
+                        Novo serviço
+
+                    </button>
+
+                </section>
+
+
+                <!-- =====================================
+                     4. AVISO
+                ====================================== -->
+
+                <div class="admin-dashboard-notice">
+
+                    <span
+                        class="admin-notice-icon"
+                        aria-hidden="true">
+                        i
+                    </span>
+
+                    <p>
+
+                        <strong>
+                            Conteúdo em homologação:
+                        </strong>
+
+                        títulos, descrições,
+                        modalidades, disponibilidade
+                        e valores deverão ser
+                        confirmados pela médica.
+                        Alterações nesta tela
+                        são apenas simulações e
+                        não atualizam o site público.
+
+                    </p>
+
+                </div>
+
+
+                <!-- =====================================
+                     5. INDICADORES
+                ====================================== -->
+
+                <section
+                    class="services-summary"
+                    aria-label="Resumo dos serviços">
+
+                    <article class="services-summary-card">
+
+                        <span
+                            class="services-summary-icon green"
+                            aria-hidden="true">
+                            ♡
+                        </span>
+
+                        <div>
+
+                            <strong id="services-total">
+                                03
+                            </strong>
+
+                            <span>
+                                Serviços cadastrados
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="services-summary-card">
+
+                        <span
+                            class="services-summary-icon copper"
+                            aria-hidden="true">
+                            ◉
+                        </span>
+
+                        <div>
+
+                            <strong id="services-visible">
+                                03
+                            </strong>
+
+                            <span>
+                                Visíveis no protótipo
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="services-summary-card">
+
+                        <span
+                            class="services-summary-icon gold"
+                            aria-hidden="true">
+                            ◇
+                        </span>
+
+                        <div>
+
+                            <strong id="services-hidden">
+                                00
+                            </strong>
+
+                            <span>
+                                Ocultos no protótipo
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- =====================================
+                     6. FILTROS
+                ====================================== -->
+
+                <section
+                    class="admin-panel services-management-panel"
+                    aria-labelledby="services-list-title">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+
+                            <p class="admin-panel-eyebrow">
+                                ORGANIZAÇÃO
+                            </p>
+
+                            <h2 id="services-list-title">
+                                Serviços demonstrativos
+                            </h2>
+
+                        </div>
+
+                        <span
+                            id="services-results-count"
+                            class="services-results-count">
+                            3 serviços
+                        </span>
+
+                    </div>
+
+
+                    <div class="services-filters">
+
+                        <!-- PESQUISA -->
+
+                        <div class="services-filter-field">
+
+                            <label for="services-search">
+                                Pesquisar
+                            </label>
+
+                            <input
+                                type="search"
+                                id="services-search"
+                                placeholder="Buscar serviço..."
+                                autocomplete="off">
+
+                        </div>
+
+
+                        <!-- MODALIDADE -->
+
+                        <div class="services-filter-field">
+
+                            <label for="services-modality-filter">
+                                Modalidade ilustrativa
+                            </label>
+
+                            <select id="services-modality-filter">
+
+                                <option value="todas">
+                                    Todas
+                                </option>
+
+                                <option value="Presencial">
+                                    Presencial
+                                </option>
+
+                                <option value="Online">
+                                    Online
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- VISIBILIDADE -->
+
+                        <div class="services-filter-field">
+
+                            <label for="services-status-filter">
+                                Visibilidade
+                            </label>
+
+                            <select id="services-status-filter">
+
+                                <option value="todos">
+                                    Todos
+                                </option>
+
+                                <option value="Visível">
+                                    Visíveis
+                                </option>
+
+                                <option value="Oculto">
+                                    Ocultos
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- LIMPAR -->
+
+                        <button
+                            type="button"
+                            id="services-clear-filters"
+                            class="services-clear-filters">
+                            Limpar filtros
+                        </button>
+
+                    </div>
+
+
+                    <!-- =====================================
+                         7. CARTÕES DOS SERVIÇOS
+                    ====================================== -->
+
+                    <div
+                        id="services-grid"
+                        class="services-grid">
+
+                        <!-- SERVIÇO 01 -->
+
+                        <article
+                            class="services-card"
+                            data-service-id="1">
+
+                            <div class="services-card-top">
+
+                                <span
+                                    class="services-card-icon green"
+                                    aria-hidden="true">
+                                    ♡
+                                </span>
+
+                                <span
+                                    class="services-status visible">
+                                    Visível
+                                </span>
+
+                            </div>
+
+
+                            <p class="services-card-category">
+                                SAÚDE CAPILAR
+                            </p>
+
+                            <h3>
+                                Saúde Capilar
+                            </h3>
+
+                            <p class="services-card-description">
+                                Informações gerais sobre
+                                atendimento relacionado à
+                                saúde capilar, com detalhes
+                                sujeitos à confirmação
+                                da médica.
+                            </p>
+
+
+                            <div class="services-card-details">
+
+                                <div>
+
+                                    <span>
+                                        Modalidade ilustrativa
+                                    </span>
+
+                                    <strong>
+                                        Presencial
+                                    </strong>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        Valor da consulta
+                                    </span>
+
+                                    <strong>
+                                        A definir
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="services-card-actions">
+
+                                <button
+                                    type="button"
+                                    class="services-edit-button"
+                                    data-action="edit"
+                                    data-service-id="1">
+                                    Editar
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="services-details-button"
+                                    data-action="details"
+                                    data-service-id="1">
+                                    Detalhes
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="services-visibility-button"
+                                    data-action="visibility"
+                                    data-service-id="1">
+                                    Ocultar
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- SERVIÇO 02 -->
+
+                        <article
+                            class="services-card"
+                            data-service-id="2">
+
+                            <div class="services-card-top">
+
+                                <span
+                                    class="services-card-icon copper"
+                                    aria-hidden="true">
+                                    ✚
+                                </span>
+
+                                <span
+                                    class="services-status visible">
+                                    Visível
+                                </span>
+
+                            </div>
+
+
+                            <p class="services-card-category">
+                                CLÍNICA GERAL
+                            </p>
+
+                            <h3>
+                                Clínica Geral
+                            </h3>
+
+                            <p class="services-card-description">
+                                Apresentação demonstrativa
+                                do atendimento em clínica
+                                geral, com informações
+                                a serem revisadas antes
+                                da publicação.
+                            </p>
+
+
+                            <div class="services-card-details">
+
+                                <div>
+
+                                    <span>
+                                        Modalidade ilustrativa
+                                    </span>
+
+                                    <strong>
+                                        Presencial
+                                    </strong>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        Valor da consulta
+                                    </span>
+
+                                    <strong>
+                                        A definir
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="services-card-actions">
+
+                                <button
+                                    type="button"
+                                    class="services-edit-button"
+                                    data-action="edit"
+                                    data-service-id="2">
+                                    Editar
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="services-details-button"
+                                    data-action="details"
+                                    data-service-id="2">
+                                    Detalhes
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="services-visibility-button"
+                                    data-action="visibility"
+                                    data-service-id="2">
+                                    Ocultar
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- SERVIÇO 03 -->
+
+                        <article
+                            class="services-card"
+                            data-service-id="3">
+
+                            <div class="services-card-top">
+
+                                <span
+                                    class="services-card-icon gold"
+                                    aria-hidden="true">
+                                    ◉
+                                </span>
+
+                                <span
+                                    class="services-status visible">
+                                    Visível
+                                </span>
+
+                            </div>
+
+
+                            <p class="services-card-category">
+                                ATENDIMENTO REMOTO
+                            </p>
+
+                            <h3>
+                                Consulta Online
+                            </h3>
+
+                            <p class="services-card-description">
+                                Apresentação da modalidade
+                                de consulta remota.
+                                Critérios, condições e
+                                disponibilidade deverão
+                                ser confirmados.
+                            </p>
+
+
+                            <div class="services-card-details">
+
+                                <div>
+
+                                    <span>
+                                        Modalidade ilustrativa
+                                    </span>
+
+                                    <strong>
+                                        Online
+                                    </strong>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        Valor da consulta
+                                    </span>
+
+                                    <strong>
+                                        A definir
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="services-card-actions">
+
+                                <button
+                                    type="button"
+                                    class="services-edit-button"
+                                    data-action="edit"
+                                    data-service-id="3">
+                                    Editar
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="services-details-button"
+                                    data-action="details"
+                                    data-service-id="3">
+                                    Detalhes
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="services-visibility-button"
+                                    data-action="visibility"
+                                    data-service-id="3">
+                                    Ocultar
+                                </button>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- SEM RESULTADOS -->
+
+                    <div
+                        id="services-empty-state"
+                        class="services-empty-state"
+                        hidden>
+
+                        <span aria-hidden="true">
+                            ⌕
+                        </span>
+
+                        <strong>
+                            Nenhum serviço encontrado
+                        </strong>
+
+                        <p>
+                            Tente outro termo de busca
+                            ou limpe os filtros.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =====================================
+                     8. NOTA SOBRE HOMOLOGAÇÃO
+                ====================================== -->
+
+                <section class="services-review-panel">
+
+                    <div class="services-review-icon">
+                        ✦
+                    </div>
+
+                    <div>
+
+                        <p class="admin-eyebrow">
+                            REVISÃO DE CONTEÚDO
+                        </p>
+
+                        <h2>
+                            Tudo pronto para avaliar
+                            as informações.
+                        </h2>
+
+                        <p>
+                            Durante a apresentação,
+                            a médica poderá conferir
+                            títulos, descrições e
+                            organização dos serviços,
+                            solicitar ajustes e
+                            aprovar os textos finais.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="../pages/saude-capilar.html"
+                        class="services-preview-link">
+
+                        Ver exemplo no site
+
+                        <span aria-hidden="true">
+                            →
+                        </span>
+
+                    </a>
+
+                </section>
+
+
+                <!-- =====================================
+                     9. RODAPÉ
+                ====================================== -->
+
+                <footer class="admin-dashboard-footer">
+
+                    <p>
+                        © 2026 Dra. Maurícia Mbani
+                    </p>
+
+                    <p>
+                        Serviços demonstrativos —
+                        Conteúdo sujeito à aprovação
+                    </p>
+
+                </footer>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         10. MODAL NOVO / EDITAR SERVIÇO
+    ====================================== -->
+
+    <dialog
+        id="services-modal"
+        class="services-modal"
+        aria-labelledby="services-modal-title">
+
+        <div class="services-modal-content">
+
+            <div class="services-modal-header">
+
+                <div>
+
+                    <p class="admin-panel-eyebrow">
+                        EDIÇÃO DEMONSTRATIVA
+                    </p>
+
+                    <h2 id="services-modal-title">
+                        Novo serviço
+                    </h2>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="services-modal-close"
+                    class="services-modal-close"
+                    aria-label="Fechar formulário">
+                    ×
+                </button>
+
+            </div>
+
+
+            <p class="services-modal-description">
+                Faça alterações demonstrativas.
+                Os textos modificados não serão
+                publicados nem salvos no servidor.
+            </p>
+
+
+            <form
+                id="services-form"
+                class="services-form"
+                autocomplete="off">
+
+                <input
+                    type="hidden"
+                    id="services-form-id"
+                    value="">
+
+
+                <!-- TÍTULO -->
+
+                <div class="services-form-field">
+
+                    <label for="services-form-name">
+                        Nome do serviço
+                    </label>
+
+                    <input
+                        type="text"
+                        id="services-form-name"
+                        placeholder="Ex.: Serviço Demonstrativo"
+                        maxlength="70"
+                        required>
+
+                </div>
+
+
+                <!-- CATEGORIA -->
+
+                <div class="services-form-field">
+
+                    <label for="services-form-category">
+                        Categoria
+                    </label>
+
+                    <select
+                        id="services-form-category"
+                        required>
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Saúde Capilar">
+                            Saúde Capilar
+                        </option>
+
+                        <option value="Clínica Geral">
+                            Clínica Geral
+                        </option>
+
+                        <option value="Atendimento Remoto">
+                            Atendimento Remoto
+                        </option>
+
+                        <option value="Outro serviço demonstrativo">
+                            Outro serviço demonstrativo
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- DESCRIÇÃO -->
+
+                <div class="services-form-field">
+
+                    <label for="services-form-description">
+                        Descrição do serviço
+                    </label>
+
+                    <textarea
+                        id="services-form-description"
+                        rows="4"
+                        maxlength="350"
+                        placeholder="Escreva uma descrição provisória para revisão..."
+                        required>
+                    </textarea>
+
+                    <small>
+                        Texto demonstrativo,
+                        sujeito à aprovação médica.
+                    </small>
+
+                </div>
+
+
+                <!-- MODALIDADE -->
+
+                <div class="services-form-field">
+
+                    <label for="services-form-modality">
+                        Modalidade ilustrativa
+                    </label>
+
+                    <select
+                        id="services-form-modality"
+                        required>
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Presencial">
+                            Presencial
+                        </option>
+
+                        <option value="Online">
+                            Online
+                        </option>
+
+                        <option value="Presencial e Online">
+                            Presencial e Online
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- VISIBILIDADE -->
+
+                <div class="services-form-field">
+
+                    <label for="services-form-status">
+                        Visibilidade no protótipo
+                    </label>
+
+                    <select
+                        id="services-form-status"
+                        required>
+
+                        <option value="Visível">
+                            Visível
+                        </option>
+
+                        <option value="Oculto">
+                            Oculto
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- VALORES -->
+
+                <div class="services-form-note">
+
+                    <strong>
+                        Valores ainda não definidos
+                    </strong>
+
+                    <p>
+                        Os preços dos atendimentos
+                        não serão cadastrados nesta
+                        etapa. A médica deverá
+                        confirmar os valores e as
+                        condições antes da publicação.
+                    </p>
+
+                </div>
+
+
+                <!-- FEEDBACK -->
+
+                <p
+                    id="services-form-message"
+                    class="services-form-message"
+                    role="status"
+                    aria-live="polite"
+                    hidden>
+                </p>
+
+
+                <!-- BOTÕES -->
+
+                <div class="services-form-actions">
+
+                    <button
+                        type="button"
+                        id="services-form-cancel"
+                        class="services-secondary-button">
+                        Cancelar
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="admin-primary-action">
+                        Salvar simulação
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </dialog>
+
+
+    <!-- =====================================
+         11. MODAL DE DETALHES
+    ====================================== -->
+
+    <dialog
+        id="services-details-modal"
+        class="services-modal"
+        aria-labelledby="services-details-title">
+
+        <div class="services-modal-content">
+
+            <div class="services-modal-header">
+
+                <div>
+
+                    <p class="admin-panel-eyebrow">
+                        INFORMAÇÕES DO SERVIÇO
+                    </p>
+
+                    <h2 id="services-details-title">
+                        Detalhes
+                    </h2>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="services-details-close"
+                    class="services-modal-close"
+                    aria-label="Fechar detalhes">
+                    ×
+                </button>
+
+            </div>
+
+
+            <div
+                id="services-details-content"
+                class="services-details-content">
+
+                <p>
+                    Selecione um serviço para
+                    visualizar as informações.
+                </p>
+
+            </div>
+
+
+            <div class="services-form-actions">
+
+                <button
+                    type="button"
+                    id="services-details-dismiss"
+                    class="services-secondary-button">
+                    Fechar
+                </button>
+
+                <button
+                    type="button"
+                    id="services-details-edit"
+                    class="admin-primary-action">
+                    Editar serviço
+                </button>
+
+            </div>
+
+        </div>
+
+    </dialog>
+
+</body>
+</html>

@@ -1,0 +1,767 @@
+
+/* =====================================================
+   DRA. MAURÍCIA MBANI
+   RESPONSIVIDADE GERAL DO SITE PÚBLICO
+
+   ARQUIVO: assets/css/responsive.css
+
+   OBJETIVO:
+   - Desktop
+   - Notebook
+   - Tablet
+   - Smartphone
+   - Formulários
+   - Agendamento
+   - Pagamento
+   - Confirmação
+   - Assistente virtual
+
+   IMPORTANTE:
+   Este arquivo complementa os estilos existentes.
+
+   Não modifica o painel administrativo,
+   que utiliza admin.css.
+===================================================== */
+
+
+/* =====================================================
+   1. BASE RESPONSIVA
+===================================================== */
+
+body:not(.admin-dashboard-body) {
+    min-width: 320px;
+}
+
+body:not(.admin-dashboard-body),
+body:not(.admin-dashboard-body) * {
+    box-sizing: border-box;
+}
+
+body:not(.admin-dashboard-body) img,
+body:not(.admin-dashboard-body) video {
+    max-width: 100%;
+    height: auto;
+}
+
+body:not(.admin-dashboard-body) svg {
+    max-width: 100%;
+}
+
+body:not(.admin-dashboard-body) iframe {
+    max-width: 100%;
+}
+
+body:not(.admin-dashboard-body) :is(
+    main,
+    section,
+    article,
+    aside,
+    form
+) {
+    min-width: 0;
+}
+
+body:not(.admin-dashboard-body) :is(
+    h1,
+    h2,
+    h3,
+    h4,
+    p
+) {
+    overflow-wrap: break-word;
+}
+
+body:not(.admin-dashboard-body) :is(
+    input,
+    select,
+    textarea,
+    button
+) {
+    max-width: 100%;
+}
+
+
+/* =====================================================
+   2. CONTAINERS GERAIS
+===================================================== */
+
+body:not(.admin-dashboard-body) :is(
+    .container,
+    .site-container,
+    .page-container
+) {
+    width: min(100% - 40px, 1200px);
+    max-width: 1200px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =====================================================
+   3. ELEMENTOS DE TEXTO
+===================================================== */
+
+body:not(.admin-dashboard-body) :is(
+    .hero-title,
+    .home-hero-title,
+    .page-title
+) {
+    overflow-wrap: anywhere;
+}
+
+body:not(.admin-dashboard-body) :is(
+    .hero-description,
+    .page-description,
+    .section-description
+) {
+    max-width: 100%;
+}
+
+
+/* =====================================================
+   4. BOTÕES E LINKS
+===================================================== */
+
+body:not(.admin-dashboard-body) :is(
+    .btn,
+    .button,
+    .primary-button,
+    .secondary-button,
+    .btn-primary,
+    .btn-secondary
+) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    max-width: 100%;
+
+    text-align: center;
+    text-decoration: none;
+
+    white-space: normal;
+}
+
+
+/* =====================================================
+   5. FORMULÁRIOS
+===================================================== */
+
+body:not(.admin-dashboard-body) :is(
+    .form-group,
+    .form-field,
+    .input-group
+) {
+    min-width: 0;
+}
+
+body:not(.admin-dashboard-body) :is(
+    .form-group,
+    .form-field,
+    .input-group
+) :is(
+    input,
+    select,
+    textarea
+) {
+    max-width: 100%;
+}
+
+body:not(.admin-dashboard-body) textarea {
+    resize: vertical;
+}
+
+
+/* =====================================================
+   6. TABELAS E CONTEÚDOS EXTENSOS
+===================================================== */
+
+body:not(.admin-dashboard-body) :is(
+    .table-responsive,
+    .table-wrapper,
+    .table-container
+) {
+    max-width: 100%;
+    overflow-x: auto;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+body:not(.admin-dashboard-body) pre {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+
+/* =====================================================
+   7. NOTEBOOKS E TABLETS GRANDES
+   ATÉ 1024px
+===================================================== */
+
+@media (max-width: 1024px) {
+
+    body:not(.admin-dashboard-body) :is(
+        .container,
+        .site-container,
+        .page-container
+    ) {
+        width: min(100% - 36px, 960px);
+    }
+
+
+    /* SEÇÕES EM DUAS COLUNAS */
+
+    body:not(.admin-dashboard-body) :is(
+        .services-grid,
+        .cards-grid,
+        .features-grid,
+        .benefits-grid,
+        .team-grid
+    ) {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* ÁREAS COM TEXTO E IMAGEM */
+
+    body:not(.admin-dashboard-body) :is(
+        .hero-grid,
+        .hero-content-grid,
+        .about-grid,
+        .about-content-grid
+    ) {
+        gap: 35px;
+    }
+
+
+    /* IMAGENS */
+
+    body:not(.admin-dashboard-body) :is(
+        .hero-image,
+        .about-image,
+        .doctor-image
+    ) img {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    /* CARTÕES */
+
+    body:not(.admin-dashboard-body) :is(
+        .service-card,
+        .feature-card,
+        .benefit-card
+    ) {
+        min-width: 0;
+    }
+
+}
+
+
+/* =====================================================
+   8. TABLETS E CELULARES GRANDES
+   ATÉ 768px
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* CONTAINERS */
+
+    body:not(.admin-dashboard-body) :is(
+        .container,
+        .site-container,
+        .page-container
+    ) {
+        width: calc(100% - 32px);
+    }
+
+
+    /* ESPAÇAMENTO DAS SEÇÕES */
+
+    body:not(.admin-dashboard-body) :is(
+        .hero-section,
+        .home-hero,
+        .page-hero,
+        .section-about,
+        .section-services,
+        .section-benefits,
+        .services-section,
+        .benefits-section
+    ) {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+
+    /* TÍTULOS */
+
+    body:not(.admin-dashboard-body) :is(
+        .hero-title,
+        .home-hero-title,
+        .page-title
+    ) {
+        font-size: clamp(2rem, 6vw, 3rem);
+        line-height: 1.15;
+    }
+
+    body:not(.admin-dashboard-body) :is(
+        .section-title,
+        .section-heading h2
+    ) {
+        font-size: clamp(1.6rem, 5vw, 2.2rem);
+        line-height: 1.25;
+    }
+
+
+    /* GRIDS DE TEXTO E IMAGEM */
+
+    body:not(.admin-dashboard-body) :is(
+        .hero-grid,
+        .hero-content-grid,
+        .about-grid,
+        .about-content-grid,
+        .contact-grid,
+        .contact-content-grid
+    ) {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+    }
+
+
+    /* IMAGENS PRINCIPAIS */
+
+    body:not(.admin-dashboard-body) :is(
+        .hero-image,
+        .about-image,
+        .doctor-image
+    ) {
+        width: 100%;
+        max-width: 520px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* CARTÕES GERAIS */
+
+    body:not(.admin-dashboard-body) :is(
+        .services-grid,
+        .cards-grid,
+        .features-grid,
+        .benefits-grid
+    ) {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 17px;
+    }
+
+
+    /* FORMULÁRIOS DE DUAS COLUNAS */
+
+    body:not(.admin-dashboard-body) :is(
+        .form-grid,
+        .contact-form-grid,
+        .booking-form-grid,
+        .agendamento-form-grid
+    ) {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 17px;
+    }
+
+
+    /* ETAPAS DE AGENDAMENTO */
+
+    body:not(.admin-dashboard-body) :is(
+        .booking-grid,
+        .agendamento-grid,
+        .appointment-grid,
+        .checkout-grid,
+        .payment-grid
+    ) {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+
+    /* RESUMOS DE PAGAMENTO */
+
+    body:not(.admin-dashboard-body) :is(
+        .payment-summary,
+        .booking-summary,
+        .appointment-summary,
+        .checkout-summary
+    ) {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* BOTÕES AGRUPADOS */
+
+    body:not(.admin-dashboard-body) :is(
+        .hero-buttons,
+        .form-actions,
+        .booking-actions,
+        .payment-actions,
+        .confirmation-actions
+    ) {
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 12px;
+    }
+
+
+    /* RODAPÉ */
+
+    body:not(.admin-dashboard-body) :is(
+        .footer-grid,
+        .footer-content-grid
+    ) {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 25px;
+    }
+
+}
+
+
+/* =====================================================
+   9. CELULARES
+   ATÉ 600px
+===================================================== */
+
+@media (max-width: 600px) {
+
+    body:not(.admin-dashboard-body) :is(
+        .container,
+        .site-container,
+        .page-container
+    ) {
+        width: calc(100% - 28px);
+    }
+
+
+    /* TEXTOS */
+
+    body:not(.admin-dashboard-body) :is(
+        .hero-title,
+        .home-hero-title,
+        .page-title
+    ) {
+        font-size: clamp(1.85rem, 8vw, 2.5rem);
+        line-height: 1.14;
+    }
+
+    body:not(.admin-dashboard-body) :is(
+        .section-title,
+        .section-heading h2
+    ) {
+        font-size: clamp(1.5rem, 6.5vw, 2rem);
+    }
+
+
+    /* SEÇÕES */
+
+    body:not(.admin-dashboard-body) :is(
+        .hero-section,
+        .home-hero,
+        .page-hero
+    ) {
+        padding-top: 40px;
+        padding-bottom: 42px;
+    }
+
+    body:not(.admin-dashboard-body) :is(
+        .section-about,
+        .section-services,
+        .section-benefits,
+        .services-section,
+        .benefits-section
+    ) {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+
+    /* CARTÕES EM COLUNA */
+
+    body:not(.admin-dashboard-body) :is(
+        .services-grid,
+        .cards-grid,
+        .features-grid,
+        .benefits-grid,
+        .team-grid,
+        .footer-grid,
+        .footer-content-grid
+    ) {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+    }
+
+
+    /* CARTÕES */
+
+    body:not(.admin-dashboard-body) :is(
+        .service-card,
+        .feature-card,
+        .benefit-card,
+        .contact-card
+    ) {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* BOTÕES DE AÇÃO */
+
+    body:not(.admin-dashboard-body) :is(
+        .hero-buttons,
+        .form-actions,
+        .booking-actions,
+        .payment-actions,
+        .confirmation-actions
+    ) {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    body:not(.admin-dashboard-body) :is(
+        .hero-buttons,
+        .form-actions,
+        .booking-actions,
+        .payment-actions,
+        .confirmation-actions
+    ) > :is(
+        button,
+        a,
+        .btn,
+        .button
+    ) {
+        width: 100%;
+    }
+
+
+    /* FORMULÁRIOS */
+
+    body:not(.admin-dashboard-body) :is(
+        input:not([type="checkbox"]):not([type="radio"]),
+        select,
+        textarea
+    ) {
+        font-size: 16px;
+    }
+
+
+    /* CALENDÁRIOS */
+
+    body:not(.admin-dashboard-body) :is(
+        .calendar-grid,
+        .booking-calendar,
+        .agendamento-calendar
+    ) {
+        max-width: 100%;
+    }
+
+
+    /* SELEÇÃO DE HORÁRIOS */
+
+    body:not(.admin-dashboard-body) :is(
+        .time-slots,
+        .horarios-grid,
+        .booking-times,
+        .appointment-times
+    ) {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+
+    /* DETALHES E RESUMOS */
+
+    body:not(.admin-dashboard-body) :is(
+        .confirmation-card,
+        .success-card,
+        .payment-card,
+        .booking-card
+    ) {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* ASSISTENTE VIRTUAL */
+
+    body:not(.admin-dashboard-body) :is(
+        .chatbot-window,
+        .chat-window,
+        .assistant-panel,
+        .chatbot-panel
+    ) {
+        max-width: calc(100vw - 24px);
+        max-height: calc(100dvh - 90px);
+    }
+
+
+    /* JANELAS MODAIS */
+
+    body:not(.admin-dashboard-body) dialog {
+        max-width: calc(100vw - 24px);
+        max-height: calc(100dvh - 24px);
+    }
+
+}
+
+
+/* =====================================================
+   10. CELULARES PEQUENOS
+   ATÉ 390px
+===================================================== */
+
+@media (max-width: 390px) {
+
+    body:not(.admin-dashboard-body) :is(
+        .container,
+        .site-container,
+        .page-container
+    ) {
+        width: calc(100% - 24px);
+    }
+
+
+    /* TÍTULOS */
+
+    body:not(.admin-dashboard-body) :is(
+        .hero-title,
+        .home-hero-title,
+        .page-title
+    ) {
+        font-size: 1.8rem;
+    }
+
+
+    /* BOTÕES */
+
+    body:not(.admin-dashboard-body) :is(
+        .btn,
+        .button,
+        .primary-button,
+        .secondary-button,
+        .btn-primary,
+        .btn-secondary
+    ) {
+        padding: 12px 15px;
+        font-size: 0.88rem;
+    }
+
+
+    /* HORÁRIOS */
+
+    body:not(.admin-dashboard-body) :is(
+        .time-slots,
+        .horarios-grid,
+        .booking-times,
+        .appointment-times
+    ) {
+        gap: 8px;
+    }
+
+
+    /* CHATBOT */
+
+    body:not(.admin-dashboard-body) :is(
+        .chatbot-window,
+        .chat-window,
+        .assistant-panel,
+        .chatbot-panel
+    ) {
+        max-width: calc(100vw - 16px);
+    }
+
+}
+
+
+/* =====================================================
+   11. CELULAR NA HORIZONTAL
+===================================================== */
+
+@media (
+    max-height: 500px
+) and (
+    orientation: landscape
+) {
+
+    body:not(.admin-dashboard-body) :is(
+        .chatbot-window,
+        .chat-window,
+        .assistant-panel,
+        .chatbot-panel
+    ) {
+        max-height: calc(100dvh - 20px);
+    }
+
+    body:not(.admin-dashboard-body) dialog {
+        max-height: calc(100dvh - 16px);
+    }
+
+}
+
+
+/* =====================================================
+   12. ACESSIBILIDADE
+===================================================== */
+
+body:not(.admin-dashboard-body) :is(
+    button,
+    a,
+    input,
+    select,
+    textarea
+):focus-visible {
+    outline: 3px solid #B76E4F;
+    outline-offset: 3px;
+}
+
+
+/* =====================================================
+   13. REDUÇÃO DE MOVIMENTO
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    body:not(.admin-dashboard-body) *,
+    body:not(.admin-dashboard-body) *::before,
+    body:not(.admin-dashboard-body) *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
+
+/* =====================================================
+   FIM DO ARQUIVO RESPONSIVE.CSS
+
+   OBSERVAÇÕES:
+
+   1. Não substituir os CSS anteriores.
+   2. Carregar este arquivo por último.
+   3. Preservar o JavaScript do menu mobile.
+   4. Preservar a posição controlada pelo
+      JavaScript do assistente flutuante.
+   5. Testar cada página no navegador.
+===================================================== */
