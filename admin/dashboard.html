@@ -1,0 +1,1299 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Dashboard administrativo demonstrativo da Dra. Maurícia Mbani.">
+
+    <meta
+        name="robots"
+        content="noindex, nofollow">
+
+    <title>
+        Dashboard | Dra. Maurícia Mbani
+    </title>
+
+    <!-- FONTES -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- ESTILOS -->
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/variables.css">
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/global.css">
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/components.css">
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/admin.css">
+
+    <!-- JAVASCRIPT DO DASHBOARD -->
+
+    <script
+        src="../assets/js/dashboard.js"
+        defer>
+    </script>
+
+</head>
+
+<body class="admin-dashboard-body">
+
+    <!-- =====================================
+         AVISO DEMONSTRATIVO
+    ====================================== -->
+
+    <div class="admin-demo-strip">
+        ✦ PAINEL DEMONSTRATIVO — DADOS FICTÍCIOS ✦
+    </div>
+
+
+    <!-- =====================================
+         CONTAINER DO PAINEL
+    ====================================== -->
+
+    <div class="admin-app">
+
+        <!-- =====================================
+             1. MENU LATERAL
+        ====================================== -->
+
+        <aside
+            class="admin-sidebar"
+            id="admin-sidebar"
+            aria-label="Menu administrativo">
+
+            <!-- LOGOTIPO -->
+
+            <div class="admin-sidebar-brand">
+
+                <a href="dashboard.html">
+
+                    <img
+                        src="../assets/images/logo/logo-principal.png"
+                        alt="Logotipo da Dra. Maurícia Mbani">
+
+                    <span>
+                        <strong>
+                            Dra. Maurícia Mbani
+                        </strong>
+
+                        <small>
+                            PAINEL ADMINISTRATIVO
+                        </small>
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <!-- PERFIL -->
+
+            <div class="admin-sidebar-profile">
+
+                <div
+                    class="admin-profile-avatar"
+                    aria-hidden="true">
+                    DM
+                </div>
+
+                <div class="admin-profile-info">
+
+                    <strong>
+                        Usuário Demo
+                    </strong>
+
+                    <small>
+                        Administrador demonstrativo
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- NAVEGAÇÃO PRINCIPAL -->
+
+            <nav
+                class="admin-sidebar-nav"
+                aria-label="Seções do painel">
+
+                <p class="admin-nav-label">
+                    GERENCIAMENTO
+                </p>
+
+                <a
+                    href="dashboard.html"
+                    class="admin-nav-link is-active"
+                    aria-current="page">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ◫
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+                <a
+                    href="agenda.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ◷
+                    </span>
+
+                    <span>
+                        Agenda
+                    </span>
+
+                </a>
+
+                <a
+                    href="pacientes.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ♙
+                    </span>
+
+                    <span>
+                        Pacientes
+                    </span>
+
+                </a>
+
+                <a
+                    href="financeiro.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ◈
+                    </span>
+
+                    <span>
+                        Financeiro
+                    </span>
+
+                </a>
+
+
+                <p class="admin-nav-label">
+                    ADMINISTRAÇÃO
+                </p>
+
+                <a
+                    href="servicos.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ♡
+                    </span>
+
+                    <span>
+                        Serviços
+                    </span>
+
+                </a>
+
+                <a
+                    href="relatorios.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ▤
+                    </span>
+
+                    <span>
+                        Relatórios
+                    </span>
+
+                </a>
+
+                <a
+                    href="configuracoes.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ⚙
+                    </span>
+
+                    <span>
+                        Configurações
+                    </span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- RODAPÉ DA LATERAL -->
+
+            <div class="admin-sidebar-bottom">
+
+                <div class="admin-sidebar-demo-note">
+
+                    <strong>
+                        Ambiente de demonstração
+                    </strong>
+
+                    <p>
+                        Nenhum paciente ou atendimento
+                        real está cadastrado neste painel.
+                    </p>
+
+                </div>
+
+                <a
+                    href="login.html"
+                    class="admin-logout-link">
+
+                    <span aria-hidden="true">
+                        ↩
+                    </span>
+
+                    Voltar ao login
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =====================================
+             2. ÁREA DIREITA
+        ====================================== -->
+
+        <div class="admin-main-area">
+
+
+            <!-- =====================================
+                 3. CABEÇALHO SUPERIOR
+            ====================================== -->
+
+            <header class="admin-topbar">
+
+                <div class="admin-topbar-left">
+
+                    <button
+                        type="button"
+                        id="admin-menu-toggle"
+                        class="admin-menu-toggle"
+                        aria-label="Abrir menu administrativo"
+                        aria-controls="admin-sidebar"
+                        aria-expanded="false">
+
+                        ☰
+
+                    </button>
+
+                    <div>
+
+                        <span class="admin-topbar-subtitle">
+                            ÁREA ADMINISTRATIVA
+                        </span>
+
+                        <strong>
+                            Painel de Controle
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-topbar-right">
+
+                    <span class="admin-topbar-demo">
+                        ● Modo demonstração
+                    </span>
+
+                    <div
+                        class="admin-topbar-avatar"
+                        aria-label="Usuário demonstrativo">
+                        DM
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- FUNDO DO MENU MOBILE -->
+
+            <button
+                type="button"
+                id="admin-sidebar-overlay"
+                class="admin-sidebar-overlay"
+                aria-label="Fechar menu administrativo"
+                hidden>
+            </button>
+
+
+            <!-- =====================================
+                 4. CONTEÚDO DO DASHBOARD
+            ====================================== -->
+
+            <main class="admin-content">
+
+                <!-- APRESENTAÇÃO -->
+
+                <section class="admin-page-heading">
+
+                    <div>
+
+                        <p class="admin-eyebrow">
+                            VISÃO GERAL
+                        </p>
+
+                        <h1>
+                            Bem-vindo ao
+                            <em>Dashboard.</em>
+                        </h1>
+
+                        <p>
+                            Acompanhe uma visão ilustrativa
+                            da organização dos atendimentos.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="agenda.html"
+                        class="admin-primary-action">
+
+                        <span aria-hidden="true">
+                            +
+                        </span>
+
+                        Nova consulta
+
+                    </a>
+
+                </section>
+
+
+                <!-- =====================================
+                     5. AVISO SOBRE DADOS
+                ====================================== -->
+
+                <div class="admin-dashboard-notice">
+
+                    <span
+                        class="admin-notice-icon"
+                        aria-hidden="true">
+                        i
+                    </span>
+
+                    <p>
+
+                        <strong>
+                            Dados demonstrativos:
+                        </strong>
+
+                        pacientes, horários, valores
+                        e indicadores abaixo são
+                        inteiramente fictícios.
+                        Este painel não representa
+                        a atividade real da médica.
+
+                    </p>
+
+                </div>
+
+
+                <!-- =====================================
+                     6. INDICADORES PRINCIPAIS
+                ====================================== -->
+
+                <section
+                    class="admin-stats-section"
+                    aria-labelledby="admin-stats-title">
+
+                    <h2
+                        id="admin-stats-title"
+                        class="admin-section-heading">
+
+                        Indicadores ilustrativos
+
+                    </h2>
+
+
+                    <div class="admin-stats-grid">
+
+                        <!-- TOTAL DE CONSULTAS -->
+
+                        <article class="admin-stat-card">
+
+                            <div class="admin-stat-top">
+
+                                <span
+                                    class="admin-stat-icon green"
+                                    aria-hidden="true">
+                                    ◷
+                                </span>
+
+                                <span class="admin-stat-tag">
+                                    Exemplo
+                                </span>
+
+                            </div>
+
+                            <p class="admin-stat-number">
+                                24
+                            </p>
+
+                            <h3>
+                                Consultas simuladas
+                            </h3>
+
+                            <p class="admin-stat-description">
+                                Indicador mensal fictício
+                            </p>
+
+                        </article>
+
+
+                        <!-- PACIENTES -->
+
+                        <article class="admin-stat-card">
+
+                            <div class="admin-stat-top">
+
+                                <span
+                                    class="admin-stat-icon copper"
+                                    aria-hidden="true">
+                                    ♡
+                                </span>
+
+                                <span class="admin-stat-tag">
+                                    Exemplo
+                                </span>
+
+                            </div>
+
+                            <p class="admin-stat-number">
+                                18
+                            </p>
+
+                            <h3>
+                                Pacientes fictícios
+                            </h3>
+
+                            <p class="admin-stat-description">
+                                Cadastros de demonstração
+                            </p>
+
+                        </article>
+
+
+                        <!-- PENDENTES -->
+
+                        <article class="admin-stat-card">
+
+                            <div class="admin-stat-top">
+
+                                <span
+                                    class="admin-stat-icon gold"
+                                    aria-hidden="true">
+                                    ◇
+                                </span>
+
+                                <span class="admin-stat-tag">
+                                    Exemplo
+                                </span>
+
+                            </div>
+
+                            <p class="admin-stat-number">
+                                06
+                            </p>
+
+                            <h3>
+                                Confirmações pendentes
+                            </h3>
+
+                            <p class="admin-stat-description">
+                                Situações ilustrativas
+                            </p>
+
+                        </article>
+
+
+                        <!-- FINANCEIRO -->
+
+                        <article class="admin-stat-card">
+
+                            <div class="admin-stat-top">
+
+                                <span
+                                    class="admin-stat-icon navy"
+                                    aria-hidden="true">
+                                    $
+                                </span>
+
+                                <span class="admin-stat-tag">
+                                    Fictício
+                                </span>
+
+                            </div>
+
+                            <p class="admin-stat-number">
+                                R$ 6.000
+                            </p>
+
+                            <h3>
+                                Receita ilustrativa
+                            </h3>
+
+                            <p class="admin-stat-description">
+                                Nenhum pagamento real
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =====================================
+                     7. AGENDA + ATIVIDADES
+                ====================================== -->
+
+                <div class="admin-dashboard-main-grid">
+
+
+                    <!-- PRÓXIMAS CONSULTAS -->
+
+                    <section
+                        class="admin-panel admin-appointments-panel">
+
+                        <div class="admin-panel-header">
+
+                            <div>
+
+                                <p class="admin-panel-eyebrow">
+                                    AGENDA
+                                </p>
+
+                                <h2>
+                                    Consultas de exemplo
+                                </h2>
+
+                            </div>
+
+                            <a href="agenda.html">
+                                Ver agenda
+                                <span aria-hidden="true">→</span>
+                            </a>
+
+                        </div>
+
+
+                        <div class="admin-table-scroll">
+
+                            <table class="admin-data-table">
+
+                                <thead>
+
+                                    <tr>
+                                        <th scope="col">
+                                            Horário
+                                        </th>
+
+                                        <th scope="col">
+                                            Paciente
+                                        </th>
+
+                                        <th scope="col">
+                                            Serviço
+                                        </th>
+
+                                        <th scope="col">
+                                            Situação
+                                        </th>
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody>
+
+                                    <tr>
+
+                                        <td>
+                                            <strong>09:00</strong>
+                                        </td>
+
+                                        <td>
+                                            Paciente Exemplo 01
+                                        </td>
+
+                                        <td>
+                                            Saúde Capilar
+                                        </td>
+
+                                        <td>
+                                            <span class="admin-status confirmed">
+                                                Confirmada
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>
+                                            <strong>10:30</strong>
+                                        </td>
+
+                                        <td>
+                                            Paciente Exemplo 02
+                                        </td>
+
+                                        <td>
+                                            Clínica Geral
+                                        </td>
+
+                                        <td>
+                                            <span class="admin-status pending">
+                                                Pendente
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>
+                                            <strong>14:00</strong>
+                                        </td>
+
+                                        <td>
+                                            Paciente Exemplo 03
+                                        </td>
+
+                                        <td>
+                                            Consulta Online
+                                        </td>
+
+                                        <td>
+                                            <span class="admin-status confirmed">
+                                                Confirmada
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>
+                                            <strong>15:30</strong>
+                                        </td>
+
+                                        <td>
+                                            Paciente Exemplo 04
+                                        </td>
+
+                                        <td>
+                                            Saúde Capilar
+                                        </td>
+
+                                        <td>
+                                            <span class="admin-status pending">
+                                                Pendente
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                        <p class="admin-panel-footnote">
+                            Horários e pacientes inteiramente fictícios.
+                        </p>
+
+                    </section>
+
+
+                    <!-- ATIVIDADES -->
+
+                    <section class="admin-panel admin-activity-panel">
+
+                        <div class="admin-panel-header">
+
+                            <div>
+
+                                <p class="admin-panel-eyebrow">
+                                    ATIVIDADES
+                                </p>
+
+                                <h2>
+                                    Histórico ilustrativo
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="admin-activity-list">
+
+                            <div class="admin-activity-item">
+
+                                <span
+                                    class="admin-activity-dot green"
+                                    aria-hidden="true">
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Consulta confirmada
+                                    </strong>
+
+                                    <p>
+                                        Paciente Exemplo 01
+                                    </p>
+
+                                    <small>
+                                        Evento fictício
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="admin-activity-item">
+
+                                <span
+                                    class="admin-activity-dot copper"
+                                    aria-hidden="true">
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Novo agendamento
+                                    </strong>
+
+                                    <p>
+                                        Paciente Exemplo 02
+                                    </p>
+
+                                    <small>
+                                        Evento fictício
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="admin-activity-item">
+
+                                <span
+                                    class="admin-activity-dot gold"
+                                    aria-hidden="true">
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Pagamento simulado
+                                    </strong>
+
+                                    <p>
+                                        Transação de demonstração
+                                    </p>
+
+                                    <small>
+                                        Nenhum valor recebido
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="admin-activity-item">
+
+                                <span
+                                    class="admin-activity-dot green"
+                                    aria-hidden="true">
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Cadastro demonstrativo
+                                    </strong>
+
+                                    <p>
+                                        Paciente Exemplo 03
+                                    </p>
+
+                                    <small>
+                                        Evento fictício
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+
+                <!-- =====================================
+                     8. GRÁFICO + RESUMO
+                ====================================== -->
+
+                <div class="admin-dashboard-bottom-grid">
+
+
+                    <!-- GRÁFICO ILUSTRATIVO -->
+
+                    <section class="admin-panel admin-chart-panel">
+
+                        <div class="admin-panel-header">
+
+                            <div>
+
+                                <p class="admin-panel-eyebrow">
+                                    DESEMPENHO
+                                </p>
+
+                                <h2>
+                                    Atendimentos ilustrativos
+                                </h2>
+
+                            </div>
+
+                            <span class="admin-chart-period">
+                                Exemplo semanal
+                            </span>
+
+                        </div>
+
+
+                        <p class="admin-chart-description">
+                            Distribuição fictícia de consultas
+                            ao longo de uma semana.
+                        </p>
+
+
+                        <div
+                            class="admin-chart"
+                            role="img"
+                            aria-label="Gráfico demonstrativo: segunda 5, terça 8, quarta 6, quinta 9, sexta 7 e sábado 4 consultas fictícias.">
+
+                            <div class="admin-chart-column">
+
+                                <div
+                                    class="admin-chart-bar"
+                                    style="--bar-height: 50%;"
+                                    aria-hidden="true">
+                                </div>
+
+                                <span>Seg</span>
+
+                            </div>
+
+                            <div class="admin-chart-column">
+
+                                <div
+                                    class="admin-chart-bar"
+                                    style="--bar-height: 80%;"
+                                    aria-hidden="true">
+                                </div>
+
+                                <span>Ter</span>
+
+                            </div>
+
+                            <div class="admin-chart-column">
+
+                                <div
+                                    class="admin-chart-bar"
+                                    style="--bar-height: 60%;"
+                                    aria-hidden="true">
+                                </div>
+
+                                <span>Qua</span>
+
+                            </div>
+
+                            <div class="admin-chart-column">
+
+                                <div
+                                    class="admin-chart-bar"
+                                    style="--bar-height: 90%;"
+                                    aria-hidden="true">
+                                </div>
+
+                                <span>Qui</span>
+
+                            </div>
+
+                            <div class="admin-chart-column">
+
+                                <div
+                                    class="admin-chart-bar"
+                                    style="--bar-height: 70%;"
+                                    aria-hidden="true">
+                                </div>
+
+                                <span>Sex</span>
+
+                            </div>
+
+                            <div class="admin-chart-column">
+
+                                <div
+                                    class="admin-chart-bar"
+                                    style="--bar-height: 40%;"
+                                    aria-hidden="true">
+                                </div>
+
+                                <span>Sáb</span>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- RESUMO POR SERVIÇO -->
+
+                    <section class="admin-panel admin-services-panel">
+
+                        <div class="admin-panel-header">
+
+                            <div>
+
+                                <p class="admin-panel-eyebrow">
+                                    SERVIÇOS
+                                </p>
+
+                                <h2>
+                                    Distribuição fictícia
+                                </h2>
+
+                            </div>
+
+                            <a href="servicos.html">
+                                Ver serviços
+                                <span aria-hidden="true">→</span>
+                            </a>
+
+                        </div>
+
+
+                        <div class="admin-service-progress-list">
+
+
+                            <div class="admin-service-progress">
+
+                                <div class="admin-progress-heading">
+
+                                    <span>
+                                        Saúde Capilar
+                                    </span>
+
+                                    <strong>
+                                        50%
+                                    </strong>
+
+                                </div>
+
+                                <div class="admin-progress-track">
+
+                                    <span
+                                        class="admin-progress-fill capilar"
+                                        style="width: 50%;">
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="admin-service-progress">
+
+                                <div class="admin-progress-heading">
+
+                                    <span>
+                                        Clínica Geral
+                                    </span>
+
+                                    <strong>
+                                        30%
+                                    </strong>
+
+                                </div>
+
+                                <div class="admin-progress-track">
+
+                                    <span
+                                        class="admin-progress-fill geral"
+                                        style="width: 30%;">
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="admin-service-progress">
+
+                                <div class="admin-progress-heading">
+
+                                    <span>
+                                        Consulta Online
+                                    </span>
+
+                                    <strong>
+                                        20%
+                                    </strong>
+
+                                </div>
+
+                                <div class="admin-progress-track">
+
+                                    <span
+                                        class="admin-progress-fill online"
+                                        style="width: 20%;">
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <p class="admin-panel-footnote">
+                            Percentuais de exemplo, sem origem
+                            em dados reais de pacientes.
+                        </p>
+
+                    </section>
+
+                </div>
+
+
+                <!-- =====================================
+                     9. ACESSOS RÁPIDOS
+                ====================================== -->
+
+                <section class="admin-quick-section">
+
+                    <div class="admin-quick-heading">
+
+                        <div>
+
+                            <p class="admin-eyebrow">
+                                ACESSOS RÁPIDOS
+                            </p>
+
+                            <h2>
+                                Gerencie sua plataforma
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-quick-grid">
+
+                        <a
+                            href="agenda.html"
+                            class="admin-quick-card">
+
+                            <span
+                                class="admin-quick-icon"
+                                aria-hidden="true">
+                                ◷
+                            </span>
+
+                            <strong>
+                                Agenda
+                            </strong>
+
+                            <p>
+                                Consultar horários
+                                e compromissos.
+                            </p>
+
+                            <span class="admin-quick-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="pacientes.html"
+                            class="admin-quick-card">
+
+                            <span
+                                class="admin-quick-icon"
+                                aria-hidden="true">
+                                ♡
+                            </span>
+
+                            <strong>
+                                Pacientes
+                            </strong>
+
+                            <p>
+                                Visualizar registros
+                                fictícios.
+                            </p>
+
+                            <span class="admin-quick-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="financeiro.html"
+                            class="admin-quick-card">
+
+                            <span
+                                class="admin-quick-icon"
+                                aria-hidden="true">
+                                ◈
+                            </span>
+
+                            <strong>
+                                Financeiro
+                            </strong>
+
+                            <p>
+                                Explorar valores
+                                demonstrativos.
+                            </p>
+
+                            <span class="admin-quick-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="relatorios.html"
+                            class="admin-quick-card">
+
+                            <span
+                                class="admin-quick-icon"
+                                aria-hidden="true">
+                                ▤
+                            </span>
+
+                            <strong>
+                                Relatórios
+                            </strong>
+
+                            <p>
+                                Conhecer indicadores
+                                da demonstração.
+                            </p>
+
+                            <span class="admin-quick-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =====================================
+                     10. RODAPÉ
+                ====================================== -->
+
+                <footer class="admin-dashboard-footer">
+
+                    <p>
+                        © 2026 Dra. Maurícia Mbani
+                    </p>
+
+                    <p>
+                        Dashboard demonstrativo —
+                        Sem dados clínicos reais
+                    </p>
+
+                </footer>
+
+            </main>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

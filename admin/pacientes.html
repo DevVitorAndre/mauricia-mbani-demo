@@ -1,0 +1,1264 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Gerenciamento demonstrativo de pacientes da Dra. Maurícia Mbani.">
+
+    <meta
+        name="robots"
+        content="noindex, nofollow">
+
+    <title>
+        Pacientes | Dra. Maurícia Mbani
+    </title>
+
+    <!-- FONTES -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- ESTILOS -->
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/variables.css">
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/global.css">
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/components.css">
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/admin.css">
+
+    <!-- JAVASCRIPT -->
+
+    <script
+        src="../assets/js/dashboard.js"
+        defer>
+    </script>
+
+    <script
+        src="../assets/js/pacientes.js"
+        defer>
+    </script>
+
+</head>
+
+<body class="admin-dashboard-body admin-patients-page">
+
+    <!-- =====================================
+         FAIXA DEMONSTRATIVA
+    ====================================== -->
+
+    <div class="admin-demo-strip">
+        ✦ PAINEL DEMONSTRATIVO — DADOS FICTÍCIOS ✦
+    </div>
+
+    <div class="admin-app">
+
+        <!-- =====================================
+             1. MENU LATERAL
+        ====================================== -->
+
+        <aside
+            id="admin-sidebar"
+            class="admin-sidebar"
+            aria-label="Menu administrativo">
+
+            <div class="admin-sidebar-brand">
+
+                <a href="dashboard.html">
+
+                    <img
+                        src="../assets/images/logo/logo-principal.png"
+                        alt="Logotipo da Dra. Maurícia Mbani">
+
+                    <span>
+
+                        <strong>
+                            Dra. Maurícia Mbani
+                        </strong>
+
+                        <small>
+                            PAINEL ADMINISTRATIVO
+                        </small>
+
+                    </span>
+
+                </a>
+
+            </div>
+
+            <!-- PERFIL DEMO -->
+
+            <div class="admin-sidebar-profile">
+
+                <div
+                    class="admin-profile-avatar"
+                    aria-hidden="true">
+                    DM
+                </div>
+
+                <div class="admin-profile-info">
+
+                    <strong>Usuário Demo</strong>
+
+                    <small>
+                        Administrador demonstrativo
+                    </small>
+
+                </div>
+
+            </div>
+
+            <!-- NAVEGAÇÃO -->
+
+            <nav
+                class="admin-sidebar-nav"
+                aria-label="Seções administrativas">
+
+                <p class="admin-nav-label">
+                    GERENCIAMENTO
+                </p>
+
+                <a
+                    href="dashboard.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ◫
+                    </span>
+
+                    Dashboard
+
+                </a>
+
+                <a
+                    href="agenda.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ◷
+                    </span>
+
+                    Agenda
+
+                </a>
+
+                <a
+                    href="pacientes.html"
+                    class="admin-nav-link is-active"
+                    aria-current="page">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ♙
+                    </span>
+
+                    Pacientes
+
+                </a>
+
+                <a
+                    href="financeiro.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ◈
+                    </span>
+
+                    Financeiro
+
+                </a>
+
+                <p class="admin-nav-label">
+                    ADMINISTRAÇÃO
+                </p>
+
+                <a
+                    href="servicos.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ♡
+                    </span>
+
+                    Serviços
+
+                </a>
+
+                <a
+                    href="relatorios.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ▤
+                    </span>
+
+                    Relatórios
+
+                </a>
+
+                <a
+                    href="configuracoes.html"
+                    class="admin-nav-link">
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true">
+                        ⚙
+                    </span>
+
+                    Configurações
+
+                </a>
+
+            </nav>
+
+            <!-- RODAPÉ DA SIDEBAR -->
+
+            <div class="admin-sidebar-bottom">
+
+                <div class="admin-sidebar-demo-note">
+
+                    <strong>
+                        Ambiente de demonstração
+                    </strong>
+
+                    <p>
+                        Todos os registros de pacientes
+                        são fictícios.
+                    </p>
+
+                </div>
+
+                <a
+                    href="login.html"
+                    class="admin-logout-link">
+
+                    <span aria-hidden="true">↩</span>
+
+                    Voltar ao login
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =====================================
+             2. ÁREA PRINCIPAL
+        ====================================== -->
+
+        <div class="admin-main-area">
+
+            <!-- CABEÇALHO -->
+
+            <header class="admin-topbar">
+
+                <div class="admin-topbar-left">
+
+                    <button
+                        type="button"
+                        id="admin-menu-toggle"
+                        class="admin-menu-toggle"
+                        aria-label="Abrir menu administrativo"
+                        aria-controls="admin-sidebar"
+                        aria-expanded="false">
+                        ☰
+                    </button>
+
+                    <div>
+
+                        <span class="admin-topbar-subtitle">
+                            GERENCIAMENTO
+                        </span>
+
+                        <strong>
+                            Cadastro de Pacientes
+                        </strong>
+
+                    </div>
+
+                </div>
+
+                <div class="admin-topbar-right">
+
+                    <span class="admin-topbar-demo">
+                        ● Modo demonstração
+                    </span>
+
+                    <div
+                        class="admin-topbar-avatar"
+                        aria-label="Usuário demonstrativo">
+                        DM
+                    </div>
+
+                </div>
+
+            </header>
+
+            <!-- OVERLAY DO MENU MOBILE -->
+
+            <button
+                type="button"
+                id="admin-sidebar-overlay"
+                class="admin-sidebar-overlay"
+                aria-label="Fechar menu administrativo"
+                hidden>
+            </button>
+
+
+            <!-- =====================================
+                 3. CONTEÚDO
+            ====================================== -->
+
+            <main class="admin-content">
+
+                <section class="admin-page-heading">
+
+                    <div>
+
+                        <p class="admin-eyebrow">
+                            CADASTROS E ACOMPANHAMENTO
+                        </p>
+
+                        <h1>
+                            Gestão de
+                            <em>pacientes.</em>
+                        </h1>
+
+                        <p>
+                            Explore os cadastros fictícios,
+                            utilize os filtros e visualize
+                            o acompanhamento demonstrativo.
+                        </p>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        id="patients-new-button"
+                        class="admin-primary-action">
+
+                        <span aria-hidden="true">
+                            +
+                        </span>
+
+                        Novo paciente
+
+                    </button>
+
+                </section>
+
+
+                <!-- =====================================
+                     4. AVISO DE PRIVACIDADE
+                ====================================== -->
+
+                <div class="admin-dashboard-notice">
+
+                    <span
+                        class="admin-notice-icon"
+                        aria-hidden="true">
+                        i
+                    </span>
+
+                    <p>
+
+                        <strong>
+                            Base fictícia:
+                        </strong>
+
+                        nenhum nome, documento, telefone,
+                        exame ou informação de saúde
+                        pertence a pacientes reais.
+                        Não insira dados pessoais
+                        nesta demonstração.
+
+                    </p>
+
+                </div>
+
+
+                <!-- =====================================
+                     5. INDICADORES
+                ====================================== -->
+
+                <section
+                    class="patients-summary"
+                    aria-label="Indicadores de pacientes">
+
+                    <article class="patients-summary-card">
+
+                        <span
+                            class="patients-summary-icon green"
+                            aria-hidden="true">
+                            ♙
+                        </span>
+
+                        <div>
+
+                            <strong id="patients-total">
+                                08
+                            </strong>
+
+                            <span>
+                                Pacientes fictícios
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="patients-summary-card">
+
+                        <span
+                            class="patients-summary-icon copper"
+                            aria-hidden="true">
+                            ♡
+                        </span>
+
+                        <div>
+
+                            <strong id="patients-followup">
+                                05
+                            </strong>
+
+                            <span>
+                                Em acompanhamento
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="patients-summary-card">
+
+                        <span
+                            class="patients-summary-icon gold"
+                            aria-hidden="true">
+                            ✦
+                        </span>
+
+                        <div>
+
+                            <strong id="patients-new">
+                                03
+                            </strong>
+
+                            <span>
+                                Novos cadastros
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- =====================================
+                     6. PAINEL DE PACIENTES
+                ====================================== -->
+
+                <section
+                    class="admin-panel patients-list-panel"
+                    aria-labelledby="patients-list-title">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+
+                            <p class="admin-panel-eyebrow">
+                                REGISTROS DEMONSTRATIVOS
+                            </p>
+
+                            <h2 id="patients-list-title">
+                                Lista de pacientes
+                            </h2>
+
+                        </div>
+
+                        <span
+                            id="patients-results-count"
+                            class="patients-results-count">
+                            8 registros fictícios
+                        </span>
+
+                    </div>
+
+
+                    <!-- =====================================
+                         7. BUSCA E FILTROS
+                    ====================================== -->
+
+                    <div class="patients-filters">
+
+                        <div class="patients-search-field">
+
+                            <label for="patients-search">
+                                Pesquisar
+                            </label>
+
+                            <div class="patients-search-wrap">
+
+                                <span aria-hidden="true">
+                                    ⌕
+                                </span>
+
+                                <input
+                                    type="search"
+                                    id="patients-search"
+                                    placeholder="Buscar pelo identificador fictício..."
+                                    autocomplete="off">
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="patients-filter-field">
+
+                            <label for="patients-service-filter">
+                                Atendimento
+                            </label>
+
+                            <select id="patients-service-filter">
+
+                                <option value="todos">
+                                    Todos os serviços
+                                </option>
+
+                                <option value="Saúde Capilar">
+                                    Saúde Capilar
+                                </option>
+
+                                <option value="Clínica Geral">
+                                    Clínica Geral
+                                </option>
+
+                                <option value="Consulta Online">
+                                    Consulta Online
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="patients-filter-field">
+
+                            <label for="patients-status-filter">
+                                Situação
+                            </label>
+
+                            <select id="patients-status-filter">
+
+                                <option value="todos">
+                                    Todas
+                                </option>
+
+                                <option value="Acompanhamento">
+                                    Acompanhamento
+                                </option>
+
+                                <option value="Novo">
+                                    Novo
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            id="patients-clear-filters"
+                            class="patients-clear-filters">
+                            Limpar filtros
+                        </button>
+
+                    </div>
+
+
+                    <!-- =====================================
+                         8. TABELA DE PACIENTES
+                    ====================================== -->
+
+                    <div class="admin-table-scroll">
+
+                        <table class="admin-data-table patients-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th scope="col">
+                                        Identificador
+                                    </th>
+
+                                    <th scope="col">
+                                        Atendimento
+                                    </th>
+
+                                    <th scope="col">
+                                        Modalidade
+                                    </th>
+
+                                    <th scope="col">
+                                        Última interação
+                                    </th>
+
+                                    <th scope="col">
+                                        Situação
+                                    </th>
+
+                                    <th scope="col">
+                                        Ações
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="patients-table-body">
+
+                                <tr>
+
+                                    <td>
+                                        <div class="patients-name-cell">
+
+                                            <span class="patients-avatar">
+                                                01
+                                            </span>
+
+                                            <div>
+
+                                                <strong>
+                                                    Paciente Exemplo 01
+                                                </strong>
+
+                                                <small>
+                                                    ID DEMO-001
+                                                </small>
+
+                                            </div>
+
+                                        </div>
+                                    </td>
+
+                                    <td>Saúde Capilar</td>
+
+                                    <td>Presencial</td>
+
+                                    <td>Consulta fictícia</td>
+
+                                    <td>
+                                        <span class="patients-status followup">
+                                            Acompanhamento
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button
+                                            type="button"
+                                            class="patients-detail-btn"
+                                            data-patient-id="1">
+                                            Detalhes
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <div class="patients-name-cell">
+
+                                            <span class="patients-avatar">
+                                                02
+                                            </span>
+
+                                            <div>
+
+                                                <strong>
+                                                    Paciente Exemplo 02
+                                                </strong>
+
+                                                <small>
+                                                    ID DEMO-002
+                                                </small>
+
+                                            </div>
+
+                                        </div>
+                                    </td>
+
+                                    <td>Clínica Geral</td>
+
+                                    <td>Presencial</td>
+
+                                    <td>Cadastro fictício</td>
+
+                                    <td>
+                                        <span class="patients-status new">
+                                            Novo
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button
+                                            type="button"
+                                            class="patients-detail-btn"
+                                            data-patient-id="2">
+                                            Detalhes
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <div class="patients-name-cell">
+
+                                            <span class="patients-avatar">
+                                                03
+                                            </span>
+
+                                            <div>
+
+                                                <strong>
+                                                    Paciente Exemplo 03
+                                                </strong>
+
+                                                <small>
+                                                    ID DEMO-003
+                                                </small>
+
+                                            </div>
+
+                                        </div>
+                                    </td>
+
+                                    <td>Consulta Online</td>
+
+                                    <td>Online</td>
+
+                                    <td>Consulta fictícia</td>
+
+                                    <td>
+                                        <span class="patients-status followup">
+                                            Acompanhamento
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button
+                                            type="button"
+                                            class="patients-detail-btn"
+                                            data-patient-id="3">
+                                            Detalhes
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <!-- NENHUM RESULTADO -->
+
+                    <div
+                        id="patients-empty-state"
+                        class="patients-empty-state"
+                        hidden>
+
+                        <span aria-hidden="true">
+                            ⌕
+                        </span>
+
+                        <strong>
+                            Nenhum paciente encontrado
+                        </strong>
+
+                        <p>
+                            Experimente outros filtros
+                            ou limpe sua pesquisa.
+                        </p>
+
+                    </div>
+
+
+                    <!-- RODAPÉ DA TABELA -->
+
+                    <div class="patients-table-footer">
+
+                        <p>
+                            Todos os cadastros são exemplos
+                            criados exclusivamente para
+                            apresentar a interface.
+                        </p>
+
+                        <span>
+                            Modo demonstração
+                        </span>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =====================================
+                     9. RECURSOS DO MÓDULO
+                ====================================== -->
+
+                <section class="patients-resources">
+
+                    <div class="patients-resources-heading">
+
+                        <p class="admin-eyebrow">
+                            ORGANIZAÇÃO
+                        </p>
+
+                        <h2>
+                            Uma visão mais prática
+                            dos atendimentos.
+                        </h2>
+
+                    </div>
+
+                    <div class="patients-resources-grid">
+
+                        <article class="patients-resource-card">
+
+                            <span
+                                class="patients-resource-icon"
+                                aria-hidden="true">
+                                ◷
+                            </span>
+
+                            <h3>
+                                Histórico ilustrativo
+                            </h3>
+
+                            <p>
+                                Visualização de atendimentos
+                                fictícios relacionados a cada
+                                identificador de exemplo.
+                            </p>
+
+                        </article>
+
+
+                        <article class="patients-resource-card">
+
+                            <span
+                                class="patients-resource-icon"
+                                aria-hidden="true">
+                                ◈
+                            </span>
+
+                            <h3>
+                                Organização de registros
+                            </h3>
+
+                            <p>
+                                Pesquisa, filtros e
+                                identificação de situações
+                                de acompanhamento.
+                            </p>
+
+                        </article>
+
+
+                        <article class="patients-resource-card">
+
+                            <span
+                                class="patients-resource-icon"
+                                aria-hidden="true">
+                                ♡
+                            </span>
+
+                            <h3>
+                                Experiência administrativa
+                            </h3>
+
+                            <p>
+                                Uma proposta de navegação
+                                simples, organizada
+                                e acessível.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =====================================
+                     10. RODAPÉ
+                ====================================== -->
+
+                <footer class="admin-dashboard-footer">
+
+                    <p>
+                        © 2026 Dra. Maurícia Mbani
+                    </p>
+
+                    <p>
+                        Cadastro demonstrativo —
+                        Sem dados pessoais reais
+                    </p>
+
+                </footer>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         11. MODAL DE NOVO PACIENTE
+    ====================================== -->
+
+    <dialog
+        id="patients-modal"
+        class="patients-modal"
+        aria-labelledby="patients-modal-title">
+
+        <div class="patients-modal-content">
+
+            <div class="patients-modal-header">
+
+                <div>
+
+                    <p class="admin-panel-eyebrow">
+                        CADASTRO DEMONSTRATIVO
+                    </p>
+
+                    <h2 id="patients-modal-title">
+                        Novo paciente fictício
+                    </h2>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="patients-modal-close"
+                    class="patients-modal-close"
+                    aria-label="Fechar formulário">
+                    ×
+                </button>
+
+            </div>
+
+            <p class="patients-modal-description">
+                Simule um cadastro usando somente
+                identificadores fictícios.
+                Não informe nomes ou dados reais.
+            </p>
+
+            <form
+                id="patients-form"
+                class="patients-form">
+
+                <!-- IDENTIFICADOR -->
+
+                <div class="patients-form-field">
+
+                    <label for="patients-form-name">
+                        Paciente fictício
+                    </label>
+
+                    <select
+                        id="patients-form-name"
+                        required>
+
+                        <option value="">
+                            Selecione um identificador
+                        </option>
+
+                        <option value="Paciente Exemplo 09">
+                            Paciente Exemplo 09
+                        </option>
+
+                        <option value="Paciente Exemplo 10">
+                            Paciente Exemplo 10
+                        </option>
+
+                        <option value="Paciente Exemplo 11">
+                            Paciente Exemplo 11
+                        </option>
+
+                        <option value="Paciente Exemplo 12">
+                            Paciente Exemplo 12
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ATENDIMENTO -->
+
+                <div class="patients-form-field">
+
+                    <label for="patients-form-service">
+                        Atendimento
+                    </label>
+
+                    <select
+                        id="patients-form-service"
+                        required>
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Saúde Capilar">
+                            Saúde Capilar
+                        </option>
+
+                        <option value="Clínica Geral">
+                            Clínica Geral
+                        </option>
+
+                        <option value="Consulta Online">
+                            Consulta Online
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- MODALIDADE -->
+
+                <div class="patients-form-field">
+
+                    <label for="patients-form-modality">
+                        Modalidade
+                    </label>
+
+                    <select
+                        id="patients-form-modality"
+                        required>
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Presencial">
+                            Presencial
+                        </option>
+
+                        <option value="Online">
+                            Online
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- SITUAÇÃO -->
+
+                <div class="patients-form-field">
+
+                    <label for="patients-form-status">
+                        Situação
+                    </label>
+
+                    <select
+                        id="patients-form-status"
+                        required>
+
+                        <option value="Novo">
+                            Novo
+                        </option>
+
+                        <option value="Acompanhamento">
+                            Acompanhamento
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- AVISO -->
+
+                <div class="patients-form-note">
+
+                    <strong>
+                        Atenção
+                    </strong>
+
+                    <p>
+                        Este cadastro é fictício.
+                        Nenhuma informação será enviada
+                        para servidores ou registrada
+                        em banco de dados.
+                    </p>
+
+                </div>
+
+
+                <!-- FEEDBACK -->
+
+                <p
+                    id="patients-form-message"
+                    class="patients-form-message"
+                    role="status"
+                    aria-live="polite"
+                    hidden>
+                </p>
+
+
+                <!-- AÇÕES -->
+
+                <div class="patients-form-actions">
+
+                    <button
+                        type="button"
+                        id="patients-form-cancel"
+                        class="patients-secondary-btn">
+                        Cancelar
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="admin-primary-action">
+                        Salvar simulação
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </dialog>
+
+
+    <!-- =====================================
+         12. MODAL DE DETALHES
+    ====================================== -->
+
+    <dialog
+        id="patients-details-modal"
+        class="patients-modal"
+        aria-labelledby="patients-details-title">
+
+        <div class="patients-modal-content">
+
+            <div class="patients-modal-header">
+
+                <div>
+
+                    <p class="admin-panel-eyebrow">
+                        REGISTRO FICTÍCIO
+                    </p>
+
+                    <h2 id="patients-details-title">
+                        Detalhes do paciente
+                    </h2>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="patients-details-close"
+                    class="patients-modal-close"
+                    aria-label="Fechar detalhes">
+                    ×
+                </button>
+
+            </div>
+
+
+            <div
+                id="patients-details-content"
+                class="patients-details-content">
+
+                <p>
+                    Selecione um cadastro
+                    para visualizar os detalhes.
+                </p>
+
+            </div>
+
+
+            <div class="patients-form-actions">
+
+                <button
+                    type="button"
+                    id="patients-details-dismiss"
+                    class="patients-secondary-btn">
+                    Fechar
+                </button>
+
+                <a
+                    href="agenda.html"
+                    class="admin-primary-action">
+                    Consultar agenda
+                </a>
+
+            </div>
+
+        </div>
+
+    </dialog>
+
+</body>
+</html>
