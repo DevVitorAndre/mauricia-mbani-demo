@@ -332,6 +332,80 @@ if (
 }
 
 
+ // ============================================
+ // BOTAO CONCLUIR CONSULTA
+ // ============================================
+
+if (consulta.status === "confirmado") {
+
+    const botaoConcluir = criar(
+        "button",
+        "agenda-row-action",
+        "Concluir"
+    );
+
+    botaoConcluir.type = "button";
+
+    botaoConcluir.addEventListener("click", async () => {
+
+        const confirmar = window.confirm(
+            "Deseja marcar esta consulta como concluída?"
+        );
+
+        if (!confirmar) return;
+
+        botaoConcluir.disabled = true;
+        botaoConcluir.textContent = "Concluindo...";
+
+        try {
+
+            const respostaCsrf = await fetch(
+                "/api/clinica/agendamentos/csrf",
+                { credentials: "same-origin" }
+            );
+
+            if (!respostaCsrf.ok) {
+                throw new Error("Erro de segurança.");
+            }
+
+            const { csrfToken } = await respostaCsrf.json();
+
+            const resposta = await fetch(
+                `/api/clinica/agendamentos/${consulta.id}/concluir`,
+                {
+                    method: "PATCH",
+                    credentials: "same-origin",
+                    headers: {
+                        "X-CSRF-Token": csrfToken
+                    }
+                }
+            );
+
+            const resultado = await resposta.json();
+
+            if (!resposta.ok) {
+                throw new Error(
+                    resultado.mensagem ||
+                    "Erro ao concluir consulta."
+                );
+            }
+
+            await carregarSemana();
+
+        } catch (erro) {
+
+            alert(erro.message);
+
+            botaoConcluir.disabled = false;
+            botaoConcluir.textContent = "Concluir";
+        }
+
+    });
+
+    colunaAcoes.append(botaoConcluir);
+}
+
+
 linha.append(colunaAcoes);
 tabela.append(linha);
 
