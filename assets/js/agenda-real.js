@@ -111,8 +111,15 @@ document.addEventListener("DOMContentLoaded", () => {
       String(consultas.filter(c => c.status === "pendente").length)
         .padStart(2, "0");
 
-    // A modalidade ainda nao existe no banco.
-    elemento("agenda-online").textContent = "—";
+ 
+ // Contar consultas concluídas na semana
+elemento("agenda-online").textContent =
+    String(
+        consultas.filter(
+            consulta => consulta.status === "concluido"
+        ).length
+    ).padStart(2, "0");
+
 
     contador.textContent = `${filtradas.length} registro(s)`;
     vazio.hidden = filtradas.length > 0;
