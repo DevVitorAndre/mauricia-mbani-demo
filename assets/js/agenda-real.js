@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const filtroServico = elemento("agenda-filter-service");
   const filtroStatus = elemento("agenda-filter-status");
   const filtroModalidade = elemento("agenda-filter-modality");
+  const filtroProfissional = elemento("agenda-filter-profissional");
+
 
   const dias = ["SEG", "TER", "QUA", "QUI", "SEX", "SÁB", "DOM"];
 
@@ -93,11 +95,17 @@ document.addEventListener("DOMContentLoaded", () => {
         filtroServico.value === "todos" ||
         c.servico === filtroServico.value;
 
-      const statusOK =
-        filtroStatus.value === "todas" ||
-        situacao(c.status) === filtroStatus.value;
+     
+const statusOK =
+  filtroStatus.value === "todas" ||
+  situacao(c.status) === filtroStatus.value;
 
-      return servicoOK && statusOK;
+const profissionalOK =
+  filtroProfissional.value === "todos" ||
+  c.profissional_id === filtroProfissional.value;
+
+return servicoOK && statusOK && profissionalOK;
+
     });
 
     elemento("agenda-total").textContent =
@@ -463,11 +471,14 @@ tabela.append(linha);
 
       consultas = resultados.flat().map((a) => ({
         id: a.id,
+        profissional_id: String(a.profissional_id),
         data: String(a.data_agendamento).slice(0, 10),
         horario: String(a.hora_inicio).slice(0, 5),
         paciente: a.paciente_nome,
         servico: a.servico,
         status: a.status
+
+        
       }));
 
       renderizar();
@@ -500,12 +511,18 @@ tabela.append(linha);
 
   filtroServico.addEventListener("change", renderizar);
   filtroStatus.addEventListener("change", renderizar);
+  filtroProfissional.addEventListener("change", renderizar);
 
-  elemento("agenda-clear-filters").addEventListener("click", () => {
+
+
+elemento("agenda-clear-filters").addEventListener("click", () => {
     filtroServico.value = "todos";
     filtroStatus.value = "todas";
+    filtroProfissional.value = "todos";
+
     renderizar();
-  });
+});
+
 
   // Funcionalidades que serao integradas depois.
   filtroModalidade.disabled = true;
@@ -697,5 +714,63 @@ formulario.addEventListener("submit", async (evento) => {
       "Não há agendamentos para esta semana e filtros.";
   }
 
+
+  // ============================================
+  // CARREGAR PROFISSIONAIS NO FILTRO
+  // ============================================
+
+  async function carregarFiltroProfissionais() {
+
+    const filtro = elemento("agenda-filter-profissional");
+
+    filtro.disabled = true;
+
+    try {
+
+      const resposta = await fetch(
+        "/api/clinica/agendamentos/profissionais",
+        {
+          credentials: "same-origin",
+          cache: "no-store"
+        }
+      );
+
+      if (!resposta.ok) {
+        throw new Error("Erro ao buscar profissionais.");
+      }
+
+      const dados = await resposta.json();
+
+      filtro.replaceChildren(
+        new Option("Todos os profissionais", "todos")
+      );
+
+      dados.profissionais.forEach((profissional) => {
+
+        filtro.add(
+          new Option(
+            profissional.nome,
+            profissional.id
+          )
+        );
+
+      });
+
+      filtro.disabled = false;
+
+    } catch (erro) {
+
+      console.error(erro);
+
+      filtro.replaceChildren(
+        new Option("Erro ao carregar profissionais", "")
+      );
+
+    }
+
+  }
+
+  carregarFiltroProfissionais();
   carregarSemana();
+
 });
