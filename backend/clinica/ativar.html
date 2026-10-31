@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Ativar conta | SaaS</title>
+
+  <link rel="stylesheet"
+        href="/clinica/assets/css/ativar.css">
+
+  <script
+    src="/clinica/assets/js/ativar.js"
+    defer>
+  </script>
+</head>
+
+<body>
+
+  <main class="card">
+
+    <div class="icone">S</div>
+
+    <p class="destaque">BEM-VINDA À PLATAFORMA</p>
+
+    <h1>Ativar minha conta</h1>
+
+    <p id="statusConvite" class="descricao" role="status">
+      Verificando seu convite...
+    </p>
+
+    <section id="dadosConvite" hidden>
+
+      <div class="informacoes">
+        <p>
+          <strong>Clínica:</strong>
+          <span id="nomeClinica"></span>
+        </p>
+
+        <p>
+          <strong>E-mail:</strong>
+          <span id="emailConvite"></span>
+        </p>
+      </div>
+
+      <form id="formAtivacao">
+
+        <label for="nome">Nome completo</label>
+        <input
+          type="text"
+          id="nome"
+          minlength="3"
+          maxlength="150"
+          autocomplete="name"
+          required
+        >
+
+        <label for="senha">Criar senha</label>
+        <input
+          type="password"
+          id="senha"
+          minlength="12"
+          autocomplete="new-password"
+          required
+        >
+
+        <label for="confirmarSenha">
+          Confirmar senha
+        </label>
+        <input
+          type="password"
+          id="confirmarSenha"
+          minlength="12"
+          autocomplete="new-password"
+          required
+        >
+
+        <p id="mensagem" role="alert"></p>
+
+        <button type="submit" id="btnAtivar">
+          Criar minha conta
+        </button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

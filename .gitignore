@@ -1,5 +1,5 @@
 
-# Variáveis de ambiente
+# Variáveis de ambiente e segredos
 .env
 .env.*
 !.env.example
@@ -7,7 +7,10 @@
 # Dependências
 node_modules/
 
-# Arquivos temporários
+# Logs
 *.log
+npm-debug.log*
+
+# Arquivos locais
 .DS_Store
 Thumbs.db

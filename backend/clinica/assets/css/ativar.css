@@ -1,0 +1,142 @@
+
+:root {
+  --fundo: #0b1120;
+  --card: #151e30;
+  --borda: #2b374b;
+  --texto: #f1f5f9;
+  --cinza: #94a3b8;
+  --azul: #38bdf8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: Arial, sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 460px;
+  padding: 38px;
+  border: 1px solid var(--borda);
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.icone {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--azul);
+  color: #08111f;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.destaque {
+  margin-top: 25px;
+  color: var(--azul);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: 29px;
+  margin: 10px 0;
+}
+
+.descricao {
+  color: var(--cinza);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.informacoes {
+  margin: 24px 0;
+  padding: 16px;
+  background: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.informacoes p {
+  overflow-wrap: anywhere;
+}
+
+label {
+  display: block;
+  margin: 18px 0 8px;
+  font-size: 13px;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid var(--borda);
+  border-radius: 9px;
+  background: var(--fundo);
+  color: white;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: 2px solid var(--azul);
+  outline-offset: 1px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 22px;
+  border: none;
+  border-radius: 9px;
+  background: var(--azul);
+  color: #08111f;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.08);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+#mensagem {
+  color: #fca5a5;
+  font-size: 13px;
+}
+
+@media (max-width: 500px) {
+  .card {
+    padding: 24px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+}

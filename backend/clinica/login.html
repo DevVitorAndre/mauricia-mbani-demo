@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Login da Clínica | SaaS</title>
+
+  <link rel="stylesheet"
+        href="/clinica/assets/css/ativar.css">
+
+  <script
+    src="/clinica/assets/js/login.js"
+    defer>
+  </script>
+</head>
+
+<body>
+
+  <main class="card">
+
+    <div class="icone">S</div>
+
+    <p class="destaque">
+      ÁREA ADMINISTRATIVA
+    </p>
+
+    <h1>Painel da Clínica</h1>
+
+    <p class="descricao">
+      Acesse sua agenda, serviços e ferramentas de gestão.
+    </p>
+
+    <form id="formLogin">
+
+      <label for="email">E-mail</label>
+      <input
+        type="email"
+        id="email"
+        autocomplete="username"
+        placeholder="seu@email.com"
+        required
+      >
+
+      <label for="senha">Senha</label>
+      <input
+        type="password"
+        id="senha"
+        autocomplete="current-password"
+        placeholder="Digite sua senha"
+        required
+      >
+
+      <p id="mensagem" role="alert"></p>
+
+      <button type="submit" id="btnEntrar">
+        Entrar na minha clínica
+      </button>
+
+    </form>
+
+  </main>
+
+</body>
+</html>

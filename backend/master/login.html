@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>Login Master | SaaS</title>
+
+  <link rel="stylesheet" href="/master/assets/css/master.css">
+  <script src="/master/assets/js/login.js" defer></script>
+</head>
+
+<body class="login-page">
+
+  <main class="login-card">
+
+    <div class="brand-icon">S</div>
+
+    <p class="eyebrow">ADMINISTRAÇÃO CENTRAL</p>
+
+    <h1>SaaS Master</h1>
+
+    <p class="subtitle">
+      Gerenciamento de empresas, planos e assinaturas.
+    </p>
+
+    <form id="loginForm">
+
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="seu@email.com"
+          autocomplete="username"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="senha">Senha</label>
+        <input
+          type="password"
+          id="senha"
+          name="senha"
+          placeholder="Digite sua senha"
+          autocomplete="current-password"
+          required
+        >
+      </div>
+
+      <p id="mensagem" class="mensagem" role="alert"></p>
+
+      <button type="submit" id="btnEntrar">
+        Entrar no Painel Master
+      </button>
+
+    </form>
+
+    <p class="footer-login">
+      Acesso exclusivo à administração do sistema.
+    </p>
+
+  </main>
+
+</body>
+</html>

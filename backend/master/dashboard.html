@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dashboard | SaaS Master</title>
+
+  <link rel="stylesheet" href="/master/assets/css/master.css">
+  <script src="/master/assets/js/dashboard.js" defer></script>
+</head>
+
+<body class="master-app">
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-icon">S</div>
+      <div>
+        <strong>SaaS Master</strong>
+        <small>Administração central</small>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="#inicio" class="nav-link">
+        <span>▦</span> Dashboard
+      </a>
+
+      <a href="#empresas" class="nav-link">
+        <span>▣</span> Empresas
+      </a>
+
+      <a href="#nova-clinica" class="nav-link">
+        <span>＋</span> Nova clínica
+      </a>
+
+      
+    <a href="#modulos" class="nav-link">
+        <span>⚙</span> Modulos
+    </a>
+
+    
+<a href="#controle-modulos" class="nav-link">
+  <span>🔐</span> Controle de módulos
+</a>
+
+
+    </nav>
+
+    <div class="sidebar-bottom">
+      <p id="usuarioEmail">Carregando...</p>
+      <button type="button" id="btnSair" class="btn-secondary">
+        Sair do sistema
+      </button>
+    </div>
+  </aside>
+
+  <main class="master-content">
+
+    <header class="master-topbar" id="inicio">
+      <div>
+        <p class="eyebrow">PAINEL ADMINISTRATIVO</p>
+        <h1 id="boasVindas">Carregando...</h1>
+        <p class="subtitle">
+          Gerencie suas empresas e assinaturas.
+        </p>
+      </div>
+      <div class="topbar-status">● Sistema local</div>
+    </header>
+
+    <section class="stats-grid">
+      <article class="stat-card">
+        <span>Empresas cadastradas</span>
+        <strong id="totalEmpresas">--</strong>
+      </article>
+
+      <article class="stat-card">
+        <span>Clínicas ativas</span>
+        <strong id="clinicasAtivas">--</strong>
+      </article>
+
+      <article class="stat-card">
+        <span>Planos disponíveis</span>
+        <strong id="totalPlanos">--</strong>
+      </article>
+    </section>
+
+    <section class="master-panel" id="empresas">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">GESTÃO DE CLIENTES</p>
+          <h2>Empresas cadastradas</h2>
+        </div>
+
+        <a href="#nova-clinica" class="btn-link">
+          + Nova clínica
+        </a>
+      </div>
+
+      <div class="table-scroll">
+        <table class="master-table">
+          <thead>
+            <tr>
+              <th>Empresa</th>
+              <th>Identificador</th>
+              <th>Plano</th>
+              <th>Assinatura</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaClinicas">
+            <tr>
+              <td colspan="4">Carregando empresas...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p id="mensagemLista" class="feedback" role="status"></p>
+    </section>
+
+    
+<!-- ====================================
+     MODULOS DOS PLANOS
+==================================== -->
+
+<section class="master-panel" id="modulos">
+
+  <div class="panel-heading">
+    <div>
+      <p class="eyebrow">CONFIGURACAO DO SAAS</p>
+      <h2>Modulos por plano</h2>
+      <p class="subtitle">
+        Funcionalidades incluidas em cada assinatura.
+      </p>
+    </div>
+  </div>
+
+  <div class="table-scroll">
+    <table class="master-table tabela-modulos">
+
+      <thead>
+        <tr>
+          <th>Funcionalidade</th>
+          <th>Basico</th>
+          <th>Plus</th>
+          <th>Pro</th>
+        </tr>
+      </thead>
+
+      <tbody id="tabelaModulos">
+        <tr>
+          <td colspan="4">
+            Carregando modulos...
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+
+  <p id="mensagemModulos"
+     class="feedback"
+     role="status"></p>
+
+</section>
+
+
+<!-- CONTROLE DE MODULOS POR CLINICA -->
+
+<section class="master-panel" id="controle-modulos">
+
+  <div class="panel-heading">
+    <div>
+      <p class="eyebrow">GERENCIAMENTO DE ACESSOS</p>
+      <h2>Controle de módulos por clínica</h2>
+      <p class="subtitle">
+        Libere, bloqueie ou restaure funcionalidades
+        conforme o plano contratado.
+      </p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="clinicaModulo">
+      Selecione a clínica
+    </label>
+
+    <select id="clinicaModulo">
+      <option value="">Carregando clínicas...</option>
+    </select>
+  </div>
+
+  <div class="table-scroll">
+    <table class="master-table">
+      <thead>
+        <tr>
+          <th>Funcionalidade</th>
+          <th>Incluído no plano</th>
+          <th>Status atual</th>
+          <th>Configuração Master</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+
+      <tbody id="tabelaControleModulos">
+        <tr>
+          <td colspan="5">
+            Selecione uma clínica.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p id="mensagemControle"
+     class="feedback"
+     role="status"></p>
+
+</section>
+
+    <section class="master-panel" id="nova-clinica">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">NOVO CLIENTE</p>
+          <h2>Cadastrar clínica</h2>
+          <p class="subtitle">
+            Os dados serão salvos no PostgreSQL.
+          </p>
+        </div>
+      </div>
+
+      <form id="formClinica" class="clinic-form">
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="nomeClinica">Nome da clínica *</label>
+            <input
+              id="nomeClinica"
+              type="text"
+              maxlength="150"
+              placeholder="Ex.: Clínica Exemplo"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="slugClinica">Identificador *</label>
+            <input
+              id="slugClinica"
+              type="text"
+              maxlength="80"
+              pattern="[a-z0-9]+(-[a-z0-9]+)*"
+              placeholder="clinica-exemplo"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="emailClinica">E-mail</label>
+            <input
+              id="emailClinica"
+              type="email"
+              maxlength="150"
+              placeholder="contato@exemplo.com"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="telefoneClinica">Telefone</label>
+            <input
+              id="telefoneClinica"
+              type="tel"
+              maxlength="30"
+              placeholder="(51) 99999-9999"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="planoClinica">Plano contratado *</label>
+            <select id="planoClinica" required>
+              <option value="">Carregando planos...</option>
+            </select>
+          </div>
+        </div>
+
+        <p id="mensagemCadastro" class="feedback" role="status"></p>
+
+        <button type="submit" id="btnCadastrar">
+          Cadastrar clínica
+        </button>
+
+      </form>
+    </section>
+
+  </main>
+
+</body>
+</html>
