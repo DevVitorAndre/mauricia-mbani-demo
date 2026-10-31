@@ -17,6 +17,7 @@ import convitesRoutes from "./routes/convites.routes.js";
 import ativacaoRoutes from "./routes/ativacao.routes.js";
 import clinicaAuthRoutes from "./routes/clinica-auth.routes.js";
 import { consultarPermissao } from "./services/permissoes.service.js";
+import agendamentosRoutes from "./routes/agendamentos.routes.js";
 
 
 
@@ -166,6 +167,7 @@ app.use("/api/master/modulos", modulosRoutes);
 app.use("/api/master/convites", convitesRoutes);
 app.use("/api/ativacao", ativacaoRoutes);
 app.use("/api/clinica/auth", clinicaAuthRoutes);
+app.use("/api/clinica/agendamentos", agendamentosRoutes);
 
 
 

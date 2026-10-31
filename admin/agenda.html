@@ -7,11 +7,13 @@
 
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0">
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
-        content="Agenda administrativa demonstrativa da Dra. Maurícia Mbani.">
+        content="Sistema de gerenciamento de consultas da Dra. Maurícia Mbani."
+    >
 
     <meta name="robots" content="noindex, nofollow">
 
@@ -19,85 +21,96 @@
         Agenda Administrativa | Dra. Maurícia Mbani
     </title>
 
+    <!-- FAVICON -->
+
     <link
-    rel="icon"
-    type="image/png"
-    href="../assets/images/logo/logo-principal.png"
->
+        rel="icon"
+        type="image/png"
+        href="../assets/images/logo/logo-principal.png"
+    >
 
     <!-- FONTES -->
 
     <link
         rel="preconnect"
-        href="https://fonts.googleapis.com">
+        href="https://fonts.googleapis.com"
+    >
 
     <link
         rel="preconnect"
         href="https://fonts.gstatic.com"
-        crossorigin>
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"
+    >
 
-    <!-- ESTILOS EXISTENTES -->
+    <!-- CSS ORIGINAL DA CLINICA -->
 
     <link
         rel="stylesheet"
-        href="../assets/css/variables.css">
+        href="../assets/css/variables.css"
+    >
 
     <link
         rel="stylesheet"
-        href="../assets/css/global.css">
+        href="../assets/css/global.css"
+    >
 
     <link
         rel="stylesheet"
-        href="../assets/css/components.css">
+        href="../assets/css/components.css"
+    >
 
     <link
         rel="stylesheet"
-        href="../assets/css/admin.css">
+        href="../assets/css/admin.css"
+    >
 
     <!-- JAVASCRIPT -->
 
     <script
         src="../assets/js/dashboard.js"
-        defer>
-    </script>
+        defer
+    ></script>
 
     <script
-        src="../assets/js/agenda.js"
-        defer>
-    </script>
+        src="../assets/js/agenda-real.js"
+        defer
+    ></script>
+
+    <script
+        src="/clinica/assets/js/painel.js"
+        defer
+    ></script>
 
 </head>
 
 <body class="admin-dashboard-body admin-agenda-page">
 
-    <!-- =====================================
-         FAIXA DEMONSTRATIVA
-    ====================================== -->
+    <!-- AMBIENTE DE TESTES -->
 
     <div class="admin-demo-strip">
-        ✦ PAINEL DEMONSTRATIVO — DADOS FICTÍCIOS ✦
+        ✦ SISTEMA DE GESTÃO — AMBIENTE DE TESTES ✦
     </div>
 
-
-    <!-- =====================================
-         ESTRUTURA ADMINISTRATIVA
-    ====================================== -->
+    <!-- ESTRUTURA ADMINISTRATIVA -->
 
     <div class="admin-app">
 
-
         <!-- =====================================
-             1. MENU LATERAL
+             MENU LATERAL
         ====================================== -->
 
         <aside
             class="admin-sidebar"
             id="admin-sidebar"
-            aria-label="Menu administrativo">
+            aria-label="Menu administrativo"
+        >
+
+            <!-- IDENTIDADE DA CLINICA -->
 
             <div class="admin-sidebar-brand">
 
@@ -105,7 +118,8 @@
 
                     <img
                         src="../assets/images/logo/logo-principal.png"
-                        alt="Logotipo da Dra. Maurícia Mbani">
+                        alt="Logotipo da Dra. Maurícia Mbani"
+                    >
 
                     <span>
 
@@ -123,194 +137,184 @@
 
             </div>
 
-
-            <!-- PERFIL -->
+            <!-- PERFIL AUTENTICADO -->
 
             <div class="admin-sidebar-profile">
 
                 <div
                     class="admin-profile-avatar"
-                    aria-hidden="true">
+                    aria-hidden="true"
+                >
                     DM
                 </div>
 
                 <div class="admin-profile-info">
 
                     <strong>
-                        Usuário Demo
+                        Carregando...
                     </strong>
 
                     <small>
-                        Administrador demonstrativo
+                        Administrador da clínica
                     </small>
 
                 </div>
 
             </div>
 
-
-            <!-- NAVEGAÇÃO -->
+            <!-- NAVEGACAO -->
 
             <nav
                 class="admin-sidebar-nav"
-                aria-label="Seções do painel">
+                aria-label="Seções do painel"
+            >
 
                 <p class="admin-nav-label">
                     GERENCIAMENTO
                 </p>
 
-
                 <a
                     href="dashboard.html"
-                    class="admin-nav-link">
-
+                    class="admin-nav-link"
+                >
                     <span
                         class="admin-nav-icon"
-                        aria-hidden="true">
+                        aria-hidden="true"
+                    >
                         ◫
                     </span>
 
                     Dashboard
-
                 </a>
-
 
                 <a
                     href="agenda.html"
                     class="admin-nav-link is-active"
-                    aria-current="page">
-
+                    aria-current="page"
+                >
                     <span
                         class="admin-nav-icon"
-                        aria-hidden="true">
+                        aria-hidden="true"
+                    >
                         ◷
                     </span>
 
                     Agenda
-
                 </a>
-
 
                 <a
                     href="pacientes.html"
-                    class="admin-nav-link">
-
+                    class="admin-nav-link"
+                >
                     <span
                         class="admin-nav-icon"
-                        aria-hidden="true">
+                        aria-hidden="true"
+                    >
                         ♙
                     </span>
 
                     Pacientes
-
                 </a>
-
 
                 <a
                     href="financeiro.html"
-                    class="admin-nav-link">
-
+                    class="admin-nav-link"
+                >
                     <span
                         class="admin-nav-icon"
-                        aria-hidden="true">
+                        aria-hidden="true"
+                    >
                         ◈
                     </span>
 
                     Financeiro
-
                 </a>
-
 
                 <p class="admin-nav-label">
                     ADMINISTRAÇÃO
                 </p>
 
-
                 <a
                     href="servicos.html"
-                    class="admin-nav-link">
-
+                    class="admin-nav-link"
+                >
                     <span
                         class="admin-nav-icon"
-                        aria-hidden="true">
+                        aria-hidden="true"
+                    >
                         ♡
                     </span>
 
                     Serviços
-
                 </a>
-
 
                 <a
                     href="relatorios.html"
-                    class="admin-nav-link">
-
+                    class="admin-nav-link"
+                >
                     <span
                         class="admin-nav-icon"
-                        aria-hidden="true">
+                        aria-hidden="true"
+                    >
                         ▤
                     </span>
 
                     Relatórios
-
                 </a>
-
 
                 <a
                     href="configuracoes.html"
-                    class="admin-nav-link">
-
+                    class="admin-nav-link"
+                >
                     <span
                         class="admin-nav-icon"
-                        aria-hidden="true">
+                        aria-hidden="true"
+                    >
                         ⚙
                     </span>
 
                     Configurações
-
                 </a>
 
             </nav>
 
+            <!-- RODAPE DO MENU -->
 
             <div class="admin-sidebar-bottom">
 
                 <div class="admin-sidebar-demo-note">
 
                     <strong>
-                        Ambiente de demonstração
+                        Gestão de atendimentos
                     </strong>
 
                     <p>
-                        Todos os agendamentos
-                        desta área são fictícios.
+                        Consulte os agendamentos
+                        vinculados à sua clínica.
                     </p>
 
                 </div>
 
                 <a
-                    href="login.html"
-                    class="admin-logout-link">
-
+                    href="/clinica/login"
+                    class="admin-logout-link"
+                >
                     <span aria-hidden="true">↩</span>
 
-                    Voltar ao login
-
+                    Sair do sistema
                 </a>
 
             </div>
 
         </aside>
 
-
         <!-- =====================================
-             2. ÁREA PRINCIPAL
+             AREA PRINCIPAL
         ====================================== -->
 
         <div class="admin-main-area">
 
-
-            <!-- CABEÇALHO -->
+            <!-- CABECALHO -->
 
             <header class="admin-topbar">
 
@@ -322,10 +326,9 @@
                         class="admin-menu-toggle"
                         aria-label="Abrir menu administrativo"
                         aria-controls="admin-sidebar"
-                        aria-expanded="false">
-
+                        aria-expanded="false"
+                    >
                         ☰
-
                     </button>
 
                     <div>
@@ -342,21 +345,22 @@
 
                 </div>
 
-
                 <div class="admin-topbar-right">
 
                     <span class="admin-topbar-demo">
-                        ● Modo demonstração
+                        ● Sistema conectado
                     </span>
 
-                    <div class="admin-topbar-avatar">
+                    <div
+                        class="admin-topbar-avatar"
+                        aria-label="Perfil administrativo"
+                    >
                         DM
                     </div>
 
                 </div>
 
             </header>
-
 
             <!-- OVERLAY MOBILE -->
 
@@ -365,18 +369,16 @@
                 id="admin-sidebar-overlay"
                 class="admin-sidebar-overlay"
                 aria-label="Fechar menu administrativo"
-                hidden>
-            </button>
-
+                hidden
+            ></button>
 
             <!-- =====================================
-                 3. CONTEÚDO DA AGENDA
+                 CONTEUDO DA AGENDA
             ====================================== -->
 
             <main class="admin-content">
 
-
-                <!-- CABEÇALHO DA PÁGINA -->
+                <!-- APRESENTACAO -->
 
                 <section class="admin-page-heading">
 
@@ -392,62 +394,67 @@
                         </h1>
 
                         <p>
-                            Visualize horários,
-                            acompanhe situações e
-                            simule o gerenciamento
-                            dos atendimentos.
+                            Visualize os horários cadastrados,
+                            acompanhe a situação dos
+                            atendimentos e organize
+                            sua semana.
                         </p>
 
                     </div>
 
+                    <!-- CADASTRO VISUAL AINDA EM INTEGRACAO -->
+
                     <button
                         type="button"
                         id="agenda-new-button"
-                        class="admin-primary-action">
-
-                        <span aria-hidden="true">
-                            +
-                        </span>
+                        class="admin-primary-action"
+                        disabled
+                        title="Cadastro pelo painel em desenvolvimento"
+                    >
+                        <span aria-hidden="true">+</span>
 
                         Novo agendamento
-
                     </button>
 
                 </section>
 
-
-                <!-- AVISO -->
+                <!-- AVISO OPERACIONAL -->
 
                 <div class="admin-dashboard-notice">
 
                     <span
                         class="admin-notice-icon"
-                        aria-hidden="true">
+                        aria-hidden="true"
+                    >
                         i
                     </span>
 
                     <p>
                         <strong>
-                            Agenda demonstrativa:
+                            Agenda conectada ao banco:
                         </strong>
 
-                        os pacientes e os horários
-                        são fictícios. Agendamentos
-                        criados nesta experiência
-                        não são enviados para a médica
-                        e não representam reservas reais.
+                        os registros exibidos são
+                        consultados no PostgreSQL.
+
+                        O sistema está em fase de testes.
+                        Utilize somente dados de teste
+                        até a conclusão das verificações
+                        de segurança.
                     </p>
 
                 </div>
 
-
                 <!-- =====================================
-                     4. INDICADORES DA AGENDA
+                     INDICADORES
                 ====================================== -->
 
                 <section
                     class="agenda-summary"
-                    aria-label="Resumo da agenda">
+                    aria-label="Resumo da agenda"
+                >
+
+                    <!-- TOTAL -->
 
                     <article class="agenda-summary-card">
 
@@ -458,7 +465,7 @@
                         <div>
 
                             <strong id="agenda-total">
-                                04
+                                00
                             </strong>
 
                             <span>
@@ -469,6 +476,7 @@
 
                     </article>
 
+                    <!-- CONFIRMADAS -->
 
                     <article class="agenda-summary-card">
 
@@ -479,7 +487,7 @@
                         <div>
 
                             <strong id="agenda-confirmed">
-                                02
+                                00
                             </strong>
 
                             <span>
@@ -490,6 +498,7 @@
 
                     </article>
 
+                    <!-- PENDENTES -->
 
                     <article class="agenda-summary-card">
 
@@ -500,7 +509,7 @@
                         <div>
 
                             <strong id="agenda-pending">
-                                02
+                                00
                             </strong>
 
                             <span>
@@ -511,6 +520,7 @@
 
                     </article>
 
+                    <!-- MODALIDADE AINDA NAO CADASTRADA -->
 
                     <article class="agenda-summary-card">
 
@@ -521,11 +531,11 @@
                         <div>
 
                             <strong id="agenda-online">
-                                01
+                                —
                             </strong>
 
                             <span>
-                                Consultas online
+                                Modalidade em preparação
                             </span>
 
                         </div>
@@ -534,14 +544,14 @@
 
                 </section>
 
-
                 <!-- =====================================
-                     5. CONTROLES E FILTROS
+                     CALENDARIO SEMANAL
                 ====================================== -->
 
                 <section
                     class="admin-panel agenda-calendar-panel"
-                    aria-labelledby="agenda-calendar-title">
+                    aria-labelledby="agenda-calendar-title"
+                >
 
                     <div class="agenda-calendar-toolbar">
 
@@ -557,8 +567,7 @@
 
                         </div>
 
-
-                        <!-- NAVEGAÇÃO ENTRE SEMANAS -->
+                        <!-- NAVEGACAO -->
 
                         <div class="agenda-week-navigation">
 
@@ -566,28 +575,32 @@
                                 type="button"
                                 id="agenda-prev-week"
                                 class="agenda-icon-button"
-                                aria-label="Semana anterior">
+                                aria-label="Semana anterior"
+                            >
                                 ←
                             </button>
 
                             <strong
                                 id="agenda-week-label"
-                                aria-live="polite">
-                                Semana demonstrativa
+                                aria-live="polite"
+                            >
+                                Carregando semana...
                             </strong>
 
                             <button
                                 type="button"
                                 id="agenda-next-week"
                                 class="agenda-icon-button"
-                                aria-label="Próxima semana">
+                                aria-label="Próxima semana"
+                            >
                                 →
                             </button>
 
                             <button
                                 type="button"
                                 id="agenda-today-button"
-                                class="agenda-today-button">
+                                class="agenda-today-button"
+                            >
                                 Hoje
                             </button>
 
@@ -595,10 +608,11 @@
 
                     </div>
 
-
                     <!-- FILTROS -->
 
                     <div class="agenda-filters">
+
+                        <!-- SERVICO -->
 
                         <div class="agenda-filter-field">
 
@@ -624,10 +638,15 @@
                                     Consulta Online
                                 </option>
 
+                                <option value="Consulta Teste">
+                                    Consulta Teste
+                                </option>
+
                             </select>
 
                         </div>
 
+                        <!-- MODALIDADE -->
 
                         <div class="agenda-filter-field">
 
@@ -635,24 +654,19 @@
                                 Modalidade
                             </label>
 
-                            <select id="agenda-filter-modality">
-
+                            <select
+                                id="agenda-filter-modality"
+                                disabled
+                                title="Modalidade ainda não cadastrada no banco"
+                            >
                                 <option value="todas">
-                                    Todas
+                                    Em preparação
                                 </option>
-
-                                <option value="Presencial">
-                                    Presencial
-                                </option>
-
-                                <option value="Online">
-                                    Online
-                                </option>
-
                             </select>
 
                         </div>
 
+                        <!-- SITUACAO -->
 
                         <div class="agenda-filter-field">
 
@@ -682,289 +696,47 @@
 
                         </div>
 
+                        <!-- LIMPAR -->
 
                         <button
                             type="button"
                             id="agenda-clear-filters"
-                            class="agenda-clear-filters">
-
+                            class="agenda-clear-filters"
+                        >
                             Limpar filtros
-
                         </button>
 
                     </div>
 
-
-                    <!-- =====================================
-                         6. CALENDÁRIO SEMANAL
-                    ====================================== -->
+                    <!-- GRADE PREENCHIDA PELA API -->
 
                     <div class="agenda-calendar-scroll">
 
                         <div
                             id="agenda-week-grid"
                             class="agenda-week-grid"
-                            aria-label="Calendário de consultas da semana">
-
-
-                            <!-- SEGUNDA -->
-
-                            <div class="agenda-day">
-
-                                <div class="agenda-day-header">
-
-                                    <span>
-                                        SEG
-                                    </span>
-
-                                    <strong>
-                                        26
-                                    </strong>
-
-                                </div>
-
-                                <div class="agenda-day-events">
-
-                                    <div class="agenda-event confirmed">
-
-                                        <span class="agenda-event-time">
-                                            09:00
-                                        </span>
-
-                                        <strong>
-                                            Exemplo 01
-                                        </strong>
-
-                                        <small>
-                                            Saúde Capilar
-                                        </small>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-                            <!-- TERÇA -->
-
-                            <div class="agenda-day">
-
-                                <div class="agenda-day-header">
-
-                                    <span>
-                                        TER
-                                    </span>
-
-                                    <strong>
-                                        27
-                                    </strong>
-
-                                </div>
-
-                                <div class="agenda-day-events">
-
-                                    <div class="agenda-event pending">
-
-                                        <span class="agenda-event-time">
-                                            10:30
-                                        </span>
-
-                                        <strong>
-                                            Exemplo 02
-                                        </strong>
-
-                                        <small>
-                                            Clínica Geral
-                                        </small>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-                            <!-- QUARTA -->
-
-                            <div class="agenda-day">
-
-                                <div class="agenda-day-header">
-
-                                    <span>
-                                        QUA
-                                    </span>
-
-                                    <strong>
-                                        28
-                                    </strong>
-
-                                </div>
-
-                                <div class="agenda-day-events">
-
-                                    <div class="agenda-event confirmed">
-
-                                        <span class="agenda-event-time">
-                                            14:00
-                                        </span>
-
-                                        <strong>
-                                            Exemplo 03
-                                        </strong>
-
-                                        <small>
-                                            Consulta Online
-                                        </small>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-                            <!-- QUINTA -->
-
-                            <div class="agenda-day">
-
-                                <div class="agenda-day-header">
-
-                                    <span>
-                                        QUI
-                                    </span>
-
-                                    <strong>
-                                        29
-                                    </strong>
-
-                                </div>
-
-                                <div class="agenda-day-events">
-
-                                    <div class="agenda-event pending">
-
-                                        <span class="agenda-event-time">
-                                            15:30
-                                        </span>
-
-                                        <strong>
-                                            Exemplo 04
-                                        </strong>
-
-                                        <small>
-                                            Saúde Capilar
-                                        </small>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-                            <!-- SEXTA -->
-
-                            <div class="agenda-day">
-
-                                <div class="agenda-day-header">
-
-                                    <span>
-                                        SEX
-                                    </span>
-
-                                    <strong>
-                                        30
-                                    </strong>
-
-                                </div>
-
-                                <div class="agenda-day-events">
-
-                                    <p class="agenda-empty-day">
-                                        Sem consultas
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-                            <!-- SÁBADO -->
-
-                            <div class="agenda-day">
-
-                                <div class="agenda-day-header">
-
-                                    <span>
-                                        SÁB
-                                    </span>
-
-                                    <strong>
-                                        31
-                                    </strong>
-
-                                </div>
-
-                                <div class="agenda-day-events">
-
-                                    <p class="agenda-empty-day">
-                                        Sem consultas
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-                            <!-- DOMINGO -->
-
-                            <div class="agenda-day">
-
-                                <div class="agenda-day-header">
-
-                                    <span>
-                                        DOM
-                                    </span>
-
-                                    <strong>
-                                        01
-                                    </strong>
-
-                                </div>
-
-                                <div class="agenda-day-events">
-
-                                    <p class="agenda-empty-day">
-                                        Sem consultas
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
+                            aria-label="Calendário de consultas da semana"
+                        ></div>
 
                     </div>
-
 
                     <p class="agenda-calendar-help">
                         Arraste horizontalmente no celular
                         para visualizar todos os dias.
-                        Os horários apresentados são
-                        somente exemplos.
+                        Os horários são carregados
+                        do sistema de agendamentos.
                     </p>
 
                 </section>
 
-
                 <!-- =====================================
-                     7. LISTA DE CONSULTAS
+                     LISTA DE AGENDAMENTOS
                 ====================================== -->
 
                 <section
                     class="admin-panel agenda-list-panel"
-                    aria-labelledby="agenda-list-title">
+                    aria-labelledby="agenda-list-title"
+                >
 
                     <div class="admin-panel-header">
 
@@ -982,12 +754,15 @@
 
                         <span
                             id="agenda-results-count"
-                            class="agenda-results-count">
-                            4 registros fictícios
+                            class="agenda-results-count"
+                            aria-live="polite"
+                        >
+                            Carregando...
                         </span>
 
                     </div>
 
+                    <!-- TABELA -->
 
                     <div class="admin-table-scroll">
 
@@ -1029,173 +804,21 @@
 
                             </thead>
 
+                            <!-- DADOS VINDOS DO POSTGRESQL -->
 
-                            <tbody id="agenda-table-body">
-
-                                <tr>
-
-                                    <td>26/10</td>
-
-                                    <td>
-                                        <strong>09:00</strong>
-                                    </td>
-
-                                    <td>
-                                        Paciente Exemplo 01
-                                    </td>
-
-                                    <td>
-                                        Saúde Capilar
-                                    </td>
-
-                                    <td>
-                                        Presencial
-                                    </td>
-
-                                    <td>
-                                        <span class="admin-status confirmed">
-                                            Confirmada
-                                        </span>
-                                    </td>
-
-                                    <td>
-                                        <button
-                                            type="button"
-                                            class="agenda-row-action"
-                                            data-agenda-id="1">
-                                            Detalhes
-                                        </button>
-                                    </td>
-
-                                </tr>
-
-
-                                <tr>
-
-                                    <td>27/10</td>
-
-                                    <td>
-                                        <strong>10:30</strong>
-                                    </td>
-
-                                    <td>
-                                        Paciente Exemplo 02
-                                    </td>
-
-                                    <td>
-                                        Clínica Geral
-                                    </td>
-
-                                    <td>
-                                        Presencial
-                                    </td>
-
-                                    <td>
-                                        <span class="admin-status pending">
-                                            Pendente
-                                        </span>
-                                    </td>
-
-                                    <td>
-                                        <button
-                                            type="button"
-                                            class="agenda-row-action"
-                                            data-agenda-id="2">
-                                            Detalhes
-                                        </button>
-                                    </td>
-
-                                </tr>
-
-
-                                <tr>
-
-                                    <td>28/10</td>
-
-                                    <td>
-                                        <strong>14:00</strong>
-                                    </td>
-
-                                    <td>
-                                        Paciente Exemplo 03
-                                    </td>
-
-                                    <td>
-                                        Consulta Online
-                                    </td>
-
-                                    <td>
-                                        Online
-                                    </td>
-
-                                    <td>
-                                        <span class="admin-status confirmed">
-                                            Confirmada
-                                        </span>
-                                    </td>
-
-                                    <td>
-                                        <button
-                                            type="button"
-                                            class="agenda-row-action"
-                                            data-agenda-id="3">
-                                            Detalhes
-                                        </button>
-                                    </td>
-
-                                </tr>
-
-
-                                <tr>
-
-                                    <td>29/10</td>
-
-                                    <td>
-                                        <strong>15:30</strong>
-                                    </td>
-
-                                    <td>
-                                        Paciente Exemplo 04
-                                    </td>
-
-                                    <td>
-                                        Saúde Capilar
-                                    </td>
-
-                                    <td>
-                                        Presencial
-                                    </td>
-
-                                    <td>
-                                        <span class="admin-status pending">
-                                            Pendente
-                                        </span>
-                                    </td>
-
-                                    <td>
-                                        <button
-                                            type="button"
-                                            class="agenda-row-action"
-                                            data-agenda-id="4">
-                                            Detalhes
-                                        </button>
-                                    </td>
-
-                                </tr>
-
-                            </tbody>
+                            <tbody id="agenda-table-body"></tbody>
 
                         </table>
 
                     </div>
 
-
-                    <!-- SEM RESULTADOS -->
+                    <!-- NENHUM AGENDAMENTO -->
 
                     <div
                         id="agenda-empty-state"
                         class="agenda-empty-state"
-                        hidden>
+                        hidden
+                    >
 
                         <span aria-hidden="true">
                             ◷
@@ -1206,23 +829,23 @@
                         </strong>
 
                         <p>
-                            Não há registros fictícios
-                            correspondentes aos filtros
-                            desta semana.
+                            Não há agendamentos
+                            para esta semana
+                            e os filtros selecionados.
                         </p>
 
                     </div>
 
                 </section>
 
-
                 <!-- =====================================
-                     8. LEGENDA
+                     LEGENDA
                 ====================================== -->
 
                 <section
                     class="agenda-legend"
-                    aria-label="Legenda das situações">
+                    aria-label="Legenda das situações"
+                >
 
                     <span>
                         Situações:
@@ -1242,10 +865,7 @@
 
                 </section>
 
-
-                <!-- =====================================
-                     9. RODAPÉ
-                ====================================== -->
+                <!-- RODAPE -->
 
                 <footer class="admin-dashboard-footer">
 
@@ -1254,8 +874,7 @@
                     </p>
 
                     <p>
-                        Agenda demonstrativa —
-                        Sem pacientes ou reservas reais
+                        Sistema de gestão de agendamentos
                     </p>
 
                 </footer>
@@ -1265,324 +884,6 @@
         </div>
 
     </div>
-
-
-    <!-- =====================================
-         10. JANELA DE AGENDAMENTO
-    ====================================== -->
-
-    <dialog
-        id="agenda-modal"
-        class="agenda-modal"
-        aria-labelledby="agenda-modal-title">
-
-        <div class="agenda-modal-content">
-
-            <div class="agenda-modal-header">
-
-                <div>
-
-                    <p class="admin-panel-eyebrow">
-                        SISTEMA DEMONSTRATIVO
-                    </p>
-
-                    <h2 id="agenda-modal-title">
-                        Novo agendamento
-                    </h2>
-
-                </div>
-
-                <button
-                    type="button"
-                    id="agenda-modal-close"
-                    class="agenda-modal-close"
-                    aria-label="Fechar janela">
-                    ×
-                </button>
-
-            </div>
-
-
-            <p class="agenda-modal-description">
-                Crie um exemplo para visualizar
-                como funcionará o gerenciamento
-                da agenda. Não informe dados reais.
-            </p>
-
-
-            <form
-                id="agenda-form"
-                class="agenda-form"
-                autocomplete="off">
-
-                <!-- PACIENTE FICTÍCIO -->
-
-                <div class="agenda-form-field">
-
-                    <label for="agenda-patient">
-                        Identificação fictícia
-                    </label>
-
-                    <select
-                        id="agenda-patient"
-                        required>
-
-                        <option value="">
-                            Selecione um exemplo
-                        </option>
-
-                        <option value="Paciente Exemplo 05">
-                            Paciente Exemplo 05
-                        </option>
-
-                        <option value="Paciente Exemplo 06">
-                            Paciente Exemplo 06
-                        </option>
-
-                        <option value="Paciente Exemplo 07">
-                            Paciente Exemplo 07
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <!-- SERVIÇO -->
-
-                <div class="agenda-form-field">
-
-                    <label for="agenda-service">
-                        Tipo de atendimento
-                    </label>
-
-                    <select
-                        id="agenda-service"
-                        required>
-
-                        <option value="">
-                            Selecione
-                        </option>
-
-                        <option value="Saúde Capilar">
-                            Saúde Capilar
-                        </option>
-
-                        <option value="Clínica Geral">
-                            Clínica Geral
-                        </option>
-
-                        <option value="Consulta Online">
-                            Consulta Online
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <!-- DATA E HORÁRIO -->
-
-                <div class="agenda-form-row">
-
-                    <div class="agenda-form-field">
-
-                        <label for="agenda-date">
-                            Data
-                        </label>
-
-                        <input
-                            type="date"
-                            id="agenda-date"
-                            required>
-
-                    </div>
-
-                    <div class="agenda-form-field">
-
-                        <label for="agenda-time">
-                            Horário
-                        </label>
-
-                        <input
-                            type="time"
-                            id="agenda-time"
-                            required>
-
-                    </div>
-
-                </div>
-
-
-                <!-- MODALIDADE -->
-
-                <div class="agenda-form-field">
-
-                    <label for="agenda-modality">
-                        Modalidade
-                    </label>
-
-                    <select
-                        id="agenda-modality"
-                        required>
-
-                        <option value="">
-                            Selecione
-                        </option>
-
-                        <option value="Presencial">
-                            Presencial
-                        </option>
-
-                        <option value="Online">
-                            Online
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <!-- SITUAÇÃO -->
-
-                <div class="agenda-form-field">
-
-                    <label for="agenda-status">
-                        Situação
-                    </label>
-
-                    <select
-                        id="agenda-status"
-                        required>
-
-                        <option value="Pendente">
-                            Pendente
-                        </option>
-
-                        <option value="Confirmada">
-                            Confirmada
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <!-- AVISO -->
-
-                <p class="agenda-form-notice">
-                    Esta ação simula um agendamento.
-                    Nenhuma reserva ou informação
-                    será enviada a servidores.
-                </p>
-
-
-                <!-- MENSAGEM -->
-
-                <p
-                    id="agenda-form-message"
-                    class="agenda-form-message"
-                    role="status"
-                    aria-live="polite"
-                    hidden>
-                </p>
-
-
-                <!-- AÇÕES -->
-
-                <div class="agenda-form-actions">
-
-                    <button
-                        type="button"
-                        id="agenda-cancel-button"
-                        class="agenda-secondary-button">
-                        Cancelar
-                    </button>
-
-                    <button
-                        type="submit"
-                        class="admin-primary-action">
-                        Salvar simulação
-                    </button>
-
-                </div>
-
-            </form>
-
-        </div>
-
-    </dialog>
-
-
-    <!-- =====================================
-         11. DETALHES DA CONSULTA
-    ====================================== -->
-
-    <dialog
-        id="agenda-details-modal"
-        class="agenda-modal"
-        aria-labelledby="agenda-details-title">
-
-        <div class="agenda-modal-content">
-
-            <div class="agenda-modal-header">
-
-                <div>
-
-                    <p class="admin-panel-eyebrow">
-                        AGENDAMENTO FICTÍCIO
-                    </p>
-
-                    <h2 id="agenda-details-title">
-                        Detalhes da consulta
-                    </h2>
-
-                </div>
-
-                <button
-                    type="button"
-                    id="agenda-details-close"
-                    class="agenda-modal-close"
-                    aria-label="Fechar detalhes">
-                    ×
-                </button>
-
-            </div>
-
-
-            <div
-                id="agenda-details-content"
-                class="agenda-details-content">
-
-                <p>
-                    Selecione uma consulta
-                    para visualizar os detalhes.
-                </p>
-
-            </div>
-
-
-            <div class="agenda-form-actions">
-
-                <button
-                    type="button"
-                    id="agenda-details-dismiss"
-                    class="agenda-secondary-button">
-                    Fechar
-                </button>
-
-                <button
-                    type="button"
-                    id="agenda-details-confirm"
-                    class="admin-primary-action">
-                    Confirmar simulação
-                </button>
-
-            </div>
-
-        </div>
-
-    </dialog>
 
 </body>
 </html>
