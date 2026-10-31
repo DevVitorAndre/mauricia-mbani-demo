@@ -126,6 +126,39 @@ router.get("/csrf", (req, res) => {
   });
 });
 
+
+ // ============================================
+ // LISTAR PROFISSIONAIS DA CLINICA
+ // GET /api/clinica/agendamentos/profissionais
+ // ============================================
+
+router.get("/profissionais", async (req, res) => {
+    try {
+        const resultado = await db.query(
+            `SELECT id, nome
+             FROM profissionais
+             WHERE clinica_id = $1
+               AND ativo = TRUE
+             ORDER BY nome`,
+            [req.session.clinicaId]
+        );
+
+        return res.json({
+            sucesso: true,
+            profissionais: resultado.rows
+        });
+
+    } catch (erro) {
+        console.error("Erro ao listar profissionais:", erro.message);
+
+        return res.status(500).json({
+            sucesso: false,
+            mensagem: "Erro ao consultar profissionais."
+        });
+    }
+});
+
+
 // ============================================
 // LISTAR AGENDAMENTOS DE UMA DATA
 // GET /api/clinica/agendamentos?data=2026-11-10

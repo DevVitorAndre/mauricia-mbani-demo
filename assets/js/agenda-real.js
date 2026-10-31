@@ -271,9 +271,185 @@ document.addEventListener("DOMContentLoaded", () => {
   // Funcionalidades que serao integradas depois.
   filtroModalidade.disabled = true;
 
-  const botaoNovo = elemento("agenda-new-button");
-  botaoNovo.disabled = true;
-  botaoNovo.title = "Cadastro pelo painel em desenvolvimento";
+
+const botaoNovo = elemento("agenda-new-button");
+const modal = elemento("agenda-modal");
+const formulario = elemento("agenda-form");
+
+botaoNovo.disabled = false;
+botaoNovo.removeAttribute("title");
+
+
+ // Abrir a janela e buscar profissionais
+botaoNovo.addEventListener("click", async () => {
+
+    const select = elemento("agenda-profissional");
+
+    select.replaceChildren(
+        new Option("Carregando profissionais...", "")
+    );
+
+    select.disabled = true;
+
+    modal.showModal();
+
+    try {
+
+        const resposta = await fetch(
+            "/api/clinica/agendamentos/profissionais",
+            { credentials: "same-origin" }
+        );
+
+        if (!resposta.ok) {
+            throw new Error("Erro ao buscar profissionais");
+        }
+
+        const dados = await resposta.json();
+
+        select.replaceChildren(
+            new Option("Selecione um profissional", "")
+        );
+
+        dados.profissionais.forEach((profissional) => {
+
+            select.add(
+                new Option(
+                    profissional.nome,
+                    profissional.id
+                )
+            );
+
+        });
+
+        if (dados.profissionais.length === 0) {
+            select.replaceChildren(
+                new Option("Nenhum profissional cadastrado", "")
+            );
+        } else {
+            select.disabled = false;
+        }
+
+    } catch (erro) {
+
+        console.error(erro);
+
+        select.replaceChildren(
+            new Option("Erro ao carregar profissionais", "")
+        );
+
+    }
+
+});
+
+
+// Fechar pelo X
+elemento("agenda-modal-close").addEventListener("click", () => {
+    modal.close();
+});
+
+// Fechar pelo botão Cancelar
+elemento("agenda-cancel-button").addEventListener("click", () => {
+    modal.close();
+});
+
+
+
+formulario.addEventListener("submit", async (evento) => {
+    evento.preventDefault();
+
+    const mensagem = elemento("agenda-form-message");
+    const botaoSalvar = formulario.querySelector(
+        'button[type="submit"]'
+    );
+
+    const dados = {
+        profissional_id: elemento("agenda-profissional").value,
+        paciente_nome: elemento("agenda-paciente").value.trim(),
+        servico: elemento("agenda-servico").value,
+        data_agendamento: elemento("agenda-data").value,
+        hora_inicio: elemento("agenda-inicio").value,
+        hora_fim: elemento("agenda-fim").value
+    };
+
+    if (dados.hora_fim <= dados.hora_inicio) {
+        mensagem.hidden = false;
+        mensagem.textContent =
+            "O horário final deve ser maior que o inicial.";
+        return;
+    }
+
+    botaoSalvar.disabled = true;
+    mensagem.hidden = false;
+    mensagem.textContent = "Salvando agendamento...";
+
+    try {
+        // Buscar token de segurança
+        const respostaCsrf = await fetch(
+            "/api/clinica/agendamentos/csrf",
+            {
+                credentials: "same-origin",
+                cache: "no-store"
+            }
+        );
+
+        if (!respostaCsrf.ok) {
+            throw new Error("Falha na verificação de segurança.");
+        }
+
+        const seguranca = await respostaCsrf.json();
+
+        // Enviar consulta para o PostgreSQL
+        const resposta = await fetch(
+            "/api/clinica/agendamentos",
+            {
+                method: "POST",
+                credentials: "same-origin",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRF-Token": seguranca.csrfToken
+                },
+                body: JSON.stringify(dados)
+            }
+        );
+
+        const resultado = await resposta.json();
+
+        if (resposta.status === 409) {
+            mensagem.textContent =
+                "Este horário já está ocupado! Escolha outro.";
+            return;
+        }
+
+        if (!resposta.ok) {
+            throw new Error(
+                resultado.mensagem || "Erro ao salvar agendamento."
+            );
+        }
+
+        mensagem.textContent =
+            "Agendamento salvo com sucesso no PostgreSQL!";
+
+        formulario.reset();
+
+        // Mostrar a semana da consulta cadastrada
+        semana = inicioSemana(
+            dataLocal(dados.data_agendamento)
+        );
+
+        await carregarSemana();
+
+    } catch (erro) {
+        console.error(erro);
+
+        mensagem.textContent = erro.message;
+
+    } finally {
+        botaoSalvar.disabled = false;
+    }
+});
+
+
+
 
   // Limpar o aviso antigo do estado vazio.
   const textoVazio = vazio.querySelector("p");

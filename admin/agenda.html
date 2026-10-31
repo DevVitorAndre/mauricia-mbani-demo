@@ -885,5 +885,144 @@
 
     </div>
 
+    
+<!-- JANELA DE NOVO AGENDAMENTO -->
+
+<dialog id="agenda-modal" class="agenda-modal">
+
+    <div class="agenda-modal-content">
+
+        <div class="agenda-modal-header">
+
+            <h2>Novo Agendamento</h2>
+
+            <button
+                type="button"
+                id="agenda-modal-close"
+                class="agenda-modal-close"
+            >
+                ×
+            </button>
+
+        </div>
+
+        <form id="agenda-form" class="agenda-form">
+
+            <div class="agenda-form-field">
+                <label for="agenda-profissional">
+                    Profissional
+                </label>
+
+                <select id="agenda-profissional" required>
+                    <option value="">
+                        Carregando profissionais...
+                    </option>
+                </select>
+            </div>
+
+            <div class="agenda-form-field">
+                <label for="agenda-paciente">
+                    Nome do paciente
+                </label>
+
+                <input
+                    type="text"
+                    id="agenda-paciente"
+                    maxlength="150"
+                    required
+                >
+            </div>
+
+            <div class="agenda-form-field">
+                <label for="agenda-servico">
+                    Tipo de atendimento
+                </label>
+
+                <select id="agenda-servico" required>
+                    <option value="">Selecione</option>
+                    <option value="Saúde Capilar">
+                        Saúde Capilar
+                    </option>
+                    <option value="Clínica Geral">
+                        Clínica Geral
+                    </option>
+                    <option value="Consulta Online">
+                        Consulta Online
+                    </option>
+                    <option value="Consulta Teste">
+                        Consulta Teste
+                    </option>
+                </select>
+            </div>
+
+            <div class="agenda-form-row">
+
+                <div class="agenda-form-field">
+                    <label for="agenda-data">Data</label>
+                    <input
+                        type="date"
+                        id="agenda-data"
+                        required
+                    >
+                </div>
+
+                <div class="agenda-form-field">
+                    <label for="agenda-inicio">
+                        Horário inicial
+                    </label>
+                    <input
+                        type="time"
+                        id="agenda-inicio"
+                        required
+                    >
+                </div>
+
+                <div class="agenda-form-field">
+                    <label for="agenda-fim">
+                        Horário final
+                    </label>
+                    <input
+                        type="time"
+                        id="agenda-fim"
+                        required
+                    >
+                </div>
+
+            </div>
+
+            <p
+                id="agenda-form-message"
+                class="agenda-form-message"
+                role="status"
+                aria-live="polite"
+                hidden
+            ></p>
+
+            <div class="agenda-form-actions">
+
+                <button
+                    type="button"
+                    id="agenda-cancel-button"
+                    class="agenda-secondary-button"
+                >
+                    Cancelar
+                </button>
+
+                <button
+                    type="submit"
+                    class="admin-primary-action"
+                >
+                    Salvar agendamento
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</dialog>
+
+
 </body>
 </html>
