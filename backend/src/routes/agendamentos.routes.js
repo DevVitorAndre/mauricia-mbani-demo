@@ -438,4 +438,69 @@ router.patch("/:id/confirmar", async (req, res) => {
 });
 
 
+ // ============================================
+ // CANCELAR AGENDAMENTO
+ // PATCH /api/clinica/agendamentos/:id/cancelar
+ // ============================================
+
+router.patch("/:id/cancelar", async (req, res) => {
+
+    const { id } = req.params;
+
+    if (!idValido(id)) {
+        return res.status(400).json({
+            sucesso: false,
+            mensagem: "ID inválido."
+        });
+    }
+
+    const token = req.get("X-CSRF-Token") || "";
+
+    if (
+        !/^[a-f0-9]{64}$/.test(token) ||
+        token !== req.session.csrfToken
+    ) {
+        return res.status(403).json({
+            sucesso: false,
+            mensagem: "Token de segurança inválido."
+        });
+    }
+
+    try {
+        const resultado = await db.query(
+            `UPDATE agendamentos
+             SET status = 'cancelado',
+                 atualizado_em = NOW()
+             WHERE id = $1
+               AND clinica_id = $2
+               AND status IN ('pendente', 'confirmado')
+             RETURNING id, status`,
+            [id, req.session.clinicaId]
+        );
+
+        if (!resultado.rowCount) {
+            return res.status(409).json({
+                sucesso: false,
+                mensagem: "Consulta não encontrada ou não pode ser cancelada."
+            });
+        }
+
+        return res.json({
+            sucesso: true,
+            mensagem: "Consulta cancelada com sucesso!",
+            agendamento: resultado.rows[0]
+        });
+
+    } catch (erro) {
+        console.error("Erro ao cancelar:", erro.message);
+
+        return res.status(500).json({
+            sucesso: false,
+            mensagem: "Erro ao cancelar consulta."
+        });
+    }
+});
+
+
+
 export default router;

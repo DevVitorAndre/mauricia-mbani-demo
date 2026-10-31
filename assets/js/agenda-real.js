@@ -248,6 +248,90 @@ if (consulta.status === "pendente") {
 
 }
 
+
+ // ============================================
+ // BOTAO CANCELAR AGENDAMENTO
+ // ============================================
+
+if (
+    consulta.status === "pendente" ||
+    consulta.status === "confirmado"
+) {
+
+    // Remove o traço quando existe uma ação disponível
+    if (colunaAcoes.textContent === "—") {
+        colunaAcoes.textContent = "";
+    }
+
+    const botaoCancelar = criar(
+        "button",
+        "agenda-row-action",
+        "Cancelar"
+    );
+
+    botaoCancelar.type = "button";
+
+    botaoCancelar.addEventListener("click", async () => {
+
+        const confirmar = window.confirm(
+            "Deseja realmente cancelar esta consulta?"
+        );
+
+        if (!confirmar) return;
+
+        botaoCancelar.disabled = true;
+        botaoCancelar.textContent = "Cancelando...";
+
+        try {
+
+            const respostaCsrf = await fetch(
+                "/api/clinica/agendamentos/csrf",
+                { credentials: "same-origin" }
+            );
+
+            if (!respostaCsrf.ok) {
+                throw new Error("Erro de segurança.");
+            }
+
+            const { csrfToken } =
+                await respostaCsrf.json();
+
+            const resposta = await fetch(
+                `/api/clinica/agendamentos/${consulta.id}/cancelar`,
+                {
+                    method: "PATCH",
+                    credentials: "same-origin",
+                    headers: {
+                        "X-CSRF-Token": csrfToken
+                    }
+                }
+            );
+
+            const resultado = await resposta.json();
+
+            if (!resposta.ok) {
+                throw new Error(resultado.mensagem);
+            }
+
+            await carregarSemana();
+
+        } catch (erro) {
+
+            alert(
+                erro.message ||
+                "Erro ao cancelar consulta."
+            );
+
+            botaoCancelar.disabled = false;
+            botaoCancelar.textContent = "Cancelar";
+        }
+
+    });
+
+    colunaAcoes.append(botaoCancelar);
+}
+
+
 linha.append(colunaAcoes);
 tabela.append(linha);
 
