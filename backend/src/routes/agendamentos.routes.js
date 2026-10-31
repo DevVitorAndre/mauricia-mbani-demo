@@ -348,4 +348,94 @@ router.post("/", async (req, res) => {
   }
 });
 
+
+ // ============================================
+ // CONFIRMAR AGENDAMENTO
+ // PATCH /api/clinica/agendamentos/:id/confirmar
+ // ============================================
+
+router.patch("/:id/confirmar", async (req, res) => {
+
+    const { id } = req.params;
+
+    // Validar ID
+    if (!idValido(id)) {
+        return res.status(400).json({
+            sucesso: false,
+            mensagem: "ID do agendamento inválido."
+        });
+    }
+
+    // Validar token CSRF
+    const token = req.get("X-CSRF-Token") || "";
+
+    if (
+        !/^[a-f0-9]{64}$/.test(token) ||
+        token !== req.session.csrfToken
+    ) {
+        return res.status(403).json({
+            sucesso: false,
+            mensagem: "Token de segurança inválido."
+        });
+    }
+
+    try {
+
+        // Atualizar somente consultas pendentes
+        // da clínica autenticada.
+        const resultado = await db.query(
+            `UPDATE agendamentos
+             SET status = 'confirmado',
+                 atualizado_em = NOW()
+             WHERE id = $1
+               AND clinica_id = $2
+               AND status = 'pendente'
+             RETURNING id, status`,
+            [id, req.session.clinicaId]
+        );
+
+        if (!resultado.rowCount) {
+
+            const consulta = await db.query(
+                `SELECT status
+                 FROM agendamentos
+                 WHERE id = $1
+                   AND clinica_id = $2`,
+                [id, req.session.clinicaId]
+            );
+
+            if (!consulta.rowCount) {
+                return res.status(404).json({
+                    sucesso: false,
+                    mensagem: "Agendamento não encontrado."
+                });
+            }
+
+            return res.status(409).json({
+                sucesso: false,
+                mensagem: "Esta consulta não está pendente."
+            });
+        }
+
+        return res.json({
+            sucesso: true,
+            mensagem: "Consulta confirmada com sucesso!",
+            agendamento: resultado.rows[0]
+        });
+
+    } catch (erro) {
+
+        console.error(
+            "Erro ao confirmar agendamento:",
+            erro.message
+        );
+
+        return res.status(500).json({
+            sucesso: false,
+            mensagem: "Erro ao confirmar consulta."
+        });
+    }
+});
+
+
 export default router;

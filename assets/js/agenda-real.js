@@ -162,21 +162,95 @@ document.addEventListener("DOMContentLoaded", () => {
     filtradas.forEach((consulta) => {
       const linha = document.createElement("tr");
 
-      const valores = [
-        consulta.data.split("-").reverse().join("/"),
-        consulta.horario,
-        consulta.paciente,
-        consulta.servico,
-        "—",
-        situacao(consulta.status),
-        "—"
-      ];
 
-      valores.forEach((valor) => {
-        linha.append(criar("td", "", valor));
-      });
+const valores = [
+  consulta.data.split("-").reverse().join("/"),
+  consulta.horario,
+  consulta.paciente,
+  consulta.servico,
+  "—",
+  situacao(consulta.status)
+];
 
-      tabela.append(linha);
+valores.forEach((valor) => {
+  linha.append(criar("td", "", valor));
+});
+
+// Coluna de ações
+const colunaAcoes = document.createElement("td");
+
+// Só permite confirmar consultas pendentes
+if (consulta.status === "pendente") {
+
+  const botao = criar(
+    "button",
+    "agenda-row-action",
+    "Confirmar"
+  );
+
+  botao.type = "button";
+
+  botao.addEventListener("click", async () => {
+
+    botao.disabled = true;
+    botao.textContent = "Confirmando...";
+
+    try {
+      // Obter token CSRF
+      const respostaCsrf = await fetch(
+        "/api/clinica/agendamentos/csrf",
+        { credentials: "same-origin" }
+      );
+
+      if (!respostaCsrf.ok) {
+        throw new Error("Erro ao validar segurança.");
+      }
+
+      const { csrfToken } = await respostaCsrf.json();
+
+      // Confirmar no PostgreSQL
+      const resposta = await fetch(
+        `/api/clinica/agendamentos/${consulta.id}/confirmar`,
+        {
+          method: "PATCH",
+          credentials: "same-origin",
+          headers: {
+            "X-CSRF-Token": csrfToken
+          }
+        }
+      );
+
+      const resultado = await resposta.json();
+
+      if (!resposta.ok) {
+        throw new Error(
+          resultado.mensagem || "Erro ao confirmar."
+        );
+      }
+
+      // Recarregar os dados reais
+      await carregarSemana();
+
+    } catch (erro) {
+
+      alert(erro.message);
+
+      botao.disabled = false;
+      botao.textContent = "Confirmar";
+    }
+  });
+
+  colunaAcoes.append(botao);
+
+} else {
+
+  colunaAcoes.textContent = "—";
+
+}
+
+linha.append(colunaAcoes);
+tabela.append(linha);
+
     });
   }
 
